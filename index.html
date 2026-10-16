@@ -149,7 +149,7 @@
   .brand { display: flex; align-items: center; gap: 8px; font-size: 26px; font-weight: 700; letter-spacing: -0.03em; }
   .brand .bolt { color: var(--accent-text); font-size: 26px; }
   .top-actions { display: flex; gap: 2px; }
-  .badge { position: absolute; top: 2px; right: 0; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: #8C47F4; color: #fff; font-size: 11px; font-weight: 600; display: grid; place-items: center; border: 2px solid var(--bg); line-height: 1; }
+  .badge { position: absolute; top: 2px; right: 0; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--danger); color: #fff; font-size: 11px; font-weight: 600; display: grid; place-items: center; border: 2px solid var(--bg); line-height: 1; }
   .pane { max-width: 560px; margin: 0 auto; padding: 16px 16px 132px; display: grid; gap: 14px; }
   .pane > h1, .panel-head h1 { font-size: 30px; }
   .panel { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 22px; padding: 18px; }
@@ -342,7 +342,7 @@
   .conv-row.unread-row .pv { color: var(--text); }
   .conv-row .pv { color: var(--muted); font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .conv-row .right { display: grid; justify-items: end; gap: 6px; flex: none; }
-  .count { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: #8C47F4; color: #fff; font-size: 12px; font-weight: 600; display: grid; place-items: center; }
+  .count { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: var(--danger); color: #fff; font-size: 12px; font-weight: 600; display: grid; place-items: center; }
   .avatar-wrap { position: relative; display: inline-flex; flex: none; }
   .sdot { position: absolute; right: -2px; bottom: -2px; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--bg); }
   .sdot.online { background: var(--ok); }
@@ -374,7 +374,8 @@
 
   .composer[hidden] { display: none; }
   .bubble .sender { font-size: 12px; font-weight: 600; margin-bottom: 2px; opacity: .85; }
-  .bubble img, .bubble video { display: block; max-width: 100%; max-height: 320px; border-radius: 14px; margin: 2px 0 4px; background: var(--surface2); }
+  .bubble img { display: block; max-width: 100%; max-height: 320px; border-radius: 14px; margin: 2px 0 4px; background: var(--surface2); }
+  .bubble video { display: block; width: 260px; max-width: 100%; height: auto; max-height: 60vh; object-fit: contain; border-radius: 14px; margin: 2px 0 4px; background: #000; }
   .bubble audio { display: block; width: 220px; max-width: 100%; height: 40px; margin: 2px 0 4px; }
   .composer .iconbtn { flex: none; width: 46px; height: 46px; }
   .rec-bar { display: flex; align-items: center; gap: 12px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--surface); border-top: 1px solid var(--line-soft); }
@@ -388,7 +389,8 @@
   .member-row:last-child { border-bottom: 0; }
   .pick-row { display: flex; align-items: center; gap: 12px; padding: 12px 4px; border-bottom: 1px solid var(--line-soft); min-height: 52px; cursor: pointer; }
   .pick-row input { width: 22px; height: 22px; flex: none; }
-  .post-video { max-height: 480px; object-fit: contain; background: #000; }
+  .post-video { width: 100%; height: auto; max-height: 80vh; object-fit: contain; background: #000; }
+  .bubble { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
   @media (min-width: 700px) { .sheet-backdrop { align-items: center; } .sheet { border-radius: 26px; } }
   @media (max-width: 520px) { .card { padding: 24px; } .splash h1 { font-size: 44px; } }
   @media (prefers-reduced-motion: reduce) { .sheet { animation: none; } .progress > div, .viewer .bar.run > div { transition: none; } }
@@ -789,6 +791,7 @@
       <label class="row-item"><div class="grow">Friends finishing commitments</div><span class="switch"><input type="checkbox" id="nt-completions"><span class="track"></span></span></label>
       <label class="row-item"><div class="grow">Mentions</div><span class="switch"><input type="checkbox" id="nt-mentions"><span class="track"></span></span></label>
       <label class="row-item"><div class="grow">New messages</div><span class="switch"><input type="checkbox" id="nt-messages"><span class="track"></span></span></label>
+      <label class="row-item"><div class="grow">Browser alerts<small id="nt-browser-sub">Get a pop-up when a message arrives.</small></div><span class="switch"><input type="checkbox" id="nt-browser"><span class="track"></span></span></label>
       <label class="row-item"><div class="grow">Group invites</div><span class="switch"><input type="checkbox" id="nt-groups"><span class="track"></span></span></label>
       <button class="row-item" type="button" id="nt-pause"><div class="grow">Pause alerts<small id="nt-pause-sub">Alerts are on.</small></div><span data-icon="chevron"></span></button>
     </div></div>
@@ -1076,7 +1079,7 @@ $('#recovery-form').addEventListener('submit', async (e) => {
   recovering = false; toast('Password saved'); route();
 });
 
-$('#signout-btn').addEventListener('click', async () => { await sb.auth.signOut(); });
+$('#signout-btn').addEventListener('click', async () => { await disablePush(); await sb.auth.signOut(); });
 
 /* ---------- Screen 3: profile ---------- */
 function squareJpeg(file, size = 512) {
@@ -1686,6 +1689,7 @@ function openChat(cid, other, group) {
   loadMessages(false).then(markRead);
   startTyping();
   const c = chat;
+  c.syncTimer = setInterval(syncChat, 12000);
   if (c.group) {
     loadGroupMembers(c).then(ok => { if (chat === c && ok) { paintChatHead(); renderChat('new'); } });
   } else c.poll = setInterval(async () => {
@@ -1707,7 +1711,7 @@ function updateChatStatus() {
 function closeChat() {
   if (!chat) return;
   cancelRecording();
-  clearInterval(chat.poll); clearTimeout(chat.typingTimer);
+  clearInterval(chat.poll); clearInterval(chat.syncTimer); clearTimeout(chat.typingTimer);
   if (chat.typingChannel) sb.removeChannel(chat.typingChannel);
   chat = null; $('#chat').hidden = true; document.body.style.overflow = '';
   if (currentTab === 'messages') loadConversations(); else refreshUnread();
@@ -1759,7 +1763,7 @@ function renderChat(mode, prevH) {
 function bubble(m, map, me) {
   const mine = m.sender_id === me;
   if (m.deleted_at) return h('div', { class: 'bubble deleted ' + (mine ? 'me' : 'them'), text: 'Message deleted' });
-  const el = h('div', { class: 'bubble ' + (mine ? 'me' : 'them') + (m._failed ? ' failed' : ''), role: 'button', tabindex: '0', 'aria-label': 'Message options' });
+  const el = h('div', { class: 'bubble ' + (mine ? 'me' : 'them') + (m._failed ? ' failed' : ''), role: 'button', tabindex: '0', 'aria-label': 'Message. Press and hold for options.' });
   if (chat.group && !mine) el.append(h('div', { class: 'sender', text: nameOf(senderOf(m.sender_id)) }));
   if (m.reply_to) {
     const o = map[m.reply_to];
@@ -1770,8 +1774,16 @@ function bubble(m, map, me) {
   if (m.media_type && (m.media_url || m._localUrl)) el.append(mediaEl(m));
   if (m.body) el.append(h('span', { text: m.body }));
   el.append(h('time', { class: 'time', text: m._pending ? 'Sending' : m._failed ? 'Not sent. Tap to retry' : clockTime(m.created_at) }));
-  el.addEventListener('click', () => { if (m._failed) retrySend(m); else if (!m._pending) openMessageSheet(m, mine); });
-  el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); } });
+  const canOpen = () => !m._pending && !m._failed;
+  let lp = null, fired = false;
+  el.addEventListener('click', () => { if (m._failed) retrySend(m); });
+  el.addEventListener('pointerdown', () => {
+    fired = false; clearTimeout(lp);
+    lp = setTimeout(() => { fired = true; if (canOpen()) { if (navigator.vibrate) navigator.vibrate(15); openMessageSheet(m, mine); } }, 450);
+  });
+  ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => el.addEventListener(ev, () => clearTimeout(lp)));
+  el.addEventListener('contextmenu', ev => { ev.preventDefault(); if (!fired && canOpen()) openMessageSheet(m, mine); });
+  el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (m._failed) retrySend(m); else if (canOpen()) openMessageSheet(m, mine); } });
   return el;
 }
 
@@ -1953,11 +1965,12 @@ function mediaEl(m) {
   if (m.media_type === 'image') el = h('img', { alt: 'Photo in chat', loading: 'lazy' });
   else if (m.media_type === 'video') el = h('video', { controls: '', preload: 'metadata', playsinline: '' });
   else el = h('audio', { controls: '', preload: 'metadata' });
-  if (m._localUrl) el.src = m._localUrl;
+  const setSrc = u => { el.src = m.media_type === 'video' ? u + '#t=0.1' : u; };
+  if (m._localUrl) setSrc(m._localUrl);
   else {
     const hit = chatUrlCache[m.media_url];
-    if (hit && hit.exp > Date.now()) el.src = hit.url;
-    else signedChatUrl(m.media_url).then(u => { if (u) el.src = u; });
+    if (hit && hit.exp > Date.now()) setSrc(hit.url);
+    else signedChatUrl(m.media_url).then(u => { if (u) setSrc(u); });
   }
   if (c && real) { c.mnodes = c.mnodes || {}; c.mnodes[m.id] = el; }
   return el;
@@ -2081,13 +2094,109 @@ function startRealtime() {
     .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'messages' }, p => onMessageEvent('INSERT', p.new))
     .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'messages' }, p => onMessageEvent('UPDATE', p.new))
     .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'notifications' }, p => onNotificationEvent(p.new))
-    .subscribe();
+    .on('postgres_changes', { event: '*', schema: 'public', table: 'friendships' }, () => { refreshUnread(); if (currentTab === 'messages') loadRequests(); })
+    .subscribe(st => {
+      if (st === 'CHANNEL_ERROR' || st === 'TIMED_OUT') setTimeout(() => { if (inbox) { const old = inbox; inbox = null; sb.removeChannel(old); startRealtime(); } }, 3000);
+    });
 }
 function stopRealtime() {
   if (inbox) { sb.removeChannel(inbox); inbox = null; }
   clearInterval(hbTimer); hbTimer = null;
-  if (chat) { clearInterval(chat.poll); chat = null; $('#chat').hidden = true; document.body.style.overflow = ''; }
+  if (chat) { clearInterval(chat.poll); clearInterval(chat.syncTimer); chat = null; $('#chat').hidden = true; document.body.style.overflow = ''; }
 }
+/* ---------- Live sync and browser alerts ---------- */
+async function syncChat() {
+  const c = chat; if (!c) return;
+  const last = c.messages.filter(x => !String(x.id).startsWith('tmp')).slice(-1)[0];
+  let q = sb.from('messages').select(MSG_SELECT).eq('conversation_id', c.id).order('created_at', { ascending: true }).limit(50);
+  if (last) q = q.gt('created_at', last.created_at);
+  const { data } = await q;
+  if (chat !== c || !data || !data.length) return;
+  const known = new Set(c.messages.map(x => x.id));
+  const fresh = data.filter(x => !known.has(x.id));
+  if (!fresh.length) return;
+  c.messages.push(...fresh); renderChat('new'); markRead();
+}
+function resync() {
+  if (!session) return;
+  if (chat) syncChat();
+  refreshUnread();
+  if (currentTab === 'messages') loadConversations();
+}
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') resync(); });
+window.addEventListener('online', resync);
+
+const alertsOn = () => { try { return localStorage.getItem('browserAlerts') === '1'; } catch { return false; } };
+function paintBrowserAlerts() {
+  const cb = $('#nt-browser'), sub = $('#nt-browser-sub');
+  if (!('Notification' in window)) { cb.disabled = true; cb.checked = false; sub.textContent = 'This browser does not support alerts.'; return; }
+  cb.checked = alertsOn() && Notification.permission === 'granted';
+  sub.textContent = Notification.permission === 'denied'
+    ? 'Blocked. Allow notifications for this site in your browser settings.'
+    : 'Get a pop-up when a message arrives and the app is in the background.';
+}
+const VAPID_PUBLIC = 'BPLBTe4QQTs3PDc69bmNEMPoKRKamj66DeoJtO-OEgKF5GIbEgggYscvxGUCDbpK-CkJxf26XCqbyRIZqmscb4Y';
+const pushOn = () => { try { return localStorage.getItem('pushOn') === '1'; } catch { return false; } };
+const swReady = () => Promise.race([navigator.serviceWorker.ready, new Promise((_, no) => setTimeout(no, 4000))]);
+function b64ToBytes(b64) {
+  const raw = atob((b64 + '='.repeat((4 - b64.length % 4) % 4)).replace(/-/g, '+').replace(/_/g, '/'));
+  return Uint8Array.from(raw, c => c.charCodeAt(0));
+}
+async function enablePush() {
+  if (!('serviceWorker' in navigator) || !('PushManager' in window)) return false;
+  try {
+    const reg = await swReady();
+    let sub = await reg.pushManager.getSubscription();
+    if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToBytes(VAPID_PUBLIC) });
+    const j = sub.toJSON();
+    const { error } = await sb.rpc('save_push_subscription', { ep: j.endpoint, p256: j.keys.p256dh, au: j.keys.auth });
+    if (error) return false;
+    try { localStorage.setItem('pushOn', '1'); } catch {}
+    return true;
+  } catch { return false; }
+}
+async function disablePush() {
+  try {
+    if ('serviceWorker' in navigator) {
+      const reg = await swReady(), sub = await reg.pushManager.getSubscription();
+      if (sub) { await sb.rpc('remove_push_subscription', { ep: sub.endpoint }); await sub.unsubscribe(); }
+    }
+  } catch {}
+  try { localStorage.setItem('pushOn', '0'); } catch {}
+}
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+$('#nt-browser').addEventListener('change', async e => {
+  if (!e.target.checked) { await disablePush(); try { localStorage.setItem('browserAlerts', '0'); } catch {} paintBrowserAlerts(); return; }
+  let perm = Notification.permission;
+  if (perm === 'default') perm = await Notification.requestPermission();
+  if (perm !== 'granted') { e.target.checked = false; toast('Allow notifications in your browser to turn this on.'); paintBrowserAlerts(); return; }
+  try { localStorage.setItem('browserAlerts', '1'); } catch {}
+  const ok = await enablePush();
+  toast(ok ? 'Alerts are on, even when the app is closed' : 'Alerts are on while the app is open');
+  paintBrowserAlerts();
+});
+async function maybeBrowserAlert(n) {
+  if (!alertsOn() || pushOn() || !('Notification' in window) || Notification.permission !== 'granted') return;
+  const cid = n.data && n.data.conversation_id;
+  if (!cid || (chat && chat.id === cid && document.visibilityState === 'visible')) return;
+  const ns = await sb.from('notification_settings').select('muted_until').eq('user_id', session.user.id).maybeSingle();
+  const until = ns.data && ns.data.muted_until ? new Date(ns.data.muted_until) : null;
+  if (until && until > new Date()) return;
+  const [mr, pr] = await Promise.all([
+    sb.from('messages').select('body,media_type,deleted_at').eq('conversation_id', cid).neq('sender_id', session.user.id).order('created_at', { ascending: false }).limit(1),
+    sb.from('profiles').select('username,full_name').eq('id', n.actor_id).maybeSingle()
+  ]);
+  const m = mr.data && mr.data[0]; if (!m || m.deleted_at) return;
+  const who = pr.data ? nameOf(pr.data) : 'New message';
+  const text = m.body || MEDIA_LABEL[m.media_type] || 'New message';
+  try {
+    const note = new Notification(who, { body: text.slice(0, 120), tag: 'chat-' + cid });
+    note.onclick = () => { window.focus(); try { showTab('messages'); } catch {} note.close(); };
+  } catch {
+    try { const reg = await navigator.serviceWorker.getRegistration(); if (reg) reg.showNotification(who, { body: text.slice(0, 120), tag: 'chat-' + cid }); } catch {}
+  }
+}
+
 function beat() {
   if (session && document.visibilityState === 'visible') {
     sb.from('profiles').update({ last_seen: new Date().toISOString() }).eq('id', session.user.id).then(() => {});
@@ -2100,9 +2209,53 @@ function startHeartbeat() {
 }
 
 /* ---------- Screen 6: the app ---------- */
+/* ---------- First-run setup: notifications and camera ---------- */
+function maybeSetupPrompt() {
+  const key = 'setup:' + session.user.id;
+  try { if (localStorage.getItem(key)) return; localStorage.setItem(key, '1'); } catch { return; }
+  setTimeout(openSetupSheet, 700);
+}
+function openSetupSheet() {
+  const row = (label, sub, fn) => {
+    const b = actionBtn(label, sub, async () => {
+      b.disabled = true;
+      const ok = await fn();
+      b.disabled = false;
+      if (ok) b.querySelector('strong').textContent = label + ' (on)';
+    });
+    return b;
+  };
+  const notif = row('Turn on notifications', 'Know when a friend messages you.', async () => {
+    if (!('Notification' in window)) { toast('This browser does not support notifications.'); return false; }
+    let perm = Notification.permission;
+    if (perm === 'default') perm = await Notification.requestPermission();
+    if (perm !== 'granted') { toast('Notifications are blocked. Allow them in your browser settings.'); return false; }
+    try { localStorage.setItem('browserAlerts', '1'); } catch {}
+    await enablePush();
+    return true;
+  });
+  const cam = row('Allow camera and microphone', 'For photos, videos and voice notes.', async () => {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { toast('Camera is not available in this browser.'); return false; }
+    try {
+      const st = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+      st.getTracks().forEach(t => t.stop()); return true;
+    } catch {
+      try {
+        const st = await navigator.mediaDevices.getUserMedia({ audio: true });
+        st.getTracks().forEach(t => t.stop()); toast('Microphone allowed. The camera was not.'); return true;
+      } catch { toast('Allow camera and microphone in your browser settings.'); return false; }
+    }
+  });
+  const done = h('button', { class: 'btn primary', type: 'button', text: 'Done', style: 'margin-top:12px' });
+  done.addEventListener('click', closeSheet);
+  openSheet('Get set up',
+    h('p', { class: 'hint', text: 'Allow these now so everything works from the start. You can change them later.' }),
+    h('div', { style: 'display:grid;gap:10px;margin-top:12px' }, notif, cam), done);
+}
+
 function openApp(tab) {
   show('app'); showTab(tab || currentTab);
-  startRealtime(); startHeartbeat(); refreshUnread(); refreshBell();
+  startRealtime(); startHeartbeat(); refreshUnread(); refreshBell(); maybeSetupPrompt();
 }
 function showTab(name) {
   currentTab = name;
@@ -2189,7 +2342,7 @@ function postCard(p, ctx, onGone) {
     if (ctx.signed[path]) kids.push(h('img', { class: 'post-img', src: ctx.signed[path], alt: 'Photo posted by ' + nameOf(a), loading: 'lazy' }));
   });
 
-  if (p.video_url && ctx.signed[p.video_url]) kids.push(h('video', { class: 'post-img post-video', src: ctx.signed[p.video_url], controls: '', playsinline: '', preload: 'metadata' }));
+  if (p.video_url && ctx.signed[p.video_url]) kids.push(h('video', { class: 'post-img post-video', src: ctx.signed[p.video_url] + '#t=0.1', controls: '', playsinline: '', preload: 'metadata' }));
 
   const like = h('button', { class: 'act' + (mine ? ' on' : ''), type: 'button', 'aria-pressed': String(!!mine),
     'aria-label': (mine ? 'Remove your reaction' : 'Like') + '. Hold to choose another reaction.' });
@@ -2303,7 +2456,7 @@ function openPostComposer() {
     if (!VIDEO_EXT[f.type]) { toast('Use an MP4, MOV or WebM video.'); vInput.value = ''; return; }
     if (f.size > 50 * 1024 * 1024) { toast('Choose a video under 50 MB.'); vInput.value = ''; return; }
     video = f;
-    vBox.replaceChildren(h('video', { src: URL.createObjectURL(f), controls: '', playsinline: '', preload: 'metadata', style: 'width:100%;max-height:260px;border-radius:14px' }));
+    vBox.replaceChildren(h('video', { src: URL.createObjectURL(f) + '#t=0.1', controls: '', playsinline: '', preload: 'metadata', style: 'width:100%;max-height:260px;border-radius:14px' }));
   });
   const setMode = m => {
     mode = m;
@@ -2488,7 +2641,8 @@ async function refreshBell() {
   setBadge($('#bell-badge'), count || 0);
 }
 function onNotificationEvent(n) {
-  if (!n || n.type === 'message') return;
+  if (!n) return;
+  if (n.type === 'message') { maybeBrowserAlert(n); return; }
   refreshBell();
   if (n.type === 'encouragement' && n.data && n.data.message) toast('Someone cheered you on');
   else if (n.type === 'check_in_help') toast('A friend needs help');
@@ -2625,7 +2779,7 @@ async function loadConversations() {
     const r = await sb.from('profiles').select('id,username,full_name,avatar_url,status,last_seen').in('id', ids);
     convPeople = Object.fromEntries((r.data || []).map(p => [p.id, p]));
   }
-  setBadge($('#msg-badge'), convRows.reduce((a, c) => a + (c.unread_count || 0), 0));
+  unreadMsgs = convRows.reduce((a, c) => a + (c.unread_count || 0), 0); paintMsgBadge();
   renderConvList();
 }
 function renderConvList() {
@@ -2650,9 +2804,16 @@ function renderConvList() {
     return row;
   }));
 }
+let unreadMsgs = 0, reqPending = 0;
+function paintMsgBadge() { setBadge($('#msg-badge'), unreadMsgs + reqPending); }
 async function refreshUnread() {
-  const { data } = await sb.rpc('my_conversations');
-  if (data) setBadge($('#msg-badge'), data.reduce((a, c) => a + (c.unread_count || 0), 0));
+  const [cv, rq] = await Promise.all([
+    sb.rpc('my_conversations'),
+    sb.from('friendships').select('id', { count: 'exact', head: true }).eq('addressee_id', session.user.id).eq('status', 'pending')
+  ]);
+  if (cv.data) unreadMsgs = cv.data.reduce((a, c) => a + (c.unread_count || 0), 0);
+  if (!rq.error) reqPending = rq.count || 0;
+  paintMsgBadge();
 }
 
 /* Friend requests live in the Requests tab */
@@ -2660,7 +2821,7 @@ async function loadRequests() {
   const d = await loadFriendData(); if (!d) return;
   const list = $('#requests-list'); list.replaceChildren();
   $('#requests-empty').hidden = d.incoming.length > 0;
-  const rc = $('#req-count'); rc.hidden = !d.incoming.length; rc.textContent = String(d.incoming.length);
+  const rc = $('#req-count'); rc.hidden = !d.incoming.length; rc.textContent = String(d.incoming.length); reqPending = d.incoming.length; paintMsgBadge();
   d.incoming.forEach(r => {
     const p = d.byId[r.requester_id] || { username: 'someone' };
     const accept = h('button', { class: 'btn primary small', type: 'button', text: 'Accept' });
@@ -2762,6 +2923,7 @@ async function openSettings() {
   const { data } = await sb.from('notification_settings').select('*').eq('user_id', session.user.id).maybeSingle();
   ntRow = data || {};
   Object.entries(NT_MAP).forEach(([id, col]) => { $('#' + id).checked = ntRow[col] !== false; });
+  paintBrowserAlerts();
   paintPause();
 }
 function paintPause() {
@@ -2786,7 +2948,7 @@ $('#nt-pause').addEventListener('click', () => {
     actionBtn('Turn alerts back on', null, () => set(0)));
 });
 $('#settings-back').addEventListener('click', () => openApp('profile'));
-$('#signout-btn').addEventListener('click', async () => { await sb.auth.signOut(); });
+$('#signout-btn').addEventListener('click', async () => { await disablePush(); await sb.auth.signOut(); });
 
 $('#set-password').addEventListener('click', () => {
   const a = h('input', { class: 'input', type: 'password', autocomplete: 'new-password', 'aria-label': 'New password' });
