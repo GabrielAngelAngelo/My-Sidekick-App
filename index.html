@@ -1,0 +1,2920 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#070719">
+<title>Logra</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAJI0lEQVR42u2aeVCU5x3Hn+t92RXXXVjBq3WcjmastuORWo1V66TGmlRDTMdbRFQ8WJRLTkUR8cIDUaM1rXib1LNajVYNGjVhPInWiqlHklqjwi4sKPAez9E/XtS0Mx2BfRdxJs/MLuwMLJ/v7/ndC2zn6AVe5YPAK35+EODbgRC+wgIghKqq+SjhpQlACNZUK916/BRCJIR4xQQQQh6VeVzxEZ27dKzwVmKCG/5WL4X+gbskJXlGeOT7fXsOt7Vozhl/ZQQQgkvc7hhXRNayxEnjZldX1zRzWihlr4YLEYJL3J4ZMeEr12UUXbp+aP+JIIfdF/pGFWDQx8ROXLk2AwCwZuVmTdMR9hWANCb9zLjIZblpQoirRcVHDhXY7Tbmm/kb6QYM+lnxk5blplHKIIRrVuQriuq7+RtDgEEfGz9p6apUXacYo6tFxYcPfmqK+f0uwKCPS5y8ZFUqYxxBCCHMW77JLPP7V4BBH584ZfGKFMaYEAITbK75/SjAoE+YHbVoRTJnHGOMEAQAmGt+fwmopU+Kyl6exBgHED64X4IQulp0w1zz+0WAQZ+YPDU7J8mI2nOfXSASBgCsNtv85gsw6GenTFu4bLamapJEDu47DiEMCXUWXf7HkYMF5prfZAEGfVLq9KyliZqqyQHy8aNn/nnzbv+BvwQArF252XTzm1mJMcElbk9y2vTMxQmapssB8rWi4g/X7dy6O9covaZ7v5kCMMGlbk9K2oz5i+N1XZdl6dFD9+TxSR9uWxYY2AwAYJReazNLUxSAMS51e1LSo+cvitN1ihFWVe3dwZPGTAjr8XpXIcS1L2/6yfw+C4AAI1zqKUud45qXHUsphRAijEYPc9nttoSUKEopIWRd7haqU5stkLHnAkTto/bV914KIUDdh8yGC4AQIIRLPZ60ua6MhbGUMiGAJOGEmKxTBYXFdws454SQz89c2rp9rwXKjx65BRAAAFj728ZOAkIIIar9giCECAohJIkQguuigvhC7/aUpWfEzM2axSgz/urqnE25H6zf81F+m7ahuk4RQi3sts1bVgABqqtrFEVVatTnz4qqKqqiaKqqqYqqqpqm6TU1CiHE4y6r8D7GGL1QA2zAavE5/byYOQtmMsY4F5JEPt52aEzEtImjx+bvWqGpujGqk/oM7JQyQvDF81cjRiWUl3kJIS/0pXoLgBAihNyesjnzZ6ZnxjyjP3ns7PCwqT/r8trZi/vrCM0Ye7baghBSyiSJFJ67Ej4itqLisdVq4fzFw379BDyjn5s5M21+jEGAMbpWVBw2ZMqTmqpfD+jT+43unHMiEYwwwghjhDFGCGFsdNNQliVV1dq2azVk6EAhhKHACPejh09PHjebUma1BrC6rSrqIeA5/YJZafNcjDIAIULw6pUb77wZ4a4sDyTWJ7SaAqU2UP8nYQFBgNwMWXVOIYAHj236zeB+QnCEkOE5f975V9eUuZIkyTJhdV60kPrSZ2TFpmZEM8qMpkAIceb0hd+9+6atRXNN0yGEEAAuhBCCcyEEF1xwIRhjGOO7t/9186vbuqJv35M36Lf9OOcQIsYYIXjjup3JcYtttkCEEKvPmqhuNwABEMDtLZ+fGZc236VpuuEPT5eEdWpvdJ2+1X/s5+cvbfzDkknTRlHKMEaCC4RRTvaGrIy8oCB7bRUwvZBBAFVNW7U6Izp2AgBAlqU6vrsQgnPOGJdlaWbUvM/On86el2HQG/MNwig9cVneqvyWziDORQOWpC8WgBCqqqp+a0j/Pn17Fp67IsmEYCM6a0Pz6XfIeDYOIZgx1twWKMuSLEu7dx7euHVz9OSpRto1HJJz7poyd0v+ntCWTsoYaNCGt65BjBB68rgKIQRrcwlEtQ+jhCKjkBo/gDFmlAU7HYdO5LduE/L1nXs9f/52v3699h/5I8aIc0EIVmrUyeOTDuz/W2iIk+rU770QY6y5rdnTrgX8l7MKI6PXNjRCAEKwu7xs3qK41m1COOcTxya0b992x+41kkR0nUoS8ZZXho+IPfVpYasQp+4Dff2yEOfi/4UIqg1oCIDAmHjLK8LCBodHvg8AWJC++kbxrcvXPrE7bJqmy7L04LuSMe/FXLn095CQYB/pG9hKvEgnxwQXFH7csVOHghNfDH876uS5Xb36dFNVLSBAvn3r29Fh0bdvfRMUZPed3vyZGGPsrahMzYju2KmDu7Rs6oSU/B3Le/XppihqQID85ZUbwwZF3r1zz+Ewh97kG8AYV1Y+7tO358Hjm2RZ+v0703r/qkfynOlKjWqxBpw9fSF8ZFzVk+rAQCs1b7LBLSztTLO/EBDBLR+tbPfj1rk5f+KcZ+ckKYpqsQYcOVgQPjKWatRqtXx/rGlCLkQkUuatmJkQ2f31rl+cvXzj+q3c9ZmaplssAbu2/WXCqDgIoWyRzaU3TYBRJXr06JqQGuUuLTuw51jO6nQAhCxLG/K2z4hMt1othBBfPgvz+w1wzpeuTrNaLft3H50xKzwo2I4QWrLgg6S4RXaHzchOflljmrHPIqVuj2tWRL8BvQrPXX6j3y9+0rE9ACAlbvHavC0hTifn3JdPgv2bhRBCiqK2+1GrM5f26Zpe8sjduUtHXacxURnbt+4LbemkflilmOlCEEJFUZesTLXZAgEEnbt0rKqqCR8Ru2Pr/tCQlv6m99WFCMEet3dcxHtDhg7UND042FHm8Y4fEXvm1PlQn5scv7sQhFDXqd1hO3Nxb7DTIUnk/r2Ho4e7rhYVO52OxqH36QYwRuXlVXkbMlu1bgkAuPXV16PCou/euRfciPQNjwFMcHlZxbCwQSPHDgUAXLl0feigyG+/ue9wtKCNSN9AARBCqlNHUIusnNkQwVMnC4cPmVLu8dpsgZQ2Kn0DBWCMyysqkufO6PRahwN7jo0Z7lJVzdrM2gg5xwQBGGOvt7L/gN6uuIitm/ZOHpeEEJJl85scv2QhoyOglF4u/uTo4dPx0ZkOh90Yz8FLOvUTgDFye8pzctMBAInxC0ODWwoh/NcmmDwPQAirq5XefbpLElmavT4k2PnS6et9A0KI0FbOf997aLEE1H+J1gQKGYTwwXelFktAk2BvWBaSJNJ06BsioEnRgx/+d/rln/8A8Wup4ApOiBoAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAJI0lEQVR42u2aeVCU5x3Hn+t92RXXXVjBq3WcjmastuORWo1V66TGmlRDTMdbRFQ8WJRLTkUR8cIDUaM1rXib1LNajVYNGjVhPInWiqlHklqjwi4sKPAez9E/XtS0Mx2BfRdxJs/MLuwMLJ/v7/ndC2zn6AVe5YPAK35+EODbgRC+wgIghKqq+SjhpQlACNZUK916/BRCJIR4xQQQQh6VeVzxEZ27dKzwVmKCG/5WL4X+gbskJXlGeOT7fXsOt7Vozhl/ZQQQgkvc7hhXRNayxEnjZldX1zRzWihlr4YLEYJL3J4ZMeEr12UUXbp+aP+JIIfdF/pGFWDQx8ROXLk2AwCwZuVmTdMR9hWANCb9zLjIZblpQoirRcVHDhXY7Tbmm/kb6QYM+lnxk5blplHKIIRrVuQriuq7+RtDgEEfGz9p6apUXacYo6tFxYcPfmqK+f0uwKCPS5y8ZFUqYxxBCCHMW77JLPP7V4BBH584ZfGKFMaYEAITbK75/SjAoE+YHbVoRTJnHGOMEAQAmGt+fwmopU+Kyl6exBgHED64X4IQulp0w1zz+0WAQZ+YPDU7J8mI2nOfXSASBgCsNtv85gsw6GenTFu4bLamapJEDu47DiEMCXUWXf7HkYMF5prfZAEGfVLq9KyliZqqyQHy8aNn/nnzbv+BvwQArF252XTzm1mJMcElbk9y2vTMxQmapssB8rWi4g/X7dy6O9covaZ7v5kCMMGlbk9K2oz5i+N1XZdl6dFD9+TxSR9uWxYY2AwAYJReazNLUxSAMS51e1LSo+cvitN1ihFWVe3dwZPGTAjr8XpXIcS1L2/6yfw+C4AAI1zqKUud45qXHUsphRAijEYPc9nttoSUKEopIWRd7haqU5stkLHnAkTto/bV914KIUDdh8yGC4AQIIRLPZ60ua6MhbGUMiGAJOGEmKxTBYXFdws454SQz89c2rp9rwXKjx65BRAAAFj728ZOAkIIIar9giCECAohJIkQguuigvhC7/aUpWfEzM2axSgz/urqnE25H6zf81F+m7ahuk4RQi3sts1bVgABqqtrFEVVatTnz4qqKqqiaKqqqYqqqpqm6TU1CiHE4y6r8D7GGL1QA2zAavE5/byYOQtmMsY4F5JEPt52aEzEtImjx+bvWqGpujGqk/oM7JQyQvDF81cjRiWUl3kJIS/0pXoLgBAihNyesjnzZ6ZnxjyjP3ns7PCwqT/r8trZi/vrCM0Ye7baghBSyiSJFJ67Ej4itqLisdVq4fzFw379BDyjn5s5M21+jEGAMbpWVBw2ZMqTmqpfD+jT+43unHMiEYwwwghjhDFGCGFsdNNQliVV1dq2azVk6EAhhKHACPejh09PHjebUma1BrC6rSrqIeA5/YJZafNcjDIAIULw6pUb77wZ4a4sDyTWJ7SaAqU2UP8nYQFBgNwMWXVOIYAHj236zeB+QnCEkOE5f975V9eUuZIkyTJhdV60kPrSZ2TFpmZEM8qMpkAIceb0hd+9+6atRXNN0yGEEAAuhBCCcyEEF1xwIRhjGOO7t/9186vbuqJv35M36Lf9OOcQIsYYIXjjup3JcYtttkCEEKvPmqhuNwABEMDtLZ+fGZc236VpuuEPT5eEdWpvdJ2+1X/s5+cvbfzDkknTRlHKMEaCC4RRTvaGrIy8oCB7bRUwvZBBAFVNW7U6Izp2AgBAlqU6vrsQgnPOGJdlaWbUvM/On86el2HQG/MNwig9cVneqvyWziDORQOWpC8WgBCqqqp+a0j/Pn17Fp67IsmEYCM6a0Pz6XfIeDYOIZgx1twWKMuSLEu7dx7euHVz9OSpRto1HJJz7poyd0v+ntCWTsoYaNCGt65BjBB68rgKIQRrcwlEtQ+jhCKjkBo/gDFmlAU7HYdO5LduE/L1nXs9f/52v3699h/5I8aIc0EIVmrUyeOTDuz/W2iIk+rU770QY6y5rdnTrgX8l7MKI6PXNjRCAEKwu7xs3qK41m1COOcTxya0b992x+41kkR0nUoS8ZZXho+IPfVpYasQp+4Dff2yEOfi/4UIqg1oCIDAmHjLK8LCBodHvg8AWJC++kbxrcvXPrE7bJqmy7L04LuSMe/FXLn095CQYB/pG9hKvEgnxwQXFH7csVOHghNfDH876uS5Xb36dFNVLSBAvn3r29Fh0bdvfRMUZPed3vyZGGPsrahMzYju2KmDu7Rs6oSU/B3Le/XppihqQID85ZUbwwZF3r1zz+Ewh97kG8AYV1Y+7tO358Hjm2RZ+v0703r/qkfynOlKjWqxBpw9fSF8ZFzVk+rAQCs1b7LBLSztTLO/EBDBLR+tbPfj1rk5f+KcZ+ckKYpqsQYcOVgQPjKWatRqtXx/rGlCLkQkUuatmJkQ2f31rl+cvXzj+q3c9ZmaplssAbu2/WXCqDgIoWyRzaU3TYBRJXr06JqQGuUuLTuw51jO6nQAhCxLG/K2z4hMt1othBBfPgvz+w1wzpeuTrNaLft3H50xKzwo2I4QWrLgg6S4RXaHzchOflljmrHPIqVuj2tWRL8BvQrPXX6j3y9+0rE9ACAlbvHavC0hTifn3JdPgv2bhRBCiqK2+1GrM5f26Zpe8sjduUtHXacxURnbt+4LbemkflilmOlCEEJFUZesTLXZAgEEnbt0rKqqCR8Ru2Pr/tCQlv6m99WFCMEet3dcxHtDhg7UND042FHm8Y4fEXvm1PlQn5scv7sQhFDXqd1hO3Nxb7DTIUnk/r2Ho4e7rhYVO52OxqH36QYwRuXlVXkbMlu1bgkAuPXV16PCou/euRfciPQNjwFMcHlZxbCwQSPHDgUAXLl0feigyG+/ue9wtKCNSN9AARBCqlNHUIusnNkQwVMnC4cPmVLu8dpsgZQ2Kn0DBWCMyysqkufO6PRahwN7jo0Z7lJVzdrM2gg5xwQBGGOvt7L/gN6uuIitm/ZOHpeEEJJl85scv2QhoyOglF4u/uTo4dPx0ZkOh90Yz8FLOvUTgDFye8pzctMBAInxC0ODWwoh/NcmmDwPQAirq5XefbpLElmavT4k2PnS6et9A0KI0FbOf997aLEE1H+J1gQKGYTwwXelFktAk2BvWBaSJNJ06BsioEnRgx/+d/rln/8A8Wup4ApOiBoAAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+<style>
+  :root {
+    --bg: #070719; --surface: #0F102E; --surface2: #16173F; --line: #2A2866; --line-soft: rgba(124, 92, 255, .16);
+    --text: #F4F2FF; --muted: #9C98BC; --accent: #7440F5; --accent-text: #B49CFF; --on-accent: #FFFFFF;
+    --accent-soft: rgba(116, 64, 245, .2); --grad: linear-gradient(135deg, #7C4BF7, #6532F0);
+    --danger: #FF8A8A; --ok: #4ADE80; --warn: #E0B558; --focus: rgba(169, 139, 255, .5);
+    --glow: 0 8px 28px rgba(116, 64, 245, .45); --scrim: rgba(4, 4, 18, .72);
+    --av1: #6E49E8; --av2: #3E6B9E; --av3: #A24E8E; --av4: #2F7A76; --av5: #8A6A12; --av6: #4A56B8;
+    --page-glow: radial-gradient(900px 420px at 50% -140px, rgba(116, 64, 245, .30), transparent 70%);
+    color-scheme: dark;
+  }
+  :root[data-theme="light"] {
+    --bg: #F5F3FF; --surface: #FFFFFF; --surface2: #EEEAFD; --line: #DDD6F6; --line-soft: rgba(116, 64, 245, .12);
+    --text: #17123A; --muted: #5F5A82; --accent: #6A38FC; --accent-text: #5B2BE0; --accent-soft: rgba(106, 56, 252, .1);
+    --danger: #C0392B; --ok: #1F7A44; --warn: #8A6A12; --focus: rgba(106, 56, 252, .35);
+    --glow: 0 8px 22px rgba(106, 56, 252, .3); --scrim: rgba(23, 18, 58, .55);
+    --page-glow: radial-gradient(900px 420px at 50% -140px, rgba(116, 64, 245, .16), transparent 70%);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: light) {
+    :root[data-theme="auto"] {
+      --bg: #F5F3FF; --surface: #FFFFFF; --surface2: #EEEAFD; --line: #DDD6F6; --line-soft: rgba(116, 64, 245, .12);
+      --text: #17123A; --muted: #5F5A82; --accent: #6A38FC; --accent-text: #5B2BE0; --accent-soft: rgba(106, 56, 252, .1);
+      --danger: #C0392B; --ok: #1F7A44; --warn: #8A6A12; --focus: rgba(106, 56, 252, .35);
+      --glow: 0 8px 22px rgba(106, 56, 252, .3); --scrim: rgba(23, 18, 58, .55);
+      --page-glow: radial-gradient(900px 420px at 50% -140px, rgba(116, 64, 245, .16), transparent 70%);
+      color-scheme: light;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; min-height: 100dvh; color: var(--text); background: var(--page-glow), var(--bg); background-attachment: fixed;
+    font: 400 16px/1.5 Outfit, "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  h1, h2, h3 { font-weight: 600; margin: 0; letter-spacing: -0.015em; line-height: 1.15; }
+  p { margin: 0; }
+  [hidden] { display: none !important; }
+  button, input, textarea, select { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+  svg.i { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  svg.i.fill { fill: currentColor; }
+
+  /* Buttons and fields */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 0 22px;
+    border-radius: 14px; border: 1px solid var(--line); background: var(--surface2); font-weight: 500; cursor: pointer; width: 100%;
+  }
+  .btn:hover { border-color: var(--accent-text); }
+  .btn[disabled] { opacity: .55; cursor: default; }
+  .btn.primary { background: var(--grad); color: var(--on-accent); border-color: transparent; box-shadow: var(--glow); }
+  .btn.primary:hover { filter: brightness(1.1); }
+  .btn.small { min-height: 40px; padding: 0 16px; width: auto; border-radius: 12px; font-size: 14px; }
+  .btn.quiet { border-color: transparent; background: transparent; color: var(--muted); box-shadow: none; }
+  .btn.quiet:hover { color: var(--text); }
+  .btn.danger { color: var(--danger); }
+  .iconbtn { width: 44px; height: 44px; border-radius: 50%; border: 0; background: transparent; color: var(--text); display: grid; place-items: center; cursor: pointer; position: relative; }
+  .iconbtn:hover { background: var(--accent-soft); }
+  .field { display: grid; gap: 6px; margin-bottom: 16px; }
+  .field label { font-size: 14px; font-weight: 500; }
+  .hint { font-size: 13px; color: var(--muted); }
+  .input {
+    width: 100%; min-height: 50px; padding: 10px 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface2);
+  }
+  .input::placeholder, textarea::placeholder { color: var(--muted); opacity: .8; }
+  textarea.input { min-height: 110px; resize: vertical; }
+  .input:focus { outline: none; border-color: var(--accent-text); box-shadow: 0 0 0 4px var(--focus); }
+  select.input { appearance: auto; }
+  .error { color: var(--danger); font-size: 14px; }
+  .error:empty { display: none; }
+  .notice { color: var(--ok); font-size: 14px; }
+  .link { background: none; border: 0; padding: 0; color: var(--accent-text); cursor: pointer; font-size: 14px; min-height: 32px; }
+  .link:hover { text-decoration: underline; }
+  .bolt { width: 1em; height: 1em; fill: currentColor; }
+
+  /* Splash (first screen) */
+  .splash {
+    min-height: 100dvh; display: grid; grid-template-rows: 1fr auto; justify-items: center; padding: 48px 24px calc(40px + env(safe-area-inset-bottom, 0px));
+    background:
+      radial-gradient(120% 70% at 50% 108%, rgba(112, 62, 255, .75) 0%, rgba(112, 62, 255, 0) 62%),
+      radial-gradient(60% 40% at 50% 38%, rgba(116, 64, 245, .28), transparent 70%),
+      linear-gradient(180deg, #1C0C58 0%, #0B0A2C 52%, #070719 100%);
+    position: relative; overflow: hidden;
+  }
+  .splash::before, .splash::after { content: ""; position: absolute; left: 50%; width: 150vmax; height: 150vmax; border-radius: 50%; border: 1.5px solid rgba(160, 120, 255, .28); transform: translateX(-50%); pointer-events: none; }
+  .splash::before { top: 74%; }
+  .splash::after { top: 84%; border-color: rgba(160, 120, 255, .16); }
+  .splash-main { display: grid; align-content: center; justify-items: center; gap: 14px; text-align: center; z-index: 1; }
+  .logo-tile { width: 108px; height: 108px; border-radius: 30px; background: #1B1035; display: grid; place-items: center; color: #fff; font-size: 80px; box-shadow: 0 0 0 1px rgba(180, 156, 255, .35), 0 18px 60px rgba(116, 64, 245, .55); }
+  .splash h1 { font-size: 52px; font-weight: 700; margin-top: 10px; letter-spacing: -0.03em; color: #fff; }
+  .splash .tag-line { color: #C9BEF5; font-size: 18px; }
+  .splash-actions { width: 100%; max-width: 360px; display: grid; gap: 10px; justify-items: center; z-index: 1; }
+  .splash .link { color: #D9CFFF; }
+
+  /* Auth and steps */
+  .center-page { min-height: 100dvh; display: grid; align-content: start; justify-items: center; padding: 24px 20px 48px; gap: 20px; }
+  .back { justify-self: start; width: 100%; max-width: 440px; }
+  .card { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 24px; padding: 32px; width: 100%; max-width: 440px; }
+  .card h2 { font-size: 28px; margin-bottom: 6px; }
+  .card .sub { color: var(--muted); margin-bottom: 24px; }
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; padding: 4px; border-radius: 14px; background: var(--surface2); margin-bottom: 24px; }
+  .tabs button { min-height: 44px; border: 0; border-radius: 11px; background: transparent; color: var(--muted); font-weight: 500; cursor: pointer; }
+  .tabs button[aria-selected="true"], .tabs button[aria-pressed="true"] { background: var(--grad); color: #fff; }
+  .divider { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 14px; margin: 20px 0; }
+  .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .row-between { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .banner { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+  .step-page { max-width: 520px; margin: 0 auto; padding: 24px 24px 80px; }
+  .step-page h1 { font-size: 34px; margin-bottom: 6px; }
+  .step-page .sub { color: var(--muted); margin-bottom: 24px; }
+  .photo-row { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+  details.more { border: 1px solid var(--line); border-radius: 14px; padding: 4px 16px; margin-bottom: 16px; background: var(--surface); }
+  details.more summary { min-height: 46px; display: flex; align-items: center; cursor: pointer; font-weight: 500; }
+  details.more[open] summary { margin-bottom: 8px; }
+  .counter { text-align: right; }
+  .purposes { display: grid; gap: 12px; margin-bottom: 24px; }
+  .purpose { text-align: left; border: 1px solid var(--line); background: var(--surface); border-radius: 16px; padding: 16px; cursor: pointer; display: flex; gap: 14px; align-items: flex-start; min-height: 64px; }
+  .purpose[aria-pressed="true"] { border-color: var(--accent-text); background: var(--accent-soft); }
+  .purpose .tick { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--line); flex: none; display: grid; place-items: center; margin-top: 2px; color: transparent; }
+  .purpose[aria-pressed="true"] .tick { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .purpose strong { display: block; font-weight: 500; }
+  .purpose span.d { color: var(--muted); font-size: 14px; }
+
+  .avatar { border-radius: 50%; display: grid; place-items: center; color: #fff; font-weight: 600; background-size: cover; background-position: center; flex: none; }
+  .code { font-size: 28px; font-weight: 600; letter-spacing: .16em; font-variant-numeric: tabular-nums; }
+  .code-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .inline-form { display: flex; gap: 10px; }
+  .inline-form .input { flex: 1; }
+  .inline-form .btn { width: auto; }
+
+  /* App shell */
+  .topbar { position: sticky; top: 0; z-index: 6; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line-soft); }
+  .topbar .in { max-width: 560px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 8px; font-size: 26px; font-weight: 700; letter-spacing: -0.03em; }
+  .brand .bolt { color: var(--accent-text); font-size: 26px; }
+  .top-actions { display: flex; gap: 2px; }
+  .badge { position: absolute; top: 2px; right: 0; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: #8C47F4; color: #fff; font-size: 11px; font-weight: 600; display: grid; place-items: center; border: 2px solid var(--bg); line-height: 1; }
+  .pane { max-width: 560px; margin: 0 auto; padding: 16px 16px 132px; display: grid; gap: 14px; }
+  .pane > h1, .panel-head h1 { font-size: 30px; }
+  .panel { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 22px; padding: 18px; }
+  .panel h2 { font-size: 20px; margin-bottom: 4px; }
+  .panel .sub { color: var(--muted); font-size: 15px; margin-bottom: 14px; }
+  .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .gentle { background: var(--accent-soft); border-radius: 16px; padding: 14px 16px; display: flex; gap: 12px; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+  .empty { color: var(--muted); }
+  .soon { display: grid; justify-items: start; gap: 8px; }
+
+  .progress { height: 8px; border-radius: 99px; background: var(--accent-soft); overflow: hidden; margin: 8px 0 4px; }
+  .progress > div { height: 100%; background: var(--grad); border-radius: 99px; transition: width .4s ease; }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .chip { font-size: 13px; padding: 5px 12px; border-radius: 99px; background: var(--accent-soft); color: var(--accent-text); font-weight: 500; }
+  .chip.plain { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+
+  /* Stories */
+  .stories { display: flex; gap: 14px; overflow-x: auto; padding: 4px 2px 8px; scrollbar-width: none; }
+  .stories::-webkit-scrollbar { display: none; }
+  .story { background: none; border: 0; display: grid; justify-items: center; gap: 6px; width: 68px; flex: none; cursor: pointer; }
+  .story .ring { width: 66px; height: 66px; border-radius: 50%; padding: 3px; background: linear-gradient(135deg, #A57BFF, #6532F0 60%, #D17BFF); display: grid; place-items: center; position: relative; }
+  .story .ring.seen { background: var(--line); }
+  .story .ring.add { background: var(--surface2); border: 1.5px dashed var(--accent-text); }
+  .story .ring .gap { width: 100%; height: 100%; border-radius: 50%; border: 3px solid var(--bg); display: grid; place-items: center; overflow: hidden; }
+  .story .plus { position: absolute; right: -2px; bottom: -2px; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; border: 2px solid var(--bg); }
+  .story .plus svg { width: 14px; height: 14px; stroke-width: 2.6; }
+  .story span.n { font-size: 12px; color: var(--muted); max-width: 68px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* Composer card and posts */
+  .compose-card { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; background: var(--surface); border: 1px solid var(--line-soft); border-radius: 20px; padding: 12px 14px; cursor: pointer; }
+  .compose-card .ph { flex: 1; background: var(--surface2); color: var(--muted); border-radius: 14px; padding: 12px 14px; }
+  .post { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 22px; padding: 16px; display: grid; gap: 12px; }
+  .post-head { display: flex; align-items: center; gap: 12px; }
+  .post-head .who { flex: 1; min-width: 0; }
+  .post-head strong { display: block; font-weight: 600; }
+  .post-head .when { color: var(--muted); font-size: 13px; }
+  .post-text { overflow-wrap: anywhere; white-space: pre-wrap; font-size: 16px; }
+  .post-img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 16px; background: var(--surface2); }
+  .post-actions { display: flex; align-items: center; gap: 6px; }
+  .act { background: none; border: 0; color: var(--muted); min-height: 44px; padding: 0 12px; border-radius: 22px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; font-size: 14px; }
+  .act:hover { background: var(--accent-soft); color: var(--text); }
+  .act.on { color: #FF6B9A; }
+  .act.saved { color: var(--accent-text); }
+  .act.push { margin-left: auto; }
+  .pin-tag { font-size: 12px; color: var(--accent-text); display: inline-flex; align-items: center; gap: 4px; }
+
+  /* Today list */
+  .tasks { display: grid; gap: 2px; margin-bottom: 14px; }
+  .task { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 6px 0; border-bottom: 1px solid var(--line-soft); }
+  .task:last-child { border-bottom: 0; }
+  .task .tw { flex: 1; min-width: 0; }
+  .check { width: 48px; height: 48px; margin: -8px 0 -8px -10px; background: none; border: 0; cursor: pointer; display: grid; place-items: center; flex: none; }
+  .check .box { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--muted); display: grid; place-items: center; color: transparent; transition: all .15s; }
+  .check:hover .box { border-color: var(--accent-text); }
+  .task.done .box { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .task .t { overflow-wrap: anywhere; }
+  .task.done .t, .task.skipped .t { color: var(--muted); }
+  .task.done .t { text-decoration: line-through; }
+  .task .more { background: none; border: 0; cursor: pointer; width: 44px; height: 44px; border-radius: 12px; color: var(--muted); font-size: 18px; letter-spacing: 2px; }
+  .task .more:hover { color: var(--text); }
+  .meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
+  .tag { font-size: 12px; padding: 2px 9px; border-radius: 99px; background: var(--accent-soft); color: var(--accent-text); font-weight: 500; }
+  .tag.help { background: rgba(255, 107, 107, .16); color: var(--danger); }
+  .tag.plain { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+
+  .person { display: flex; align-items: center; gap: 12px; padding: 8px 0; width: 100%; background: none; border: 0; text-align: left; }
+  button.person { cursor: pointer; }
+  .person .name { flex: 1; min-width: 0; }
+  .person .name strong { display: block; font-weight: 500; }
+  .person .name span { color: var(--muted); font-size: 14px; }
+  .person .btns { display: flex; gap: 8px; }
+  .circle-item { display: flex; gap: 12px; align-items: center; padding: 8px 0; }
+  .circle-item .tx { flex: 1; min-width: 0; }
+  .circle-item time { color: var(--muted); font-size: 13px; }
+  .support-row { display: flex; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+  .support-row:last-child { border-bottom: 0; }
+  .support-row.help { background: rgba(255, 107, 107, .1); border-radius: 14px; padding: 10px 12px; border-bottom: 0; margin-bottom: 6px; }
+  .waiting { color: var(--muted); font-size: 14px; margin-top: 12px; }
+
+  /* Underline tabs (profile, messages) */
+  .utabs { display: flex; border-bottom: 1px solid var(--line); }
+  .utabs button { flex: 1; min-height: 46px; background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted); font-weight: 500; cursor: pointer; margin-bottom: -1px; }
+  .utabs button[aria-selected="true"] { color: var(--accent-text); border-bottom-color: var(--accent-text); }
+  .searchbar { display: flex; align-items: center; gap: 10px; background: var(--surface2); border: 1px solid var(--line); border-radius: 14px; padding: 0 14px; min-height: 48px; color: var(--muted); }
+  .searchbar input { flex: 1; background: none; border: 0; outline: none; min-height: 46px; }
+  .searchbar:focus-within { border-color: var(--accent-text); box-shadow: 0 0 0 4px var(--focus); }
+
+  /* Profile */
+  .cover { height: 170px; border-radius: 0 0 26px 26px; background: linear-gradient(180deg, #2B1272, #5B2BE0 70%, #8A5AFF); position: relative; overflow: hidden; margin: -16px -16px 0; }
+  .cover svg.art { position: absolute; inset: auto 0 0 0; width: 100%; height: 100%; }
+  .cover .iconbtn { position: absolute; top: 10px; right: 10px; color: #fff; background: rgba(10, 8, 40, .35); }
+  .prof-head { display: grid; justify-items: center; text-align: center; gap: 4px; margin-top: -48px; position: relative; }
+  .prof-head .avatar { border: 4px solid var(--bg); }
+  .prof-head h2 { font-size: 24px; margin-top: 6px; overflow-wrap: anywhere; }
+  .handle { color: var(--muted); }
+  .bio { overflow-wrap: anywhere; max-width: 420px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; padding: 6px 0; }
+  .stats div + div { border-left: 1px solid var(--line); }
+  .stats strong { display: block; font-size: 22px; font-weight: 600; }
+  .stats span { color: var(--muted); font-size: 13px; }
+  .shelf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 14px 8px; }
+  .shelf-friend { display: grid; justify-items: center; gap: 6px; background: none; border: 0; cursor: pointer; padding: 4px; }
+  .shelf-friend .label { font-size: 13px; color: var(--muted); max-width: 84px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* Settings */
+  .settings-page { max-width: 560px; margin: 0 auto; padding: 8px 16px 80px; display: grid; gap: 16px; }
+  .set-head { display: flex; align-items: center; gap: 8px; padding: 8px 4px; position: sticky; top: 0; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(12px); z-index: 3; }
+  .set-head h1 { font-size: 24px; }
+  .set-group h2 { font-size: 13px; color: var(--muted); font-weight: 500; margin: 0 4px 8px; letter-spacing: .02em; }
+  .set-list { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 20px; overflow: hidden; }
+  .row-item { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 56px; padding: 10px 16px; background: none; border: 0; border-bottom: 1px solid var(--line-soft); text-align: left; cursor: pointer; }
+  .row-item:last-child { border-bottom: 0; }
+  .row-item .grow { flex: 1; min-width: 0; }
+  .row-item .grow small { display: block; color: var(--muted); font-size: 13px; }
+  .row-item.danger { color: var(--danger); }
+  .row-item > svg.i { color: var(--muted); width: 20px; height: 20px; }
+  .switch { position: relative; width: 48px; height: 28px; flex: none; }
+  .switch input { position: absolute; inset: 0; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+  .switch .track { position: absolute; inset: 0; border-radius: 99px; background: var(--line); transition: background .2s; pointer-events: none; }
+  .switch .track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; transition: transform .2s; }
+  .switch input:checked + .track { background: var(--accent); }
+  .switch input:checked + .track::after { transform: translateX(20px); }
+  .switch input:focus-visible + .track { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+
+  /* Bottom navigation */
+  .bottom-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-top: 1px solid var(--line-soft); padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px)); }
+  .bottom-nav .inner { display: grid; grid-template-columns: repeat(5, 1fr); align-items: center; width: 100%; max-width: 560px; margin: 0 auto; }
+  .nav-item { position: relative; background: none; border: 0; cursor: pointer; min-height: 56px; display: grid; justify-items: center; align-content: center; gap: 2px; color: var(--muted); font-size: 11px; border-radius: 12px; }
+  .nav-item[aria-current="page"] { color: var(--accent-text); font-weight: 600; }
+  .nav-item .badge { top: 4px; right: calc(50% - 22px); border-color: var(--surface); }
+  .nav-create { justify-self: center; width: 56px; height: 56px; margin-top: -22px; border-radius: 50%; border: 0; background: var(--grad); color: #fff; display: grid; place-items: center; cursor: pointer; box-shadow: var(--glow); }
+  .nav-create svg.i { width: 28px; height: 28px; stroke-width: 2.4; }
+
+  .toast { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%); background: var(--text); color: var(--bg); padding: 10px 18px; border-radius: 14px; font-size: 14px; z-index: 40; max-width: 90vw; }
+
+  /* Sheets */
+  .sheet-backdrop { position: fixed; inset: 0; background: var(--scrim); z-index: 30; display: flex; align-items: flex-end; justify-content: center; }
+  .sheet { background: var(--surface); border: 1px solid var(--line-soft); width: 100%; max-width: 560px; max-height: 92dvh; overflow: auto; border-radius: 26px 26px 0 0; padding: 12px 20px calc(24px + env(safe-area-inset-bottom, 0px)); animation: slideup .25s ease both; }
+  .sheet::before { content: ""; display: block; width: 40px; height: 4px; border-radius: 4px; background: var(--line); margin: 0 auto 12px; }
+  @keyframes slideup { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .sheet-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 12px; }
+  .sheet-head h2 { font-size: 24px; overflow-wrap: anywhere; }
+  .action { display: grid; gap: 2px; text-align: left; width: 100%; padding: 12px 16px; border-radius: 16px; border: 1px solid var(--line); background: var(--surface2); cursor: pointer; min-height: 56px; margin-bottom: 8px; }
+  .action:hover { border-color: var(--accent-text); }
+  .action strong { font-weight: 500; }
+  .action span { color: var(--muted); font-size: 14px; }
+  .action.danger strong { color: var(--danger); }
+  .daychips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .daychip { min-width: 48px; min-height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface2); cursor: pointer; font-weight: 500; }
+  .daychip[aria-pressed="true"] { background: var(--grad); color: #fff; border-color: transparent; }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+  .seg.three { grid-template-columns: repeat(3, 1fr); }
+  .seg button { min-height: 48px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface2); cursor: pointer; font-weight: 500; }
+  .seg button[aria-pressed="true"] { border-color: var(--accent-text); background: var(--accent-soft); color: var(--accent-text); }
+  .seg button[disabled] { opacity: .5; cursor: default; }
+  .qchips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .manage-item { border: 1px solid var(--line); border-radius: 16px; padding: 14px; margin-bottom: 10px; }
+  .manage-item .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .loading-page { min-height: 100dvh; display: grid; place-items: center; color: var(--muted); }
+  .bg-swatches { display: flex; gap: 10px; margin-bottom: 14px; }
+  .bg-swatch { width: 40px; height: 40px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; }
+  .bg-swatch[aria-pressed="true"] { border-color: #fff; outline: 2px solid var(--accent-text); }
+  .photo-pick { display: grid; place-items: center; gap: 6px; min-height: 140px; border: 1.5px dashed var(--line); border-radius: 18px; color: var(--muted); cursor: pointer; background: var(--surface2); overflow: hidden; width: 100%; }
+  .photo-pick img { width: 100%; max-height: 260px; object-fit: cover; }
+
+  /* Overlays: search, story viewer */
+  .overlay { position: fixed; inset: 0; z-index: 20; background: var(--bg); overflow-y: auto; }
+  .overlay .in { max-width: 560px; margin: 0 auto; padding: 12px 16px 80px; display: grid; gap: 14px; }
+  .viewer { position: fixed; inset: 0; z-index: 28; background: #05050F; display: flex; flex-direction: column; color: #fff; }
+  .viewer .bars { display: flex; gap: 4px; padding: 12px 12px 6px; }
+  .viewer .bar { flex: 1; height: 3px; border-radius: 3px; background: rgba(255, 255, 255, .3); overflow: hidden; }
+  .viewer .bar > div { height: 100%; width: 0; background: #fff; }
+  .viewer .bar.done > div { width: 100%; }
+  .viewer .bar.run > div { width: 100%; transition: width 5s linear; }
+  .viewer .vhead { display: flex; align-items: center; gap: 10px; padding: 6px 12px; }
+  .viewer .vhead .iconbtn { color: #fff; margin-left: auto; }
+  .viewer .stage { flex: 1; display: grid; place-items: center; position: relative; overflow: hidden; }
+  .viewer .stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .viewer .stage .txt { padding: 32px; font-size: 28px; font-weight: 600; text-align: center; overflow-wrap: anywhere; max-width: 100%; }
+  .viewer .tap { position: absolute; top: 0; bottom: 0; width: 38%; background: none; border: 0; cursor: pointer; }
+  .viewer .tap.l { left: 0; }
+  .viewer .tap.r { right: 0; width: 62%; }
+  .viewer .vfoot { padding: 10px 16px calc(14px + env(safe-area-inset-bottom, 0px)); text-align: center; min-height: 52px; }
+
+  /* Messages */
+  .conv-row { display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line-soft); padding: 12px 0; min-height: 70px; cursor: pointer; }
+  .conv-row:last-child { border-bottom: 0; }
+  .conv-row strong { display: block; font-weight: 500; }
+  .conv-row.unread-row strong { font-weight: 600; }
+  .conv-row.unread-row .pv { color: var(--text); }
+  .conv-row .pv { color: var(--muted); font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .conv-row .right { display: grid; justify-items: end; gap: 6px; flex: none; }
+  .count { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: #8C47F4; color: #fff; font-size: 12px; font-weight: 600; display: grid; place-items: center; }
+  .avatar-wrap { position: relative; display: inline-flex; flex: none; }
+  .sdot { position: absolute; right: -2px; bottom: -2px; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--bg); }
+  .sdot.online { background: var(--ok); }
+  .sdot.idle { background: var(--warn); }
+  .sdot.offline { background: var(--muted); }
+  .chat { position: fixed; inset: 0; z-index: 15; background: var(--page-glow), var(--bg); display: flex; flex-direction: column; }
+  .chat-head { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: var(--surface); border-bottom: 1px solid var(--line-soft); }
+  .chat-title { flex: 1; min-width: 0; }
+  .chat-title strong { display: block; font-weight: 600; line-height: 1.2; }
+  .chat-body { flex: 1; overflow-y: auto; padding: 16px max(14px, calc((100% - 720px) / 2)); display: flex; flex-direction: column; gap: 6px; }
+  .day-sep { text-align: center; color: var(--muted); font-size: 12px; margin: 12px 0 4px; }
+  .bubble { max-width: 80%; padding: 9px 14px; border-radius: 20px; overflow-wrap: anywhere; white-space: pre-wrap; text-align: left; }
+  .bubble[role="button"] { cursor: pointer; }
+  .bubble.me { align-self: flex-end; background: var(--grad); color: #fff; border-bottom-right-radius: 6px; }
+  .bubble.them { align-self: flex-start; background: var(--surface2); border: 1px solid var(--line-soft); border-bottom-left-radius: 6px; }
+  .bubble .time { display: block; font-size: 11px; opacity: .75; margin-top: 2px; text-align: right; }
+  .bubble .quote { border-left: 3px solid currentColor; padding: 2px 8px; margin-bottom: 6px; font-size: 13px; opacity: .85; }
+  .bubble .quote strong { display: block; font-weight: 600; }
+  .bubble.deleted { font-style: italic; background: transparent; border: 1px dashed var(--line); color: var(--muted); }
+  .bubble.failed { outline: 2px solid var(--danger); }
+  .reply-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 14px; background: var(--accent-soft); border-top: 1px solid var(--line-soft); }
+  .reply-bar .rb-text { min-width: 0; font-size: 14px; }
+  .reply-bar .rb-text strong { display: block; font-weight: 500; }
+  .reply-bar .rb-text span { display: block; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .composer { display: flex; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--surface); border-top: 1px solid var(--line-soft); align-items: flex-end; }
+  .composer textarea { flex: 1; resize: none; max-height: 120px; min-height: 46px; border-radius: 23px; padding: 11px 18px; border: 1px solid var(--line); background: var(--surface2); line-height: 1.4; }
+  .composer textarea:focus { outline: none; border-color: var(--accent-text); box-shadow: 0 0 0 3px var(--focus); }
+  .send { width: 46px; height: 46px; border-radius: 50%; border: 0; background: var(--grad); color: #fff; display: grid; place-items: center; cursor: pointer; box-shadow: var(--glow); flex: none; }
+
+  .composer[hidden] { display: none; }
+  .bubble .sender { font-size: 12px; font-weight: 600; margin-bottom: 2px; opacity: .85; }
+  .bubble img, .bubble video { display: block; max-width: 100%; max-height: 320px; border-radius: 14px; margin: 2px 0 4px; background: var(--surface2); }
+  .bubble audio { display: block; width: 220px; max-width: 100%; height: 40px; margin: 2px 0 4px; }
+  .composer .iconbtn { flex: none; width: 46px; height: 46px; }
+  .rec-bar { display: flex; align-items: center; gap: 12px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--surface); border-top: 1px solid var(--line-soft); }
+  .rec-bar[hidden] { display: none; }
+  .rec-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--danger); animation: recpulse 1s infinite; }
+  .rec-bar .rec-time { flex: 1; font-variant-numeric: tabular-nums; }
+  @keyframes recpulse { 50% { opacity: .25; } }
+  .group-av { display: grid; place-items: center; border-radius: 50%; background: var(--grad); color: #fff; flex: none; }
+  .group-av .i { width: 50%; height: 50%; }
+  .member-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line-soft); }
+  .member-row:last-child { border-bottom: 0; }
+  .pick-row { display: flex; align-items: center; gap: 12px; padding: 12px 4px; border-bottom: 1px solid var(--line-soft); min-height: 52px; cursor: pointer; }
+  .pick-row input { width: 22px; height: 22px; flex: none; }
+  .post-video { max-height: 480px; object-fit: contain; background: #000; }
+  @media (min-width: 700px) { .sheet-backdrop { align-items: center; } .sheet { border-radius: 26px; } }
+  @media (max-width: 520px) { .card { padding: 24px; } .splash h1 { font-size: 44px; } }
+  @media (prefers-reduced-motion: reduce) { .sheet { animation: none; } .progress > div, .viewer .bar.run > div { transition: none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="logra-bolt" viewBox="0 0 1123 1600"><g transform="translate(0.000000,1600.000000) scale(0.100000,-0.100000)" ><path d="M4506 11508 l-4358 -4343 258 -7 c253 -7 1328 -22 3701 -53 650 -8
+1219 -19 1266 -23 l84 -7 -56 -87 c-31 -49 -126 -197 -211 -329 -85 -133 -203
+-317 -262 -408 -59 -91 -130 -202 -158 -246 -28 -44 -93 -145 -145 -225 -52
+-80 -118 -183 -147 -229 -29 -45 -60 -93 -68 -106 -8 -13 -39 -61 -68 -106
+-29 -46 -80 -124 -112 -174 -33 -49 -73 -112 -90 -140 -17 -27 -158 -248 -315
+-490 -157 -242 -298 -462 -315 -490 -17 -27 -57 -90 -90 -140 -32 -49 -82
+-126 -110 -170 -115 -180 -324 -506 -379 -590 -32 -49 -82 -128 -112 -174 -30
+-47 -143 -222 -251 -390 -109 -169 -211 -328 -228 -356 -17 -27 -57 -90 -90
+-140 -32 -49 -83 -127 -112 -173 -29 -45 -69 -107 -88 -137 -88 -137 -146
+-228 -160 -250 -15 -24 -302 -470 -415 -645 -34 -52 -115 -178 -180 -280 -189
+-295 -246 -383 -266 -412 -10 -15 -19 -30 -19 -34 0 -3 69 59 153 138 84 78
+224 208 311 288 87 80 175 161 196 180 20 19 108 100 195 180 87 80 229 210
+315 290 86 80 262 242 390 360 129 118 306 283 395 365 89 83 231 213 315 290
+85 77 226 208 315 290 89 83 265 245 390 360 126 116 301 278 390 360 89 83
+230 213 314 290 84 77 172 158 196 180 23 22 113 105 200 185 88 80 229 210
+315 290 86 80 261 242 390 360 129 118 304 280 390 360 86 80 228 210 315 290
+87 80 231 213 320 295 89 83 265 245 390 360 126 116 301 278 390 360 89 83
+230 213 314 290 84 77 167 154 185 170 18 17 106 98 196 180 90 83 236 218
+325 300 89 83 267 247 395 365 128 118 304 280 390 360 86 80 228 210 315 290
+87 80 232 213 320 295 89 83 265 245 390 360 126 116 301 278 389 360 89 83
+186 171 216 197 29 26 52 49 49 52 -2 3 -229 12 -504 21 -275 9 -606 20 -735
+25 -227 9 -629 23 -1555 55 -242 8 -557 20 -700 25 -290 11 -928 33 -1460 51
+-192 6 -351 12 -353 14 -2 2 1641 3302 2577 5173 286 573 520 1042 518 1042
+-1 0 -1964 -1954 -4361 -4342z m1892 712 c-154 -223 -223 -324 -319 -465 -53
+-77 -125 -182 -160 -232 -35 -51 -143 -208 -239 -348 -96 -141 -254 -370 -350
+-510 -96 -140 -254 -370 -350 -510 -96 -141 -230 -336 -297 -433 -67 -97 -146
+-212 -175 -255 -29 -43 -80 -117 -113 -165 -34 -48 -104 -150 -156 -227 -53
+-77 -128 -187 -168 -245 l-71 -105 77 -6 c43 -4 456 -9 918 -13 462 -3 1157
+-10 1545 -16 388 -6 938 -13 1222 -16 l518 -6 -20 -28 c-11 -15 -46 -56 -77
+-92 -32 -35 -83 -93 -113 -128 -30 -35 -77 -90 -105 -121 -27 -31 -104 -118
+-170 -194 -66 -76 -142 -164 -170 -195 -57 -64 -86 -97 -205 -235 -47 -55
+-125 -145 -175 -201 -49 -56 -144 -163 -210 -239 -66 -76 -142 -164 -170 -195
+-27 -31 -104 -119 -170 -195 -66 -76 -160 -184 -210 -240 -49 -56 -126 -144
+-170 -195 -44 -52 -120 -140 -170 -196 -49 -55 -144 -163 -210 -239 -66 -76
+-140 -162 -165 -190 -25 -28 -101 -116 -170 -195 -69 -79 -163 -187 -210 -240
+-47 -53 -123 -141 -170 -195 -47 -54 -123 -142 -170 -195 -47 -53 -141 -161
+-210 -240 -69 -79 -145 -167 -170 -195 -25 -28 -99 -114 -165 -190 -66 -76
+-160 -184 -210 -239 -49 -56 -126 -144 -170 -196 -44 -51 -120 -139 -170 -195
+-122 -137 -254 -290 -270 -312 -7 -10 -15 -16 -18 -13 -2 3 50 80 117 172 66
+92 150 208 186 259 36 51 144 201 240 335 96 134 202 282 235 329 33 47 77
+109 99 138 55 75 491 683 532 742 58 84 132 188 360 505 120 168 227 316 236
+330 10 14 42 59 72 100 30 41 75 104 100 140 25 36 148 209 275 385 126 176
+274 382 328 458 54 76 124 174 156 218 232 319 396 554 390 556 -5 1 -845 7
+-1869 13 -1024 5 -1987 13 -2142 17 l-281 6 57 66 c31 36 100 114 152 172 52
+58 127 141 165 186 105 120 337 382 450 508 55 61 143 161 195 220 52 60 138
+157 190 215 52 59 158 178 235 265 77 87 165 186 195 220 30 34 116 131 190
+215 74 84 180 203 235 265 55 61 143 160 195 220 52 60 140 159 195 220 55 62
+163 183 240 270 77 88 163 184 190 215 28 31 113 128 190 215 77 87 183 206
+235 265 52 58 138 155 190 215 137 157 271 305 276 305 3 0 -33 -54 -78 -120z"/></g></symbol>
+</svg>
+
+<noscript><p style="padding:24px">This app needs JavaScript to run.</p></noscript>
+
+<!-- Splash -->
+<main class="splash" id="view-intro" hidden>
+  <div class="splash-main">
+    <div class="logo-tile"><svg class="bolt" aria-hidden="true"><use href="#logra-bolt"/></svg></div>
+    <h1 data-app-name>Logra</h1>
+    <p class="tag-line">Make progress together.</p>
+  </div>
+  <div class="splash-actions">
+    <button class="btn primary" type="button" id="get-started">Get started</button>
+    <button class="link" type="button" id="have-account">I already have an account</button>
+  </div>
+</main>
+
+<!-- Account -->
+<main class="center-page" id="view-auth" hidden>
+  <div class="back"><button class="btn quiet small" type="button" id="auth-back">Back</button></div>
+  <section class="card" aria-labelledby="auth-title">
+    <h2 id="auth-title">Create your account</h2>
+    <p class="sub" id="auth-sub">It takes less than a minute.</p>
+    <div class="banner" id="config-banner" hidden></div>
+    <div class="tabs" role="tablist" aria-label="Sign in or create account">
+      <button type="button" role="tab" id="tab-signin" aria-selected="false">Sign in</button>
+      <button type="button" role="tab" id="tab-signup" aria-selected="true">Create account</button>
+    </div>
+    <button type="button" class="btn" id="google-btn">
+      <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      Continue with Google
+    </button>
+    <div class="divider">or use your email</div>
+    <form id="auth-form" novalidate>
+      <div class="field">
+        <label for="email">Email</label>
+        <input class="input" id="email" type="email" autocomplete="email" inputmode="email" required>
+      </div>
+      <div class="field">
+        <div class="row-between">
+          <label for="password">Password</label>
+          <button type="button" class="link" id="forgot-btn" hidden>Forgot password?</button>
+        </div>
+        <input class="input" id="password" type="password" autocomplete="new-password" required>
+        <span class="hint" id="password-hint">Use at least 8 characters.</span>
+      </div>
+      <p class="error" id="auth-error" role="alert"></p>
+      <p class="notice" id="auth-notice" role="status"></p>
+      <button class="btn primary" id="auth-submit" type="submit" style="margin-top:8px">Create account</button>
+    </form>
+  </section>
+</main>
+
+<main class="center-page" id="view-recovery" hidden>
+  <section class="card">
+    <h2>Choose a new password</h2>
+    <p class="sub">Use at least 8 characters.</p>
+    <form id="recovery-form" novalidate>
+      <div class="field"><label for="new-password">New password</label><input class="input" id="new-password" type="password" autocomplete="new-password" required></div>
+      <div class="field"><label for="confirm-password">Confirm password</label><input class="input" id="confirm-password" type="password" autocomplete="new-password" required></div>
+      <p class="error" id="recovery-error" role="alert"></p>
+      <button class="btn primary" type="submit">Save password</button>
+    </form>
+  </section>
+</main>
+
+<main class="center-page" id="view-reactivate" hidden>
+  <section class="card">
+    <h2>Welcome back</h2>
+    <p class="sub">Your account is deactivated. Nobody can see your profile or posts. Reactivate to pick up where you left off.</p>
+    <p class="error" id="reactivate-error" role="alert"></p>
+    <div style="display:grid;gap:10px">
+      <button class="btn primary" type="button" id="reactivate-btn">Reactivate my account</button>
+      <button class="btn quiet" type="button" id="reactivate-out">Sign out</button>
+    </div>
+  </section>
+</main>
+
+<!-- Profile setup and edit -->
+<div id="view-profile" hidden>
+  <div class="step-page" role="main">
+    <h1 id="profile-title">Set up your profile</h1>
+    <p class="sub" id="profile-sub">Just the essentials. You can add more later.</p>
+    <form id="profile-form" novalidate>
+      <div class="photo-row">
+        <div class="avatar" id="photo-preview" style="width:88px;height:88px;font-size:32px"></div>
+        <div>
+          <button class="btn small" type="button" id="photo-btn">Choose photo</button>
+          <input type="file" id="photo-input" accept="image/*" hidden>
+          <p class="hint" style="margin-top:6px">A square photo works best.</p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="full-name">Name</label>
+        <input class="input" id="full-name" autocomplete="name" maxlength="60" required>
+        <span class="error" id="full-name-error" role="alert"></span>
+      </div>
+      <div class="field">
+        <label for="username">Username</label>
+        <input class="input" id="username" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="20" required>
+        <span class="hint">3 to 20 letters, numbers or underscores.</span>
+        <span class="error" id="username-error" role="alert"></span>
+      </div>
+      <details class="more" id="more-details">
+        <summary>Add more details (optional)</summary>
+        <div class="field">
+          <label for="bio">Bio</label>
+          <textarea class="input" id="bio" maxlength="200"></textarea>
+          <span class="hint counter" id="bio-count">0 of 200</span>
+        </div>
+        <div class="field">
+          <label for="dob">Date of birth</label>
+          <input class="input" id="dob" type="date">
+          <span class="error" id="dob-error" role="alert"></span>
+        </div>
+      </details>
+      <p class="error" id="profile-error" role="alert"></p>
+      <div style="display:grid;gap:10px;margin-top:8px">
+        <button class="btn primary" id="profile-submit" type="submit">Save and continue</button>
+        <button class="btn quiet" id="profile-cancel" type="button" hidden>Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="view-connect" hidden>
+  <div class="step-page" role="main">
+    <h1>Connect with a friend</h1>
+    <p class="sub">Accountability works best with someone you trust. Share your ID, or add a friend with theirs.</p>
+    <section class="panel" style="margin-bottom:16px">
+      <h2>Your friend ID</h2>
+      <p class="sub">Only people who have this ID can add you.</p>
+      <div class="code-row"><div class="code" id="connect-code"></div><button class="btn small" type="button" id="connect-copy">Copy ID</button></div>
+    </section>
+    <section class="panel" style="margin-bottom:24px">
+      <h2>Add a friend</h2>
+      <p class="sub">Enter the ID your friend shared with you.</p>
+      <form class="inline-form" id="connect-form" novalidate>
+        <input class="input" id="connect-input" aria-label="Friend ID" placeholder="Friend ID" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="12">
+        <button class="btn primary" type="submit">Send request</button>
+      </form>
+      <p class="error" id="connect-error" role="alert" style="margin-top:10px"></p>
+      <p class="notice" id="connect-notice" role="status" style="margin-top:10px"></p>
+    </section>
+    <button class="btn primary" type="button" id="connect-next">Continue</button>
+    <p class="hint" style="text-align:center;margin-top:10px">You can skip this and add friends later from Messages.</p>
+  </div>
+</div>
+
+<div id="view-purpose" hidden>
+  <div class="step-page" role="main">
+    <h1>What brings you here?</h1>
+    <p class="sub">Pick any that fit. You can change this later.</p>
+    <div class="purposes" id="purposes">
+      <button class="purpose" type="button" aria-pressed="false" data-key="friends"><span class="tick" aria-hidden="true">&#10003;</span><span><strong>Stay accountable with friends</strong><span class="d">Share commitments and check in with people you trust.</span></span></button>
+      <button class="purpose" type="button" aria-pressed="false" data-key="goals"><span class="tick" aria-hidden="true">&#10003;</span><span><strong>Work toward personal goals</strong><span class="d">Plan your day and build a steady streak.</span></span></button>
+      <button class="purpose" type="button" aria-pressed="false" data-key="learn"><span class="tick" aria-hidden="true">&#10003;</span><span><strong>Join educational communities</strong><span class="d">Learn from people who share your interests.</span></span></button>
+    </div>
+    <p class="error" id="purpose-error" role="alert"></p>
+    <div style="display:grid;gap:10px">
+      <button class="btn primary" type="button" id="purpose-done">Continue</button>
+      <button class="btn quiet" type="button" id="purpose-skip">Skip for now</button>
+    </div>
+  </div>
+</div>
+
+<!-- The app -->
+<div id="view-app" hidden>
+  <header class="topbar"><div class="in">
+    <div class="brand"><svg class="bolt" aria-hidden="true"><use href="#logra-bolt"/></svg><span data-app-name>Logra</span></div>
+    <div class="top-actions">
+      <button class="iconbtn" type="button" id="search-btn" aria-label="Search"><span data-icon="search"></span></button>
+      <button class="iconbtn" type="button" id="bell-btn" aria-label="Notifications"><span data-icon="bell"></span><span class="badge" id="bell-badge" hidden></span></button>
+    </div>
+  </div></header>
+
+  <!-- Home -->
+  <main class="pane" id="pane-home">
+    <div class="stories" id="stories" aria-label="Stories"></div>
+
+    <div class="gentle" id="recovery-note" hidden>
+      <span>Yesterday did not go to plan, and that is okay. Today is a fresh start.</span>
+      <button class="link" type="button" id="recovery-adjust">Adjust my commitments</button>
+    </div>
+
+    <section class="panel" aria-labelledby="commit-title">
+      <div class="panel-head">
+        <h2 id="commit-title">Today</h2>
+        <button class="link" type="button" id="manage-btn">Manage commitments</button>
+      </div>
+      <p class="hint" id="home-summary" style="margin-top:2px"></p>
+      <div class="progress" role="progressbar" aria-label="Progress today" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress"><div style="width:0%"></div></div>
+      <div class="chips" id="streak-chips"></div>
+      <div class="tasks" id="tasks" style="margin-top:14px"></div>
+      <form class="inline-form" id="task-form" novalidate>
+        <input class="input" id="task-input" aria-label="Add something for today" placeholder="Add something for today" maxlength="200" autocomplete="off">
+        <button class="btn primary" type="submit">Add</button>
+      </form>
+      <p class="error" id="task-error" role="alert" style="margin-top:10px"></p>
+      <button class="btn small" type="button" id="new-commitment-btn" style="margin-top:14px">New repeating commitment</button>
+    </section>
+
+    <section class="panel" id="support-panel" hidden>
+      <h2>Friends you support</h2>
+      <p class="sub">What they shared with you today.</p>
+      <div id="support-list"></div>
+    </section>
+
+    <section class="panel" id="week-panel">
+      <h2>Your week</h2>
+      <p class="sub" id="week-summary" style="margin-bottom:6px"></p>
+      <div class="progress" role="progressbar" aria-label="Progress this week" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="week-progress"><div style="width:0%"></div></div>
+      <p class="hint" id="week-hint" style="margin:8px 0 12px"></p>
+      <button class="btn small" type="button" id="reflect-btn">Reflect on your week</button>
+    </section>
+
+    <button class="compose-card" type="button" id="compose-card" aria-label="Write a post">
+      <span id="compose-avatar"></span><span class="ph">What is on your mind?</span><span data-icon="image"></span>
+    </button>
+
+    <div id="feed" style="display:grid;gap:14px" aria-label="Posts"></div>
+
+    <section class="panel">
+      <h2>Activity</h2>
+      <p class="sub">Cheers for you and what your friends finished lately.</p>
+      <div id="circle"></div>
+    </section>
+  </main>
+
+  <!-- Communities -->
+  <main class="pane" id="pane-communities" hidden>
+    <h1>Communities</h1>
+    <section class="panel soon">
+      <h2>Opening soon</h2>
+      <p class="empty">Join communities around the topics you care about, learn together, and keep each other accountable. We are building this next.</p>
+    </section>
+  </main>
+
+  <!-- Messages -->
+  <main class="pane" id="pane-messages" hidden>
+    <div class="panel-head">
+      <h1>Messages</h1>
+      <button class="iconbtn" type="button" id="new-chat-btn" aria-label="New message"><span data-icon="edit"></span></button>
+    </div>
+    <div class="utabs" role="tablist" id="msg-tabs" aria-label="Messages">
+      <button type="button" role="tab" aria-selected="true" data-mtab="chats">Chats</button>
+      <button type="button" role="tab" aria-selected="false" data-mtab="requests">Requests <span class="count" id="req-count" hidden style="display:inline-grid;margin-left:4px"></span></button>
+    </div>
+    <div id="mtab-chats" style="display:grid;gap:12px">
+      <div class="searchbar"><span data-icon="search"></span><input id="conv-search" placeholder="Search chats" aria-label="Search chats" autocomplete="off"></div>
+      <button class="btn small" type="button" id="presence-btn" style="justify-self:start"></button>
+      <section class="panel" style="padding:4px 16px"><div id="conv-list"></div></section>
+    </div>
+    <div id="mtab-requests" hidden style="display:grid;gap:14px">
+      <section class="panel">
+        <h2>Friend requests</h2>
+        <p class="sub">People who want to be your friend.</p>
+        <div id="requests-list"></div>
+        <p class="empty" id="requests-empty">No requests right now.</p>
+      </section>
+      <section class="panel">
+        <h2>Add a friend</h2>
+        <p class="sub">Enter the ID your friend shared with you.</p>
+        <form class="inline-form" id="add-form" novalidate>
+          <input class="input" id="add-code" aria-label="Friend ID" placeholder="Friend ID" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="12">
+          <button class="btn primary" type="submit">Send request</button>
+        </form>
+        <p class="error" id="add-error" role="alert" style="margin-top:10px"></p>
+        <p class="waiting" id="waiting" hidden></p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Profile -->
+  <main class="pane" id="pane-profile" hidden>
+    <div class="cover">
+      <svg class="art" viewBox="0 0 400 170" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <circle cx="86" cy="52" r="24" fill="#D9CCFF" opacity=".5"/>
+        <path d="M0 170 L0 120 L70 62 L120 104 L190 40 L270 118 L330 84 L400 128 L400 170Z" fill="#3A1A9A" opacity=".85"/>
+        <path d="M0 170 L0 142 L60 108 L130 150 L210 96 L290 148 L350 120 L400 150 L400 170Z" fill="#240F66"/>
+      </svg>
+      <button class="iconbtn" type="button" id="settings-btn" aria-label="Settings"><span data-icon="gear"></span></button>
+    </div>
+    <div class="prof-head">
+      <div class="avatar" id="me-avatar" style="width:96px;height:96px;font-size:34px"></div>
+      <h2 id="me-name"></h2>
+      <div class="handle" id="me-handle"></div>
+      <p class="bio" id="me-bio"></p>
+    </div>
+    <div class="stats">
+      <div><strong id="st-done">0</strong><span>Done</span></div>
+      <div><strong id="st-streak">0</strong><span>Day streak</span></div>
+      <div><strong id="st-friends">0</strong><span>Friends</span></div>
+    </div>
+    <button class="btn primary" type="button" id="edit-profile-btn">Edit profile</button>
+    <div class="utabs" role="tablist" id="prof-tabs" aria-label="Profile">
+      <button type="button" role="tab" aria-selected="true" data-ptab="posts">Posts</button>
+      <button type="button" role="tab" aria-selected="false" data-ptab="friends">Friends</button>
+      <button type="button" role="tab" aria-selected="false" data-ptab="saved">Saved</button>
+    </div>
+    <div id="ptab-posts" style="display:grid;gap:14px"></div>
+    <div id="ptab-friends" hidden style="display:grid;gap:14px">
+      <section class="panel">
+        <h2>Your friend ID</h2>
+        <p class="sub">Share it with people you trust. They need it to add you.</p>
+        <div class="code-row"><div class="code" id="friend-code"></div><button class="btn small" type="button" id="copy-code-btn">Copy ID</button></div>
+      </section>
+      <section class="panel">
+        <h2>Your friends</h2>
+        <div class="shelf-grid" id="friends-shelf"></div>
+        <p class="empty" id="friends-empty" hidden>No friends yet. Share your ID or add one from Messages.</p>
+      </section>
+    </div>
+    <div id="ptab-saved" hidden style="display:grid;gap:14px"></div>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Main">
+    <div class="inner">
+      <button class="nav-item" type="button" data-nav="home" aria-current="page"><span data-icon="home"></span>Home</button>
+      <button class="nav-item" type="button" data-nav="communities"><span data-icon="users"></span>Communities</button>
+      <button class="nav-create" type="button" id="nav-create" aria-label="Create"><span data-icon="plus"></span></button>
+      <button class="nav-item" type="button" data-nav="messages"><span data-icon="chat"></span>Messages<span class="badge" id="msg-badge" hidden></span></button>
+      <button class="nav-item" type="button" data-nav="profile"><span data-icon="user"></span>Profile</button>
+    </div>
+  </nav>
+</div>
+
+<!-- Settings -->
+<div id="view-settings" hidden>
+  <div class="settings-page" role="main">
+    <div class="set-head"><button class="iconbtn" type="button" id="settings-back" aria-label="Back"><span data-icon="back"></span></button><h1>Settings</h1></div>
+
+    <div class="set-group"><h2>Account</h2><div class="set-list">
+      <div class="row-item" style="cursor:default"><div class="grow">Email<small id="set-email"></small></div></div>
+      <button class="row-item" type="button" id="set-password"><div class="grow">Change password</div><span data-icon="chevron"></span></button>
+      <button class="row-item" type="button" id="set-export"><div class="grow">Download my data<small>A copy of your profile, commitments, posts and messages.</small></div><span data-icon="chevron"></span></button>
+      <button class="row-item" type="button" id="set-deactivate"><div class="grow">Deactivate account<small>Hide your profile. Come back any time.</small></div><span data-icon="chevron"></span></button>
+      <button class="row-item danger" type="button" id="set-delete"><div class="grow">Delete account<small>Permanent. This cannot be undone.</small></div></button>
+    </div></div>
+
+    <div class="set-group"><h2>Notifications</h2><div class="set-list">
+      <label class="row-item"><div class="grow">Friends finishing commitments</div><span class="switch"><input type="checkbox" id="nt-completions"><span class="track"></span></span></label>
+      <label class="row-item"><div class="grow">Mentions</div><span class="switch"><input type="checkbox" id="nt-mentions"><span class="track"></span></span></label>
+      <label class="row-item"><div class="grow">New messages</div><span class="switch"><input type="checkbox" id="nt-messages"><span class="track"></span></span></label>
+      <label class="row-item"><div class="grow">Group invites</div><span class="switch"><input type="checkbox" id="nt-groups"><span class="track"></span></span></label>
+      <button class="row-item" type="button" id="nt-pause"><div class="grow">Pause alerts<small id="nt-pause-sub">Alerts are on.</small></div><span data-icon="chevron"></span></button>
+    </div></div>
+
+    <div class="set-group"><h2>Privacy</h2><div class="set-list">
+      <div class="row-item" style="cursor:default"><div class="grow">Who can find you<small>Only people who have your friend ID can add you. Only friends can message you.</small></div></div>
+      <button class="row-item" type="button" id="set-blocked"><div class="grow">Blocked accounts</div><span data-icon="chevron"></span></button>
+    </div></div>
+
+    <div class="set-group"><h2>Appearance</h2>
+      <div class="seg three" id="theme-seg">
+        <button type="button" data-theme-opt="dark" aria-pressed="true">Dark</button>
+        <button type="button" data-theme-opt="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme-opt="auto" aria-pressed="false">Auto</button>
+      </div>
+    </div>
+
+    <div class="set-group"><h2>Help</h2><div class="set-list">
+      <button class="row-item" type="button" id="set-guidelines"><div class="grow">Community guidelines</div><span data-icon="chevron"></span></button>
+      <a class="row-item" id="set-terms" href="#" target="_blank" rel="noopener" hidden><div class="grow">Terms of service</div></a>
+      <a class="row-item" id="set-privacy" href="#" target="_blank" rel="noopener" hidden><div class="grow">Privacy policy</div></a>
+    </div></div>
+
+    <button class="btn" type="button" id="signout-btn">Log out</button>
+    <p class="hint" style="text-align:center"><span data-app-name>Logra</span> &middot; Make progress together.</p>
+  </div>
+</div>
+
+<!-- Search -->
+<div class="overlay" id="search" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="in">
+    <div style="display:flex;align-items:center;gap:8px">
+      <button class="iconbtn" type="button" id="search-back" aria-label="Close search"><span data-icon="back"></span></button>
+      <div class="searchbar" style="flex:1"><span data-icon="search"></span><input id="search-input" placeholder="Search friends and posts" aria-label="Search friends and posts" autocomplete="off"></div>
+    </div>
+    <div id="search-results" style="display:grid;gap:14px"></div>
+  </div>
+</div>
+
+<!-- Story viewer -->
+<div class="viewer" id="story-viewer" hidden role="dialog" aria-modal="true" aria-label="Story"></div>
+
+<!-- Chat -->
+<div class="chat" id="chat" hidden>
+  <header class="chat-head">
+    <button class="iconbtn" type="button" id="chat-back" aria-label="Back to messages"><span data-icon="back"></span></button>
+    <button class="person" type="button" id="chat-person" style="width:auto;flex:1;padding:0;min-width:0" aria-label="Friend options">
+      <div id="chat-avatar"></div>
+      <div class="chat-title"><strong id="chat-name"></strong><span class="hint" id="chat-status"></span></div>
+    </button>
+  </header>
+  <div class="chat-body" id="chat-body" aria-live="polite"></div>
+  <div class="reply-bar" id="reply-bar" hidden>
+    <div class="rb-text"><strong id="rb-name"></strong><span id="rb-text"></span></div>
+    <button class="btn quiet small" type="button" id="rb-cancel" aria-label="Cancel reply">Cancel</button>
+  </div>
+  <form class="composer" id="composer">
+    <button class="iconbtn" type="button" id="attach-btn" aria-label="Send a photo or video"><span data-icon="image"></span></button>
+    <input type="file" id="attach-input" accept="image/*,video/mp4,video/quicktime,video/webm" hidden>
+    <textarea id="composer-input" rows="1" maxlength="4000" placeholder="Type a message" aria-label="Message"></textarea>
+    <button class="iconbtn" type="button" id="mic-btn" aria-label="Record a voice note"><span data-icon="mic"></span></button>
+    <button class="send" type="submit" aria-label="Send"><span data-icon="send"></span></button>
+  </form>
+  <div class="rec-bar" id="rec-bar" hidden>
+    <span class="rec-dot" aria-hidden="true"></span>
+    <span class="rec-time" id="rec-time" role="timer">0:00</span>
+    <button class="btn quiet small" type="button" id="rec-cancel">Cancel</button>
+    <button class="btn primary small" type="button" id="rec-send">Send</button>
+  </div>
+</div>
+
+<main class="loading-page" id="view-loading" hidden><p>Signing you in</p></main>
+
+<div class="sheet-backdrop" id="sheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-head"><h2 id="sheet-title"></h2><button class="btn quiet small" type="button" id="sheet-close">Close</button></div>
+    <div id="sheet-body"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+/* ------------------------------------------------------------
+   Settings
+   ------------------------------------------------------------ */
+const APP_NAME = 'Logra';
+const SUPABASE_URL = 'https://prectbbyjckiqinrudeu.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InByZWN0YmJ5amNraXFpbnJ1ZGV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTkxMTEsImV4cCI6MjEwNzI3NTExMX0.mQEmyucO10gYoOmtt4aJCHLFFgFgX2SMhxVi5HOCvnA';
+
+/* ------------------------------------------------------------ */
+const $ = (s, r = document) => r.querySelector(s);
+const VIEWS = ['intro', 'auth', 'recovery', 'reactivate', 'profile', 'connect', 'purpose', 'app', 'settings', 'loading'];
+let sb = null, session = null, profile = null, currentUserId = null, recovering = false;
+let authMode = 'signup', profileMode = 'setup', pendingPhoto = null, currentTab = 'home', holdAuthError = false;
+
+document.title = APP_NAME;
+document.querySelectorAll('[data-app-name]').forEach(e => { e.textContent = APP_NAME; });
+
+/* ---------- Helpers ---------- */
+function h(tag, attrs = {}, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === 'class') el.className = v; else if (k === 'text') el.textContent = v; else el.setAttribute(k, v);
+  }
+  kids.flat().forEach(k => k != null && el.append(k));
+  return el;
+}
+function show(view) {
+  VIEWS.forEach(v => { $('#view-' + v).hidden = v !== view; });
+  window.scrollTo(0, 0);
+}
+let toastTimer;
+function toast(msg) {
+  const t = $('#toast'); t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 2600);
+}
+function setBusy(btn, busy, label) {
+  if (busy) { btn.dataset.label = btn.textContent; btn.textContent = label; }
+  else if (btn.dataset.label) { btn.textContent = btn.dataset.label; }
+  btn.disabled = busy;
+}
+const pageUrl = () => location.origin + location.pathname;
+const localDate = (d = new Date()) => d.toLocaleDateString('en-CA');
+function friendlyError(err) {
+  const m = (err && err.message) || 'Something went wrong. Try again.';
+  if (/invalid login/i.test(m)) return 'The email or password is not right.';
+  if (/already registered|already been registered/i.test(m)) return 'An account with this email already exists. Sign in instead.';
+  if (/fetch|network/i.test(m)) return 'No connection. Check your internet and try again.';
+  return m;
+}
+function timeAgo(iso) {
+  const s = Math.max(1, Math.round((Date.now() - new Date(iso)) / 1000));
+  if (s < 60) return 'just now';
+  const m = Math.round(s / 60); if (m < 60) return m + ' min ago';
+  const hr = Math.round(m / 60); if (hr < 24) return hr + (hr === 1 ? ' hour ago' : ' hours ago');
+  const d = Math.round(hr / 24); return d + (d === 1 ? ' day ago' : ' days ago');
+}
+
+/* ---------- Theme ---------- */
+const THEMES = ['dark', 'light', 'auto'];
+function getTheme() { try { return localStorage.getItem('theme') || 'dark'; } catch { return 'dark'; } }
+function applyTheme(t) {
+  if (!THEMES.includes(t)) t = 'dark';
+  document.documentElement.setAttribute('data-theme', t);
+  try { localStorage.setItem('theme', t); } catch {}
+  document.querySelectorAll('[data-theme-opt]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.themeOpt === t)));
+}
+document.querySelectorAll('[data-theme-opt]').forEach(b => b.addEventListener('click', () => applyTheme(b.dataset.themeOpt)));
+applyTheme(getTheme());
+
+/* ---------- Icons ---------- */
+const ICON_PATHS = {
+  search: '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>',
+  bell: '<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  home: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/>',
+  users: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  chat: '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>',
+  user: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+  heart: '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+  bookmark: '<path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>',
+  share: '<path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/>',
+  more: '<circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/>',
+  back: '<path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>',
+  chevron: '<path d="M9 18l6-6-6-6"/>',
+  send: '<path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/>',
+  gear: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+  check: '<path d="M20 6L9 17l-5-5"/>',
+  close: '<path d="M18 6L6 18M6 6l12 12"/>',
+  edit: '<path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>',
+  image: '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>',
+  pin: '<path d="M12 17v5"/><path d="M9 3h6l-1 7 3 3H7l3-3z"/>',
+  flag: '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/>',
+  trash: '<path d="M3 6h18"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>',
+  mic: '<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2"/><path d="M12 19v3"/>',
+  video: '<rect x="2" y="5" width="14" height="14" rx="2"/><path d="M22 7l-6 5 6 5z"/>',
+  smile: '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/>'
+};
+function icon(name, cls = '') {
+  const t = document.createElement('template');
+  t.innerHTML = `<svg class="i ${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICON_PATHS[name] || ''}</svg>`;
+  return t.content.firstChild;
+}
+function hydrateIcons(root = document) {
+  root.querySelectorAll('[data-icon]').forEach(el => el.replaceWith(icon(el.dataset.icon)));
+}
+function setBadge(el, n) { el.hidden = !n; el.textContent = n > 9 ? '9+' : String(n); }
+
+
+/* ---------- Avatars ---------- */
+function paintAvatar(el, person) {
+  const name = (person && (person.full_name || person.username)) || '?';
+  if (person && person.avatar_url) {
+    el.style.background = ''; el.style.backgroundImage = `url("${person.avatar_url}")`; el.textContent = '';
+    el.setAttribute('role', 'img'); el.setAttribute('aria-label', name);
+  } else {
+    let n = 0; for (const ch of (person && person.username) || name) n += ch.charCodeAt(0);
+    el.style.backgroundImage = 'none'; el.style.background = `var(--av${(n % 6) + 1})`;
+    el.textContent = name.trim().charAt(0).toUpperCase();
+  }
+}
+function avatarEl(person, size) {
+  const el = h('div', { class: 'avatar', style: `width:${size}px;height:${size}px;font-size:${Math.round(size * 0.38)}px` });
+  paintAvatar(el, person); return el;
+}
+
+/* ---------- Screens 1 and 2: intro and account ---------- */
+function setAuthMode(mode) {
+  authMode = mode;
+  const signup = mode === 'signup';
+  $('#tab-signin').setAttribute('aria-selected', String(!signup));
+  $('#tab-signup').setAttribute('aria-selected', String(signup));
+  $('#auth-title').textContent = signup ? 'Create your account' : 'Welcome back';
+  $('#auth-sub').textContent = signup ? 'It takes less than a minute.' : 'Sign in to pick up where you left off.';
+  $('#auth-submit').textContent = signup ? 'Create account' : 'Sign in';
+  $('#forgot-btn').hidden = signup;
+  $('#password-hint').hidden = !signup;
+  $('#password').autocomplete = signup ? 'new-password' : 'current-password';
+  $('#auth-error').textContent = ''; $('#auth-notice').textContent = '';
+}
+$('#get-started').addEventListener('click', () => { setAuthMode('signup'); show('auth'); });
+$('#have-account').addEventListener('click', () => { setAuthMode('signin'); show('auth'); });
+$('#auth-back').addEventListener('click', () => show('intro'));
+$('#tab-signin').addEventListener('click', () => setAuthMode('signin'));
+$('#tab-signup').addEventListener('click', () => setAuthMode('signup'));
+
+function notReady() {
+  if (sb) return false;
+  $('#auth-error').textContent = 'The app could not connect. Check your internet and reload the page.';
+  return true;
+}
+$('#google-btn').addEventListener('click', async () => {
+  if (notReady()) return;
+  const btn = $('#google-btn');
+  $('#auth-error').textContent = '';
+  btn.disabled = true;
+  const { error } = await sb.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: pageUrl() } });
+  if (error) { btn.disabled = false; $('#auth-error').textContent = friendlyError(error); }
+});
+
+$('#auth-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const err = $('#auth-error'), note = $('#auth-notice');
+  err.textContent = ''; note.textContent = '';
+  if (notReady()) return;
+  const email = $('#email').value.trim(), password = $('#password').value;
+  if (!/^\S+@\S+\.\S+$/.test(email)) { err.textContent = 'Enter a valid email address.'; return; }
+  if (!password) { err.textContent = 'Enter your password.'; return; }
+  if (authMode === 'signup' && password.length < 8) { err.textContent = 'Use at least 8 characters for your password.'; return; }
+  const btn = $('#auth-submit');
+  setBusy(btn, true, authMode === 'signup' ? 'Creating account' : 'Signing in');
+  try {
+    if (authMode === 'signup') {
+      const { data, error } = await sb.auth.signUp({ email, password, options: { emailRedirectTo: pageUrl() } });
+      if (error) err.textContent = friendlyError(error);
+      else if (!data.session) note.textContent = 'Check your email. We sent a link to confirm your account.';
+    } else {
+      const { error } = await sb.auth.signInWithPassword({ email, password });
+      if (error) err.textContent = friendlyError(error);
+    }
+  } catch (ex) { err.textContent = friendlyError(ex); }
+  setBusy(btn, false);
+});
+
+$('#forgot-btn').addEventListener('click', async () => {
+  const err = $('#auth-error'), note = $('#auth-notice');
+  err.textContent = ''; note.textContent = '';
+  if (notReady()) return;
+  const email = $('#email').value.trim();
+  if (!/^\S+@\S+\.\S+$/.test(email)) { err.textContent = 'Enter your email above, then select Forgot password.'; return; }
+  const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo: pageUrl() });
+  if (error) err.textContent = friendlyError(error);
+  else note.textContent = 'If an account exists for ' + email + ', a reset link is on its way.';
+});
+
+$('#recovery-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const err = $('#recovery-error'); err.textContent = '';
+  const a = $('#new-password').value, b = $('#confirm-password').value;
+  if (a.length < 8) { err.textContent = 'Use at least 8 characters.'; return; }
+  if (a !== b) { err.textContent = 'The two passwords do not match.'; return; }
+  const { error } = await sb.auth.updateUser({ password: a });
+  if (error) { err.textContent = friendlyError(error); return; }
+  recovering = false; toast('Password saved'); route();
+});
+
+$('#signout-btn').addEventListener('click', async () => { await sb.auth.signOut(); });
+
+/* ---------- Screen 3: profile ---------- */
+function squareJpeg(file, size = 512) {
+  return new Promise((resolve, reject) => {
+    if (file.size > 15 * 1024 * 1024) return reject(new Error('Choose a photo under 15 MB.'));
+    const img = new Image(), url = URL.createObjectURL(file);
+    img.onload = () => {
+      const s = Math.min(img.width, img.height), c = document.createElement('canvas');
+      c.width = c.height = size;
+      c.getContext('2d').drawImage(img, (img.width - s) / 2, (img.height - s) / 2, s, s, 0, 0, size, size);
+      URL.revokeObjectURL(url);
+      c.toBlob(b => b ? resolve(b) : reject(new Error('Could not read that photo.')), 'image/jpeg', 0.85);
+    };
+    img.onerror = () => reject(new Error('That file is not a photo.'));
+    img.src = url;
+  });
+}
+$('#photo-btn').addEventListener('click', () => $('#photo-input').click());
+$('#photo-input').addEventListener('change', async (e) => {
+  const file = e.target.files[0]; if (!file) return;
+  $('#profile-error').textContent = '';
+  try {
+    pendingPhoto = await squareJpeg(file);
+    const prev = $('#photo-preview');
+    prev.textContent = ''; prev.style.background = ''; prev.style.backgroundImage = `url("${URL.createObjectURL(pendingPhoto)}")`;
+  } catch (ex) { $('#profile-error').textContent = ex.message; }
+});
+$('#bio').addEventListener('input', () => { $('#bio-count').textContent = $('#bio').value.length + ' of 200'; });
+
+function suggestUsername() {
+  let base = (profile.full_name || (session.user.email || '').split('@')[0] || 'user').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 14);
+  if (base.length < 3) base = 'user' + base;
+  return base + Math.floor(10 + Math.random() * 90);
+}
+
+function openProfileForm(mode) {
+  profileMode = mode; pendingPhoto = null;
+  const setup = mode === 'setup';
+  $('#profile-title').textContent = setup ? 'Set up your profile' : 'Edit profile';
+  $('#profile-sub').textContent = setup ? 'Just the essentials. You can add more later.' : 'Change how you appear to your friends.';
+  $('#profile-submit').textContent = setup ? 'Save and continue' : 'Save changes';
+  $('#profile-cancel').hidden = setup;
+  const generated = /^user_[a-f0-9]{8}$/.test(profile.username);
+  $('#full-name').value = profile.full_name || '';
+  $('#username').value = setup && generated ? suggestUsername() : profile.username;
+  $('#bio').value = profile.bio || '';
+  $('#bio-count').textContent = $('#bio').value.length + ' of 200';
+  $('#dob').value = profile.date_of_birth || '';
+  $('#dob').max = localDate();
+  $('#more-details').open = !!(profile.bio || profile.date_of_birth);
+  ['full-name', 'username', 'dob'].forEach(id => { $('#' + id + '-error').textContent = ''; });
+  $('#profile-error').textContent = '';
+  const prev = $('#photo-preview'); paintAvatar(prev, profile);
+  show('profile');
+}
+$('#profile-cancel').addEventListener('click', () => openApp('profile'));
+
+$('#profile-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  ['full-name', 'username', 'dob'].forEach(id => { $('#' + id + '-error').textContent = ''; });
+  $('#profile-error').textContent = '';
+  const full_name = $('#full-name').value.trim();
+  const username = $('#username').value.trim().toLowerCase();
+  const bio = $('#bio').value.trim();
+  const dob = $('#dob').value;
+  let bad = false;
+  if (!full_name) { $('#full-name-error').textContent = 'Enter your name.'; bad = true; }
+  if (!/^[a-z0-9_]{3,20}$/.test(username)) { $('#username-error').textContent = 'Use 3 to 20 letters, numbers or underscores.'; bad = true; }
+  if (dob && dob > localDate()) { $('#more-details').open = true; $('#dob-error').textContent = 'Choose a date in the past.'; bad = true; }
+  if (bad) return;
+
+  const btn = $('#profile-submit');
+  setBusy(btn, true, 'Saving');
+  try {
+    const update = {
+      full_name, username, bio: bio || null, date_of_birth: dob || null,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'Africa/Lagos'
+    };
+    if (pendingPhoto) {
+      const path = `${session.user.id}/avatar-${Date.now()}.jpg`;
+      const up = await sb.storage.from('avatars').upload(path, pendingPhoto, { contentType: 'image/jpeg', cacheControl: '3600' });
+      if (up.error) throw up.error;
+      update.avatar_url = sb.storage.from('avatars').getPublicUrl(path).data.publicUrl;
+    }
+    const { error } = await sb.from('profiles').update(update).eq('id', session.user.id);
+    if (error) {
+      if (error.code === '23505') $('#username-error').textContent = 'That username is taken. Try another.';
+      else throw error;
+    } else {
+      await loadProfile();
+      if (profileMode === 'setup') {
+        await sb.auth.updateUser({ data: { profile_done: true } });
+        openConnect();
+      } else { toast('Profile saved'); openApp('profile'); }
+    }
+  } catch (ex) { $('#profile-error').textContent = friendlyError(ex); }
+  setBusy(btn, false);
+});
+
+async function loadProfile() {
+  const { data, error } = await sb.from('profiles').select('*').eq('id', session.user.id).single();
+  if (error) throw error;
+  profile = data;
+}
+
+/* ---------- Friends (used by screen 4 and the Profile tab) ---------- */
+async function sendRequest(input, errEl, btn) {
+  errEl.textContent = '';
+  const code = input.value.trim();
+  if (!code) { errEl.textContent = 'Enter a friend ID.'; return false; }
+  btn.disabled = true;
+  const { error } = await sb.rpc('send_friend_request', { code });
+  btn.disabled = false;
+  if (error) { errEl.textContent = friendlyError(error); return false; }
+  input.value = ''; toast('Request sent'); return true;
+}
+async function copyCode() {
+  try { await navigator.clipboard.writeText(profile.friend_code); toast('ID copied'); }
+  catch { toast('Select the ID and copy it'); }
+}
+
+/* ---------- Screen 4: connect ---------- */
+function openConnect() {
+  $('#connect-code').textContent = profile.friend_code;
+  $('#connect-error').textContent = ''; $('#connect-notice').textContent = '';
+  show('connect');
+}
+$('#connect-copy').addEventListener('click', copyCode);
+$('#connect-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const ok = await sendRequest($('#connect-input'), $('#connect-error'), e.submitter || $('#connect-form button'));
+  if (ok) $('#connect-notice').textContent = 'Request sent. They will see it on their profile.';
+});
+$('#connect-next').addEventListener('click', () => show('purpose'));
+
+/* ---------- Screen 5: purpose ---------- */
+document.querySelectorAll('.purpose').forEach(b => b.addEventListener('click', () => {
+  b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true'));
+}));
+async function finishOnboarding(save) {
+  const purposes = save ? [...document.querySelectorAll('.purpose[aria-pressed="true"]')].map(b => b.dataset.key) : [];
+  $('#purpose-error').textContent = '';
+  const { error } = await sb.auth.updateUser({ data: { onboarded: true, purposes } });
+  if (error) { $('#purpose-error').textContent = friendlyError(error); return; }
+  openApp('home');
+}
+$('#purpose-done').addEventListener('click', () => finishOnboarding(true));
+$('#purpose-skip').addEventListener('click', () => finishOnboarding(false));
+
+/* Home */
+const DAY_LABELS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const STATUS_LABEL = { planned: 'Planned', in_progress: 'In progress', needs_help: 'Needs help', skipped: 'Skipped', done: 'Done' };
+const CHEER_PRESETS = ['You have got this', 'Proud of you', 'Need a hand with it?'];
+const CHECK_SVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>';
+const nameOf = p => (p && (p.full_name || p.username)) || 'a friend';
+const NEEDS_V3 = 'Run schema_v3.sql in Supabase to turn on commitments.';
+
+function daysSummary(days) {
+  const sorted = [...days].sort((a, b) => a - b), key = sorted.join('');
+  if (key === '1234567') return 'Every day';
+  if (key === '12345') return 'Weekdays';
+  if (key === '67') return 'Weekends';
+  return sorted.map(n => DAY_LABELS[n - 1]).join(', ');
+}
+function greeting() {
+  const hr = new Date().getHours();
+  return hr < 12 ? 'Good morning' : hr < 18 ? 'Good afternoon' : 'Good evening';
+}
+
+/* Bottom sheet */
+let sheetOpener = null;
+function openSheet(title, ...nodes) {
+  if ($('#sheet').hidden) sheetOpener = document.activeElement;
+  $('#sheet-title').textContent = title;
+  $('#sheet-body').replaceChildren(...nodes.filter(Boolean));
+  $('#sheet').hidden = false; document.body.style.overflow = 'hidden';
+  const first = $('#sheet-body').querySelector('input, textarea, select');
+  (first || $('#sheet-close')).focus();
+}
+function closeSheet() {
+  $('#sheet').hidden = true; document.body.style.overflow = '';
+  if (sheetOpener && sheetOpener.focus) sheetOpener.focus();
+}
+$('#sheet-close').addEventListener('click', closeSheet);
+$('#sheet').addEventListener('click', e => { if (e.target.id === 'sheet') closeSheet(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#sheet').hidden) closeSheet(); });
+
+function actionBtn(label, sub, fn, cls = '') {
+  const b = h('button', { class: 'action ' + cls, type: 'button' }, h('strong', { text: label }), sub ? h('span', { text: sub }) : null);
+  b.addEventListener('click', fn); return b;
+}
+function field(label, node, hint) {
+  return h('div', { class: 'field' }, h('label', { text: label }), node, hint ? h('span', { class: 'hint', text: hint }) : null);
+}
+async function getFriends() {
+  const me = session.user.id;
+  const { data: rows } = await sb.from('friendships').select('requester_id,addressee_id,status').eq('status', 'accepted');
+  const ids = (rows || []).map(r => r.requester_id === me ? r.addressee_id : r.requester_id);
+  if (!ids.length) return [];
+  const { data: people } = await sb.from('profiles').select('id,username,full_name').in('id', ids);
+  return (people || []).map(p => ({ id: p.id, name: nameOf(p) }));
+}
+
+/* Check-in options for one task */
+function openTaskSheet(task, commitment, partner) {
+  const note = h('input', { class: 'input', maxlength: '200', placeholder: 'What is getting in the way? (optional)', 'aria-label': 'What is getting in the way' });
+  const run = async (fn, okMsg) => {
+    const { error } = await fn();
+    if (error) { toast(friendlyError(error)); return; }
+    closeSheet(); if (okMsg) toast(okMsg); loadHome();
+  };
+  const nodes = [];
+  nodes.push(task.status === 'in_progress'
+    ? actionBtn('Back to planned', 'You have not started yet.', () => run(() => sb.rpc('check_in', { task_id: task.id, new_status: 'planned' })))
+    : actionBtn('I am working on it', 'Marks it as in progress.', () => run(() => sb.rpc('check_in', { task_id: task.id, new_status: 'in_progress' }), 'Marked in progress')));
+  if (task.status !== 'needs_help') {
+    nodes.push(h('div', { class: 'field' }, note));
+    nodes.push(actionBtn('I need help', partner ? 'Lets ' + nameOf(partner) + ' know.' : 'Marks it so you can come back to it.',
+      () => run(() => sb.rpc('check_in', { task_id: task.id, new_status: 'needs_help', note: note.value.trim() || null }),
+                partner ? nameOf(partner) + ' has been told' : 'Marked as needing help')));
+  }
+  if (commitment) {
+    nodes.push(actionBtn('Skip today', 'No penalty. The commitment continues tomorrow.',
+      () => run(() => sb.rpc('check_in', { task_id: task.id, new_status: 'skipped' }), 'Skipped for today')));
+  } else {
+    nodes.push(actionBtn('Move to tomorrow', 'Same task, a fresh day.', () => {
+      const d = new Date(); d.setDate(d.getDate() + 1);
+      run(() => sb.rpc('reschedule_task', { task_id: task.id, to_date: localDate(d) }), 'Moved to tomorrow');
+    }));
+    nodes.push(actionBtn('Remove', 'Delete this task.', () => run(() => sb.from('tasks').delete().eq('id', task.id)), 'danger'));
+  }
+  openSheet(task.title, ...nodes);
+}
+
+/* Encouragement */
+function openCheerSheet(c, owner) {
+  const input = h('input', { class: 'input', maxlength: '140', placeholder: 'Write a short message', 'aria-label': 'Message' });
+  const chips = h('div', { class: 'qchips' });
+  CHEER_PRESETS.forEach(m => {
+    const b = h('button', { class: 'btn small', type: 'button', text: m });
+    b.addEventListener('click', () => { input.value = m; input.focus(); });
+    chips.append(b);
+  });
+  const err = h('p', { class: 'error', role: 'alert' });
+  const send = h('button', { class: 'btn primary', type: 'button', text: 'Send' });
+  send.addEventListener('click', async () => {
+    err.textContent = '';
+    if (!input.value.trim()) { err.textContent = 'Pick a message or write your own.'; return; }
+    send.disabled = true;
+    const { error } = await sb.rpc('send_cheer', { commitment: c.id, msg: input.value.trim() });
+    if (error) { err.textContent = friendlyError(error); send.disabled = false; return; }
+    closeSheet(); toast('Encouragement sent');
+  });
+  openSheet('Cheer on ' + nameOf(owner), h('p', { class: 'hint', style: 'margin-bottom:12px', text: c.title }), chips, h('div', { class: 'field' }, input), err, send);
+}
+
+/* Create or edit a repeating commitment */
+async function openCommitmentForm(existing) {
+  const friends = await getFriends();
+  const days = new Set(existing ? existing.days : [1, 2, 3, 4, 5, 6, 7]);
+  let sharing = !!(existing && existing.partner_id);
+
+  const title = h('input', { class: 'input', maxlength: '120', placeholder: 'For example, Write for 30 minutes', 'aria-label': 'Name' });
+  title.value = existing ? existing.title : '';
+  const noteEl = h('textarea', { class: 'input', maxlength: '500', 'aria-label': 'Description' });
+  noteEl.value = existing && existing.note ? existing.note : '';
+
+  const dayWrap = h('div', { class: 'daychips', role: 'group', 'aria-label': 'Days' });
+  const dayBtns = DAY_LABELS.map((lab, i) => {
+    const n = i + 1, b = h('button', { class: 'daychip', type: 'button', text: lab, 'aria-pressed': String(days.has(n)) });
+    b.addEventListener('click', () => { if (days.has(n)) days.delete(n); else days.add(n); b.setAttribute('aria-pressed', String(days.has(n))); });
+    dayWrap.append(b); return b;
+  });
+  const setDays = arr => { days.clear(); arr.forEach(n => days.add(n)); dayBtns.forEach((b, i) => b.setAttribute('aria-pressed', String(days.has(i + 1)))); };
+  const presets = h('div', { class: 'qchips', style: 'margin:8px 0 0' });
+  [['Every day', [1, 2, 3, 4, 5, 6, 7]], ['Weekdays', [1, 2, 3, 4, 5]], ['Weekends', [6, 7]]].forEach(([lab, arr]) => {
+    const b = h('button', { class: 'btn quiet small', type: 'button', text: lab });
+    b.addEventListener('click', () => setDays(arr)); presets.append(b);
+  });
+
+  const solo = h('button', { type: 'button', text: 'Just me' });
+  const withF = h('button', { type: 'button', text: 'With a friend' });
+  if (!friends.length) withF.disabled = true;
+  const select = h('select', { class: 'input', 'aria-label': 'Choose a friend' }, ...friends.map(f => h('option', { value: f.id, text: f.name })));
+  if (existing && existing.partner_id) select.value = existing.partner_id;
+  const refresh = () => {
+    solo.setAttribute('aria-pressed', String(!sharing)); withF.setAttribute('aria-pressed', String(sharing));
+    select.hidden = !sharing;
+  };
+  solo.addEventListener('click', () => { sharing = false; refresh(); });
+  withF.addEventListener('click', () => { sharing = true; refresh(); });
+  refresh();
+
+  const err = h('p', { class: 'error', role: 'alert' });
+  const save = h('button', { class: 'btn primary', type: 'button', text: existing ? 'Save changes' : 'Create commitment' });
+  save.addEventListener('click', async () => {
+    err.textContent = '';
+    const t = title.value.trim();
+    if (!t) { err.textContent = 'Give your commitment a name.'; return; }
+    if (!days.size) { err.textContent = 'Choose at least one day.'; return; }
+    const payload = { title: t, note: noteEl.value.trim() || null, days: [...days].sort((a, b) => a - b), partner_id: sharing ? select.value : null };
+    save.disabled = true;
+    const { error } = existing
+      ? await sb.from('commitments').update(payload).eq('id', existing.id)
+      : await sb.from('commitments').insert({ ...payload, user_id: session.user.id });
+    if (error) { err.textContent = friendlyError(error); save.disabled = false; return; }
+    closeSheet(); toast('Commitment saved'); loadHome();
+  });
+
+  openSheet(existing ? 'Edit commitment' : 'New commitment',
+    field('Name', title),
+    field('Description (optional)', noteEl),
+    h('div', { class: 'field' }, h('label', { text: 'Repeats on' }), dayWrap, presets),
+    h('div', { class: 'field' }, h('label', { text: 'Who sees your progress' }),
+      h('div', { class: 'seg' }, solo, withF), select,
+      h('span', { class: 'hint', text: friends.length ? 'A friend you choose sees your progress on this and can send encouragement. Nothing else.' : 'Add a friend from your profile to share this.' })),
+    err, save);
+}
+
+/* All commitments */
+async function openManageSheet() {
+  const { data, error } = await sb.from('commitments').select('*').eq('user_id', session.user.id).order('created_at');
+  if (error) { toast(NEEDS_V3); return; }
+  const friends = await getFriends();
+  const fname = Object.fromEntries(friends.map(f => [f.id, f.name]));
+  const nodes = [];
+  if (!data.length) nodes.push(h('p', { class: 'empty', style: 'margin-bottom:12px', text: 'No repeating commitments yet. Start with one thing you want to do on most days.' }));
+  data.forEach(c => {
+    const edit = h('button', { class: 'btn small', type: 'button', text: 'Edit' });
+    edit.addEventListener('click', () => openCommitmentForm(c));
+    const pause = h('button', { class: 'btn small', type: 'button', text: c.is_paused ? 'Resume' : 'Pause' });
+    pause.addEventListener('click', async () => {
+      const { error: e2 } = await sb.from('commitments').update({ is_paused: !c.is_paused }).eq('id', c.id);
+      if (e2) toast(friendlyError(e2)); else { openManageSheet(); loadHome(); }
+    });
+    const del = h('button', { class: 'btn small', type: 'button', text: 'Delete' });
+    let armed = false;
+    del.addEventListener('click', async () => {
+      if (!armed) { armed = true; del.textContent = 'Tap again to delete'; return; }
+      const { error: e3 } = await sb.from('commitments').delete().eq('id', c.id);
+      if (e3) toast(friendlyError(e3)); else { toast('Commitment deleted'); openManageSheet(); loadHome(); }
+    });
+    nodes.push(h('div', { class: 'manage-item' },
+      h('strong', { style: 'font-weight:500', text: c.title }),
+      h('div', { class: 'hint', text: daysSummary(c.days) + ' \u00B7 ' + (c.partner_id ? 'With ' + (fname[c.partner_id] || 'a friend') : 'Just me') + (c.is_paused ? ' \u00B7 Paused' : '') }),
+      h('div', { class: 'row' }, edit, pause, del)));
+  });
+  const add = h('button', { class: 'btn primary', type: 'button', text: 'New commitment' });
+  add.addEventListener('click', () => openCommitmentForm(null));
+  nodes.push(add);
+  openSheet('Your commitments', ...nodes);
+}
+
+/* One row in today's list */
+function taskRow(task, commitmentById, byId) {
+  const c = task.commitment_id ? commitmentById[task.commitment_id] : null;
+  const partner = c && c.partner_id ? (byId[c.partner_id] || {}) : null;
+  const box = h('span', { class: 'box' }); box.innerHTML = CHECK_SVG;
+  const check = h('button', { class: 'check', type: 'button', 'aria-label': (task.is_done ? 'Completed: ' : 'Mark complete: ') + task.title }, box);
+  const meta = h('div', { class: 'meta' });
+  if (!task.is_done && task.status === 'in_progress') meta.append(h('span', { class: 'tag', text: 'In progress' }));
+  if (!task.is_done && task.status === 'needs_help') meta.append(h('span', { class: 'tag help', text: 'Needs help' }));
+  if (!task.is_done && task.status === 'skipped') meta.append(h('span', { class: 'tag plain', text: 'Skipped today' }));
+  if (c) meta.append(h('span', { class: 'tag plain', text: partner ? 'With ' + nameOf(partner) : daysSummary(c.days) }));
+  const row = h('div', { class: 'task' + (task.is_done ? ' done' : '') + (task.status === 'skipped' && !task.is_done ? ' skipped' : '') },
+    check, h('div', { class: 'tw' }, h('div', { class: 't', text: task.title }), meta.childNodes.length ? meta : null));
+  if (task.is_done) { check.disabled = true; return row; }
+  check.addEventListener('click', async () => {
+    check.disabled = true;
+    const { error } = await sb.rpc('complete_task', { task_id: task.id });
+    if (error) { toast(friendlyError(error)); check.disabled = false; return; }
+    toast('Done. Nice work.'); loadHome();
+  });
+  const more = h('button', { class: 'more', type: 'button', 'aria-label': 'Options for ' + task.title, text: '\u2022\u2022\u2022' });
+  more.addEventListener('click', () => openTaskSheet(task, c, partner));
+  row.append(more);
+  return row;
+}
+
+async function loadHome() {
+  const me = session.user.id, today = localDate();
+  const yd = new Date(); yd.setDate(yd.getDate() - 1);
+  const first = (profile.full_name || profile.username).split(' ')[0];
+  await sb.rpc('ensure_today_tasks', { for_date: today });
+  const since = new Date(Date.now() - 2 * 86400000).toISOString();
+  const ws = weekStartStr();
+  const [t, yt, s, a, mine, theirs, cheers, wk, refl] = await Promise.all([
+    sb.from('tasks').select('id,title,is_done,status,commitment_id').eq('user_id', me).eq('due_date', today).order('created_at'),
+    sb.from('tasks').select('id').eq('user_id', me).eq('due_date', localDate(yd)).eq('is_done', false).neq('status', 'skipped'),
+    sb.from('streaks').select('*').eq('user_id', me).maybeSingle(),
+    sb.from('activity_events').select('id,user_id,created_at').neq('user_id', me).order('created_at', { ascending: false }).limit(5),
+    sb.from('commitments').select('*').eq('user_id', me).order('created_at'),
+    sb.from('commitments').select('id,user_id,title').eq('partner_id', me).eq('is_paused', false),
+    sb.from('encouragements').select('id,from_user,message,created_at').eq('to_user', me).gte('created_at', since).order('created_at', { ascending: false }).limit(3),
+    sb.from('tasks').select('is_done,status').eq('user_id', me).gte('due_date', ws).lte('due_date', today),
+    sb.from('weekly_reflections').select('*').eq('user_id', me).order('week_start', { ascending: false }).limit(3)
+  ]);
+  if (t.error) toast(NEEDS_V3);
+
+  const tasks = (t.data || []).slice().sort((x, y) => (x.is_done === y.is_done ? 0 : x.is_done ? 1 : -1));
+  const myCommitments = mine.data || [];
+  const commitmentById = Object.fromEntries(myCommitments.map(c => [c.id, c]));
+  const partnerRows = theirs.data || [];
+  let partnerTasks = [];
+  if (partnerRows.length) {
+    const r = await sb.from('tasks').select('id,commitment_id,status,is_done').in('commitment_id', partnerRows.map(c => c.id)).eq('due_date', today);
+    partnerTasks = r.data || [];
+  }
+  const events = a.data || [], cheerRows = cheers.data || [];
+  const ids = [...new Set([...events.map(e => e.user_id), ...partnerRows.map(c => c.user_id), ...cheerRows.map(c => c.from_user), ...myCommitments.map(c => c.partner_id).filter(Boolean)])];
+  let byId = {};
+  if (ids.length) {
+    const res = await sb.from('profiles').select('id,username,full_name,avatar_url').in('id', ids);
+    byId = Object.fromEntries((res.data || []).map(p => [p.id, p]));
+  }
+
+  // Summary and progress (skipped tasks do not count against you)
+  const active = tasks.filter(x => x.status !== 'skipped' || x.is_done);
+  const done = active.filter(x => x.is_done).length, left = active.length - done;
+  $('#home-summary').textContent = tasks.length === 0
+    ? `${greeting()}, ${first}. Add the one or two things that matter most today.`
+    : active.length > 0 && left === 0 ? `${greeting()}, ${first}. Everything planned for today is done.`
+    : left === 0 ? `${greeting()}, ${first}. You chose to skip today. That is a fair call.`
+    : `${greeting()}, ${first}. You have ${left} ${left === 1 ? 'thing' : 'things'} left today.`;
+  const pct = active.length ? Math.round(done / active.length * 100) : 0;
+  const bar = $('#progress'); bar.setAttribute('aria-valuenow', pct); bar.firstElementChild.style.width = pct + '%';
+  $('#recovery-note').hidden = !((yt.data || []).length > 0);
+
+  // This week
+  const wkActive = (wk.data || []).filter(x => x.status !== 'skipped' || x.is_done);
+  const wkDone = wkActive.filter(x => x.is_done).length;
+  const reflections = refl.data || [];
+  const thisWeek = reflections.find(r => r.week_start === ws);
+  const previous = reflections.find(r => r.week_start !== ws && r.change_next);
+  $('#week-summary').textContent = wkActive.length ? `${wkDone} of ${wkActive.length} done so far this week.` : 'Nothing logged yet this week.';
+  const wpct = wkActive.length ? Math.round(wkDone / wkActive.length * 100) : 0;
+  const wbar = $('#week-progress'); wbar.setAttribute('aria-valuenow', wpct); wbar.firstElementChild.style.width = wpct + '%';
+  $('#week-hint').textContent = previous ? 'Last time you wanted to change: ' + previous.change_next : '';
+  $('#week-hint').hidden = !previous;
+  const rb = $('#reflect-btn');
+  rb.textContent = thisWeek ? 'Edit this week\u2019s reflection' : 'Reflect on your week';
+  rb.classList.toggle('primary', !thisWeek && [0, 6].includes(new Date().getDay()));
+
+  // Tasks
+  const list = $('#tasks'); list.replaceChildren();
+  if (!tasks.length) list.append(h('p', { class: 'empty', text: 'Nothing planned yet. Add something below, or create a repeating commitment.' }));
+  tasks.forEach(task => list.append(taskRow(task, commitmentById, byId)));
+
+  // Streak: only count it while it is still alive
+  const chips = $('#streak-chips'); chips.replaceChildren();
+  if (s.data) {
+    const todayD = new Date(localDate() + 'T00:00:00'), last = s.data.last_done_date ? new Date(s.data.last_done_date + 'T00:00:00') : null;
+    const gap = last ? Math.round((todayD - last) / 86400000) : null;
+    const alive = gap !== null && (gap <= 1 || (gap === 2 && s.data.freezes_left > 0));
+    const n = alive ? s.data.current_streak : 0;
+    chips.append(h('span', { class: 'chip', text: n > 0 ? `${n} day streak` : 'Complete one today to start a streak' }));
+    chips.append(h('span', { class: 'chip plain', text: `${s.data.freezes_left} streak ${s.data.freezes_left === 1 ? 'freeze' : 'freezes'} left this week` }));
+  }
+
+  // Friends you support
+  const sl = $('#support-list'); sl.replaceChildren();
+  $('#support-panel').hidden = partnerRows.length === 0;
+  partnerRows.forEach(c => {
+    const owner = byId[c.user_id] || { username: 'friend' };
+    const pt = partnerTasks.find(x => x.commitment_id === c.id);
+    const state = !pt ? 'Not scheduled today' : pt.is_done ? 'Done' : STATUS_LABEL[pt.status];
+    const needs = !!pt && !pt.is_done && pt.status === 'needs_help';
+    const btn = h('button', { class: 'btn small' + (needs ? ' primary' : ''), type: 'button', text: needs ? 'Send encouragement' : 'Cheer' });
+    btn.addEventListener('click', () => openCheerSheet(c, owner));
+    sl.append(h('div', { class: 'support-row' + (needs ? ' help' : '') }, avatarEl(owner, 40),
+      h('div', { style: 'flex:1;min-width:0' }, h('strong', { style: 'font-weight:500;display:block', text: c.title }), h('span', { class: 'hint', text: nameOf(owner) + ' \u00B7 ' + state })), btn));
+  });
+
+  // Your circle
+  const circle = $('#circle'); circle.replaceChildren();
+  const items = [
+    ...cheerRows.map(c => ({ at: c.created_at, who: byId[c.from_user], text: `${nameOf(byId[c.from_user])} cheered you on: "${c.message}"` })),
+    ...events.map(e => ({ at: e.created_at, who: byId[e.user_id], text: `${nameOf(byId[e.user_id])} finished a commitment` }))
+  ].sort((x, y) => new Date(y.at) - new Date(x.at)).slice(0, 6);
+  if (!items.length) circle.append(h('p', { class: 'empty', text: 'When a friend finishes something or cheers you on, you will see it here.' }));
+  items.forEach(it => circle.append(h('div', { class: 'circle-item' }, avatarEl(it.who || { username: 'friend' }, 40),
+    h('div', { class: 'tx' }, h('span', { text: it.text })), h('time', { text: timeAgo(it.at) }))));
+}
+
+$('#task-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const err = $('#task-error'); err.textContent = '';
+  const input = $('#task-input'), title = input.value.trim();
+  if (!title) { err.textContent = 'Write what you want to get done.'; return; }
+  const { error } = await sb.from('tasks').insert({ user_id: session.user.id, title, due_date: localDate() });
+  if (error) { err.textContent = friendlyError(error); return; }
+  input.value = ''; loadHome();
+});
+$('#manage-btn').addEventListener('click', openManageSheet);
+$('#recovery-adjust').addEventListener('click', openManageSheet);
+$('#new-commitment-btn').addEventListener('click', () => openCommitmentForm(null));
+
+/* ---------- Weekly reflection ---------- */
+function weekStartStr(d = new Date()) {
+  const x = new Date(d); x.setDate(x.getDate() - ((x.getDay() + 6) % 7));
+  return localDate(x);
+}
+function weekLabel(ws) {
+  return 'Week of ' + new Date(ws + 'T00:00:00').toLocaleDateString([], { month: 'short', day: 'numeric' });
+}
+const REFLECT_QS = [['went_well', 'What went well this week?'], ['was_hard', 'What made progress difficult?'], ['change_next', 'What would you like to change next week?']];
+
+async function openReflectionSheet(ws, existing) {
+  const areas = {};
+  const fields = REFLECT_QS.map(([key, q]) => {
+    const t = h('textarea', { class: 'input', maxlength: '1000', 'aria-label': q });
+    t.value = (existing && existing[key]) || ''; areas[key] = t;
+    return field(q, t);
+  });
+  const err = h('p', { class: 'error', role: 'alert' });
+  const save = h('button', { class: 'btn primary', type: 'button', text: 'Save reflection' });
+  const earlier = h('details', { class: 'more', style: 'margin-top:16px' }, h('summary', { text: 'Earlier weeks' }));
+  earlier.hidden = true;
+  save.addEventListener('click', async () => {
+    err.textContent = '';
+    const payload = { user_id: session.user.id, week_start: ws, updated_at: new Date().toISOString() };
+    let any = false;
+    REFLECT_QS.forEach(([key]) => { const v = areas[key].value.trim(); payload[key] = v || null; if (v) any = true; });
+    if (!any) { err.textContent = 'Write at least one answer, or close this.'; return; }
+    save.disabled = true;
+    const { error } = await sb.from('weekly_reflections').upsert(payload, { onConflict: 'user_id,week_start' });
+    if (error) { err.textContent = friendlyError(error); save.disabled = false; return; }
+    closeSheet(); toast('Reflection saved'); loadHome();
+  });
+  openSheet(weekLabel(ws),
+    h('p', { class: 'hint', style: 'margin-bottom:12px', text: 'A few honest lines is enough. Only you can see this.' }),
+    ...fields, err, save, earlier);
+  const { data } = await sb.from('weekly_reflections').select('*').neq('week_start', ws).order('week_start', { ascending: false }).limit(4);
+  if (data && data.length) {
+    earlier.hidden = false;
+    data.forEach(r => {
+      const box = h('div', { style: 'padding:8px 0 12px' }, h('strong', { style: 'font-weight:500', text: weekLabel(r.week_start) }));
+      REFLECT_QS.forEach(([key, q]) => { if (r[key]) box.append(h('p', { class: 'hint', style: 'margin-top:6px', text: q }), h('p', { text: r[key] })); });
+      earlier.append(box);
+    });
+  }
+}
+$('#reflect-btn').addEventListener('click', async () => {
+  const ws = weekStartStr();
+  const { data } = await sb.from('weekly_reflections').select('*').eq('user_id', session.user.id).eq('week_start', ws).maybeSingle();
+  openReflectionSheet(ws, data);
+});
+
+/* ---------- Status ---------- */
+const PRESENCE = {
+  online: { label: 'Online', sub: 'Friends see that you are around.' },
+  idle: { label: 'Idle', sub: 'Around, but not up for a chat.' },
+  offline: { label: 'Offline', sub: 'Appear offline, even while you use the app.' }
+};
+function presenceOf(p) {
+  if (!p || p.status === 'offline') return 'offline';
+  if (!p.last_seen || Date.now() - new Date(p.last_seen) > 3 * 60 * 1000) return 'offline';
+  return p.status === 'idle' ? 'idle' : 'online';
+}
+function avatarWithStatus(p, size) {
+  const st = presenceOf(p);
+  return h('span', { class: 'avatar-wrap' }, avatarEl(p, size), h('span', { class: 'sdot ' + st, title: PRESENCE[st].label }));
+}
+function updatePresenceBtn() { $('#presence-btn').textContent = 'You appear: ' + PRESENCE[(profile && profile.status) || 'online'].label; }
+$('#presence-btn').addEventListener('click', () => {
+  const nodes = Object.entries(PRESENCE).map(([key, v]) =>
+    actionBtn(v.label + (profile.status === key ? ' (current)' : ''), v.sub, async () => {
+      const { error } = await sb.from('profiles').update({ status: key }).eq('id', session.user.id);
+      if (error) { toast(friendlyError(error)); return; }
+      profile.status = key; updatePresenceBtn(); closeSheet(); toast('You now appear ' + v.label.toLowerCase());
+    }));
+  openSheet('Your status', ...nodes);
+});
+
+/* ---------- Messages ---------- */
+const MSG_SELECT = 'id,sender_id,body,media_url,media_type,media_seconds,reply_to,created_at,deleted_at';
+let chat = null, inbox = null, hbTimer = null, hbBound = false;
+const clockTime = iso => new Date(iso).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+function dayLabel(iso) {
+  const d = new Date(iso), diff = Math.round((new Date(new Date().toDateString()) - new Date(d.toDateString())) / 86400000);
+  return diff === 0 ? 'Today' : diff === 1 ? 'Yesterday' : d.toLocaleDateString([], { weekday: 'long', month: 'short', day: 'numeric' });
+}
+
+
+$('#new-chat-btn').addEventListener('click', async () => {
+  const friends = await getFriends();
+  if (!friends.length) {
+    openSheet('New message', h('p', { class: 'empty', text: 'Add a friend from your profile first. Then you can message them here.' }));
+    return;
+  }
+  openSheet('New message', actionBtn('New group', 'Chat with 2 or more friends at once.', () => openGroupCreator(friends)), ...friends.map(f => actionBtn(f.name, null, async () => {
+    const { data, error } = await sb.rpc('start_direct_chat', { friend: f.id });
+    if (error) { toast(friendlyError(error)); return; }
+    const r = await sb.from('profiles').select('id,username,full_name,avatar_url,status,last_seen').eq('id', f.id).single();
+    closeSheet(); openChat(data, r.data || { id: f.id, username: f.name });
+  })));
+});
+
+/* The chat screen */
+function openChat(cid, other, group) {
+  chat = { id: cid, other: other || null, group: group ? { name: group.name, count: group.count || 0, members: {} } : null, messages: [], extra: {}, hasMore: false, replyTo: null, typingUntil: 0, lastTypingSent: 0 };
+  $('#chat-name').textContent = chat.group ? chat.group.name : nameOf(other);
+  paintChatHead();
+  $('#chat').hidden = false; document.body.style.overflow = 'hidden';
+  $('#chat-body').replaceChildren(h('p', { class: 'empty', style: 'text-align:center;margin:auto', text: 'Loading' }));
+  clearReply();
+  loadMessages(false).then(markRead);
+  startTyping();
+  const c = chat;
+  if (c.group) {
+    loadGroupMembers(c).then(ok => { if (chat === c && ok) { paintChatHead(); renderChat('new'); } });
+  } else c.poll = setInterval(async () => {
+    const r = await sb.from('profiles').select('id,username,full_name,avatar_url,status,last_seen').eq('id', c.other.id).single();
+    if (chat === c && r.data) { c.other = r.data; paintChatHead(); }
+  }, 45000);
+}
+function paintChatHead() {
+  $('#chat-avatar').replaceChildren(chat.group ? groupAvatar(40) : avatarWithStatus(chat.other, 40));
+  updateChatStatus();
+}
+function updateChatStatus() {
+  if (!chat) return;
+  const typing = chat.typingUntil > Date.now();
+  $('#chat-status').textContent = chat.group
+    ? (typing ? 'Someone is typing' : (chat.group.count ? chat.group.count + ' members' : 'Group'))
+    : (typing ? 'typing' : PRESENCE[presenceOf(chat.other)].label);
+}
+function closeChat() {
+  if (!chat) return;
+  cancelRecording();
+  clearInterval(chat.poll); clearTimeout(chat.typingTimer);
+  if (chat.typingChannel) sb.removeChannel(chat.typingChannel);
+  chat = null; $('#chat').hidden = true; document.body.style.overflow = '';
+  if (currentTab === 'messages') loadConversations(); else refreshUnread();
+}
+$('#chat-back').addEventListener('click', closeChat);
+
+async function loadMessages(older) {
+  const c = chat; if (!c) return;
+  let q = sb.from('messages').select(MSG_SELECT).eq('conversation_id', c.id).order('created_at', { ascending: false }).limit(50);
+  if (older && c.messages.length) q = q.lt('created_at', c.messages[0].created_at);
+  const { data, error } = await q;
+  if (chat !== c) return;
+  if (error) { toast(friendlyError(error)); return; }
+  const body = $('#chat-body'), prevH = body.scrollHeight;
+  c.hasMore = (data || []).length === 50;
+  c.messages = [...(data || []).reverse(), ...c.messages];
+  const known = new Set(c.messages.map(m => m.id));
+  const missing = [...new Set(c.messages.map(m => m.reply_to).filter(id => id && !known.has(id) && !c.extra[id]))];
+  if (missing.length) {
+    const r = await sb.from('messages').select(MSG_SELECT).in('id', missing);
+    (r.data || []).forEach(m => { c.extra[m.id] = m; });
+  }
+  if (chat === c) renderChat(older ? 'keep' : 'bottom', prevH);
+}
+
+function renderChat(mode, prevH) {
+  if (!chat) return;
+  const me = session.user.id, body = $('#chat-body');
+  const prevTop = body.scrollTop, nearBottom = body.scrollHeight - body.scrollTop - body.clientHeight < 140;
+  const map = { ...chat.extra, ...Object.fromEntries(chat.messages.map(m => [m.id, m])) };
+  const nodes = [];
+  if (chat.hasMore) {
+    const b = h('button', { class: 'btn quiet small', type: 'button', text: 'Load earlier messages', style: 'align-self:center' });
+    b.addEventListener('click', () => loadMessages(true)); nodes.push(b);
+  }
+  if (!chat.messages.length) nodes.push(h('p', { class: 'empty', style: 'text-align:center;margin:auto', text: chat.group ? 'No messages yet. Say hello to the group.' : 'No messages yet. Say hello to ' + nameOf(chat.other) + '.' }));
+  let lastDay = '';
+  chat.messages.forEach(m => {
+    const dl = dayLabel(m.created_at);
+    if (dl !== lastDay) { nodes.push(h('div', { class: 'day-sep', text: dl })); lastDay = dl; }
+    nodes.push(bubble(m, map, me));
+  });
+  body.replaceChildren(...nodes);
+  if (mode === 'bottom' || (mode === 'new' && nearBottom)) body.scrollTop = body.scrollHeight;
+  else if (mode === 'keep') body.scrollTop = body.scrollHeight - prevH;
+  else body.scrollTop = prevTop;
+}
+
+function bubble(m, map, me) {
+  const mine = m.sender_id === me;
+  if (m.deleted_at) return h('div', { class: 'bubble deleted ' + (mine ? 'me' : 'them'), text: 'Message deleted' });
+  const el = h('div', { class: 'bubble ' + (mine ? 'me' : 'them') + (m._failed ? ' failed' : ''), role: 'button', tabindex: '0', 'aria-label': 'Message options' });
+  if (chat.group && !mine) el.append(h('div', { class: 'sender', text: nameOf(senderOf(m.sender_id)) }));
+  if (m.reply_to) {
+    const o = map[m.reply_to];
+    el.append(h('div', { class: 'quote' },
+      h('strong', { text: o ? (o.sender_id === me ? 'You' : nameOf(senderOf(o.sender_id))) : 'Message' }),
+      h('span', { text: o ? (o.deleted_at ? 'Message deleted' : (o.body || mediaLabel(o)).slice(0, 80)) : 'Original message' })));
+  }
+  if (m.media_type && (m.media_url || m._localUrl)) el.append(mediaEl(m));
+  if (m.body) el.append(h('span', { text: m.body }));
+  el.append(h('time', { class: 'time', text: m._pending ? 'Sending' : m._failed ? 'Not sent. Tap to retry' : clockTime(m.created_at) }));
+  el.addEventListener('click', () => { if (m._failed) retrySend(m); else if (!m._pending) openMessageSheet(m, mine); });
+  el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); } });
+  return el;
+}
+
+function openMessageSheet(m, mine) {
+  const nodes = [
+    actionBtn('Reply', null, () => { closeSheet(); setReply(m); }),
+    actionBtn('Copy text', null, async () => {
+      try { await navigator.clipboard.writeText(m.body || ''); toast('Copied'); } catch { toast('Could not copy'); }
+      closeSheet();
+    })
+  ];
+  if (mine) nodes.push(actionBtn('Delete for everyone', 'They will see that a message was deleted.', async () => {
+    const { error } = await sb.rpc('delete_message', { msg: m.id });
+    if (error) { toast(friendlyError(error)); return; }
+    m.deleted_at = new Date().toISOString(); m.body = null; closeSheet(); renderChat('none');
+  }, 'danger'));
+  openSheet('Message', ...nodes);
+}
+
+function setReply(m) {
+  chat.replyTo = m;
+  $('#rb-name').textContent = 'Replying to ' + (m.sender_id === session.user.id ? 'yourself' : nameOf(senderOf(m.sender_id)));
+  $('#rb-text').textContent = (m.body || mediaLabel(m)).slice(0, 80);
+  $('#reply-bar').hidden = false; $('#composer-input').focus();
+}
+function clearReply() { if (chat) chat.replyTo = null; $('#reply-bar').hidden = true; }
+$('#rb-cancel').addEventListener('click', clearReply);
+
+async function doSend(text, replyId) {
+  const c = chat, me = session.user.id;
+  const temp = { id: 'tmp' + Date.now() + Math.random(), sender_id: me, body: text, reply_to: replyId || null, created_at: new Date().toISOString(), _pending: true };
+  c.messages.push(temp); renderChat('bottom');
+  const { data, error } = await sb.from('messages').insert({ conversation_id: c.id, sender_id: me, body: text, reply_to: replyId || null }).select(MSG_SELECT).single();
+  if (error) { temp._pending = false; temp._failed = true; toast(friendlyError(error)); }
+  else {
+    const i = c.messages.indexOf(temp);
+    if (c.messages.some(x => x.id === data.id)) c.messages.splice(i, 1); else c.messages[i] = data;
+  }
+  if (chat === c) renderChat('bottom');
+}
+function retrySend(m) {
+  chat.messages = chat.messages.filter(x => x !== m);
+  if (m._media) sendMedia(m._media.blob, m._media.kind, m._media.type, m._media.ext, m._media.seconds, m.reply_to);
+  else doSend(m.body, m.reply_to);
+}
+function sendFromComposer() {
+  const input = $('#composer-input'), text = input.value.trim();
+  if (!text || !chat) return;
+  const replyId = chat.replyTo ? chat.replyTo.id : null;
+  input.value = ''; input.style.height = 'auto'; clearReply();
+  doSend(text, replyId);
+}
+$('#composer').addEventListener('submit', e => { e.preventDefault(); sendFromComposer(); });
+$('#composer-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey && window.matchMedia('(pointer: fine)').matches) { e.preventDefault(); sendFromComposer(); }
+});
+$('#composer-input').addEventListener('input', e => {
+  const t = e.target; t.style.height = 'auto'; t.style.height = Math.min(t.scrollHeight, 120) + 'px';
+  signalTyping();
+});
+
+/* ---------- Group chats, chat media, voice notes ---------- */
+const MEDIA_LABEL = { image: 'Photo', video: 'Video', audio: 'Voice note' };
+const mediaLabel = m => (m && MEDIA_LABEL[m.media_type]) || '';
+function senderOf(id) {
+  if (chat && chat.group) return chat.group.members[id] || { id, username: 'member' };
+  return chat.other;
+}
+function groupAvatar(size) {
+  const el = h('span', { class: 'group-av', style: 'width:' + size + 'px;height:' + size + 'px', role: 'img', 'aria-label': 'Group' });
+  el.append(icon('users')); return el;
+}
+async function loadGroupMembers(c) {
+  const { data, error } = await sb.rpc('group_members', { conv: c.id });
+  if (error || !data) return false;
+  c.group.members = Object.fromEntries(data.map(r => [r.user_id, { id: r.user_id, role: r.role, username: r.username, full_name: r.full_name, avatar_url: r.avatar_url, status: r.status, last_seen: r.last_seen }]));
+  c.group.count = data.length;
+  return true;
+}
+function friendPicker(friends, cta, onSubmit) {
+  const checks = friends.map(f => {
+    const cb = h('input', { type: 'checkbox', 'aria-label': f.name });
+    return { f, cb, row: h('label', { class: 'pick-row' }, cb, h('span', { text: f.name })) };
+  });
+  const err = h('p', { class: 'error', role: 'alert' });
+  const btn = h('button', { class: 'btn primary', type: 'button', text: cta, style: 'margin-top:12px' });
+  btn.addEventListener('click', async () => {
+    err.textContent = '';
+    const ids = checks.filter(x => x.cb.checked).map(x => x.f.id);
+    btn.disabled = true;
+    const msg = await onSubmit(ids);
+    if (msg) { err.textContent = msg; btn.disabled = false; }
+  });
+  return [h('div', {}, ...checks.map(x => x.row)), err, btn];
+}
+function openGroupCreator(friends) {
+  if (friends.length < 2) { openSheet('New group', h('p', { class: 'empty', text: 'You need at least 2 friends to start a group.' })); return; }
+  const name = h('input', { class: 'input', maxlength: '50', placeholder: 'Group name', 'aria-label': 'Group name' });
+  const [list, err, btn] = friendPicker(friends, 'Create group', async ids => {
+    const nm = name.value.trim();
+    if (!nm) return 'Give the group a name.';
+    if (ids.length < 2) return 'Pick at least 2 friends.';
+    const { data, error } = await sb.rpc('create_group', { group_name: nm, member_ids: ids });
+    if (error) return /function|schema cache/i.test(error.message) ? 'Run schema_v6.sql in Supabase to turn on groups.' : friendlyError(error);
+    closeSheet(); openChat(data, null, { name: nm, count: ids.length + 1 });
+    return '';
+  });
+  openSheet('New group', name, h('p', { class: 'hint', text: 'Pick the friends to add (up to 29).' }), list, err, btn);
+}
+async function openGroupSheet() {
+  const c = chat; if (!c || !c.group) return;
+  await loadGroupMembers(c); if (chat !== c) return; paintChatHead();
+  const me = session.user.id, mine = c.group.members[me], admin = !!mine && mine.role === 'admin';
+  const rows = Object.values(c.group.members).map(p => {
+    const row = h('div', { class: 'member-row' }, avatarEl(p, 38),
+      h('div', { style: 'flex:1;min-width:0' }, h('strong', { text: nameOf(p) + (p.id === me ? ' (you)' : '') }), h('div', { class: 'hint', text: p.role === 'admin' ? 'Admin' : 'Member' })));
+    if (admin && p.id !== me) {
+      const b = h('button', { class: 'btn small', type: 'button', text: 'Remove' });
+      b.addEventListener('click', async () => {
+        b.disabled = true;
+        const { error } = await sb.rpc('remove_group_member', { conv: c.id, target: p.id });
+        if (error) { toast(friendlyError(error)); b.disabled = false; return; }
+        toast('Removed'); openGroupSheet();
+      });
+      row.append(b);
+    }
+    return row;
+  });
+  const acts = [];
+  if (admin) {
+    acts.push(actionBtn('Add people', 'Invite more friends to this group.', async () => {
+      const friends = await getFriends();
+      const have = new Set(Object.keys(c.group.members));
+      const avail = friends.filter(f => !have.has(f.id));
+      if (!avail.length) { toast('All your friends are already in this group.'); return; }
+      const [list, err, btn] = friendPicker(avail, 'Add to group', async ids => {
+        if (!ids.length) return 'Pick at least one friend.';
+        const { error } = await sb.rpc('add_group_members', { conv: c.id, member_ids: ids });
+        if (error) return friendlyError(error);
+        toast('Added'); openGroupSheet(); return '';
+      });
+      openSheet('Add people', list, err, btn);
+    }));
+    acts.push(actionBtn('Rename group', null, () => {
+      const inp = h('input', { class: 'input', maxlength: '50', value: c.group.name, 'aria-label': 'Group name' });
+      const save = h('button', { class: 'btn primary', type: 'button', text: 'Save', style: 'margin-top:12px' });
+      save.addEventListener('click', async () => {
+        const nm = inp.value.trim(); if (!nm) { toast('Give the group a name.'); return; }
+        const { error } = await sb.rpc('rename_group', { conv: c.id, new_name: nm });
+        if (error) { toast(friendlyError(error)); return; }
+        c.group.name = nm; $('#chat-name').textContent = nm; closeSheet(); toast('Renamed');
+      });
+      openSheet('Rename group', inp, save);
+    }));
+  }
+  acts.push(actionBtn('Leave group', 'You will stop getting its messages.', async () => {
+    if (!confirm('Leave this group?')) return;
+    const { error } = await sb.rpc('leave_group', { conv: c.id });
+    if (error) { toast(friendlyError(error)); return; }
+    closeSheet(); closeChat(); toast('You left the group');
+  }, 'danger'));
+  openSheet(c.group.name, h('div', {}, ...rows), h('div', { style: 'display:grid;gap:10px;margin-top:14px' }, ...acts));
+}
+
+/* Photos, videos and voice notes in a chat */
+const chatUrlCache = {};
+async function signedChatUrl(path) {
+  const hit = chatUrlCache[path];
+  if (hit && hit.exp > Date.now()) return hit.url;
+  const r = await sb.storage.from('chat-media').createSignedUrl(path, 3600);
+  if (!r.data || !r.data.signedUrl) return null;
+  chatUrlCache[path] = { url: r.data.signedUrl, exp: Date.now() + 50 * 60 * 1000 };
+  return r.data.signedUrl;
+}
+function mediaEl(m) {
+  const c = chat, real = !String(m.id).startsWith('tmp');
+  if (c && real && c.mnodes && c.mnodes[m.id]) return c.mnodes[m.id];
+  let el;
+  if (m.media_type === 'image') el = h('img', { alt: 'Photo in chat', loading: 'lazy' });
+  else if (m.media_type === 'video') el = h('video', { controls: '', preload: 'metadata', playsinline: '' });
+  else el = h('audio', { controls: '', preload: 'metadata' });
+  if (m._localUrl) el.src = m._localUrl;
+  else {
+    const hit = chatUrlCache[m.media_url];
+    if (hit && hit.exp > Date.now()) el.src = hit.url;
+    else signedChatUrl(m.media_url).then(u => { if (u) el.src = u; });
+  }
+  if (c && real) { c.mnodes = c.mnodes || {}; c.mnodes[m.id] = el; }
+  return el;
+}
+async function sendMedia(blob, kind, type, ext, seconds, replyId) {
+  const c = chat, me = session.user.id; if (!c) return;
+  const temp = { id: 'tmp' + Date.now() + Math.random(), sender_id: me, body: null, media_type: kind, media_seconds: seconds || null,
+    _localUrl: URL.createObjectURL(blob), reply_to: replyId || null, created_at: new Date().toISOString(), _pending: true,
+    _media: { blob, kind, type, ext, seconds } };
+  c.messages.push(temp); renderChat('bottom');
+  const path = c.id + '/' + me + '/' + Date.now() + '.' + ext;
+  let data = null, error = null;
+  const up = await sb.storage.from('chat-media').upload(path, blob, { contentType: type });
+  if (up.error) error = up.error;
+  else {
+    const r = await sb.from('messages').insert({ conversation_id: c.id, sender_id: me, media_url: path, media_type: kind, media_seconds: seconds || null, reply_to: replyId || null }).select(MSG_SELECT).single();
+    data = r.data; error = r.error;
+  }
+  if (error) { temp._pending = false; temp._failed = true; toast(friendlyError(error)); }
+  else {
+    const i = c.messages.indexOf(temp);
+    if (c.messages.some(x => x.id === data.id)) c.messages.splice(i, 1); else c.messages[i] = data;
+  }
+  if (chat === c) renderChat('bottom');
+}
+$('#attach-btn').addEventListener('click', () => $('#attach-input').click());
+$('#attach-input').addEventListener('change', async e => {
+  const f = e.target.files[0]; e.target.value = ''; if (!f || !chat) return;
+  const replyId = chat.replyTo ? chat.replyTo.id : null;
+  try {
+    if (f.type.startsWith('image/')) {
+      const blob = await resizeJpeg(f); clearReply();
+      sendMedia(blob, 'image', 'image/jpeg', 'jpg', null, replyId);
+    } else if (f.type.startsWith('video/')) {
+      const ext = VIDEO_EXT[f.type];
+      if (!ext) { toast('Use an MP4, MOV or WebM video.'); return; }
+      if (f.size > 50 * 1024 * 1024) { toast('Choose a video under 50 MB.'); return; }
+      clearReply(); sendMedia(f, 'video', f.type, ext, null, replyId);
+    } else toast('Choose a photo or a video.');
+  } catch (ex) { toast(ex.message || 'Could not add that file.'); }
+});
+
+/* Voice notes (up to 2 minutes) */
+let rec = null, recTimer = null;
+async function startRecording() {
+  if (rec || !chat) return;
+  if (!navigator.mediaDevices || !window.MediaRecorder) { toast('Voice notes are not supported on this browser.'); return; }
+  let stream;
+  try { stream = await navigator.mediaDevices.getUserMedia({ audio: true }); }
+  catch { toast('Allow microphone access to record a voice note.'); return; }
+  const pref = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4'].find(t => MediaRecorder.isTypeSupported(t));
+  let mr;
+  try { mr = new MediaRecorder(stream, pref ? { mimeType: pref } : undefined); }
+  catch { stream.getTracks().forEach(t => t.stop()); toast('Could not start recording.'); return; }
+  const r = { mr, chunks: [], t0: Date.now(), cancel: false, c: chat, replyId: chat.replyTo ? chat.replyTo.id : null };
+  rec = r;
+  mr.ondataavailable = e => { if (e.data && e.data.size) r.chunks.push(e.data); };
+  mr.onstop = () => {
+    stream.getTracks().forEach(t => t.stop());
+    clearInterval(recTimer); $('#rec-bar').hidden = true; $('#composer').hidden = false;
+    if (rec === r) rec = null;
+    if (r.cancel || !r.chunks.length || chat !== r.c) return;
+    const secs = Math.max(1, Math.round((Date.now() - r.t0) / 1000));
+    const base = (mr.mimeType || pref || 'audio/webm').split(';')[0];
+    const ext = base === 'audio/mp4' ? 'm4a' : base === 'audio/ogg' ? 'ogg' : 'webm';
+    clearReply();
+    sendMedia(new Blob(r.chunks, { type: base }), 'audio', base, ext, secs, r.replyId);
+  };
+  mr.start();
+  $('#composer').hidden = true; $('#rec-bar').hidden = false; $('#rec-time').textContent = '0:00';
+  recTimer = setInterval(() => {
+    const sec = Math.round((Date.now() - r.t0) / 1000);
+    $('#rec-time').textContent = Math.floor(sec / 60) + ':' + String(sec % 60).padStart(2, '0');
+    if (sec >= 120 && mr.state === 'recording') mr.stop();
+  }, 250);
+}
+function stopRecording(cancel) { if (!rec) return; rec.cancel = !!cancel; if (rec.mr.state !== 'inactive') rec.mr.stop(); }
+function cancelRecording() { stopRecording(true); }
+$('#mic-btn').addEventListener('click', startRecording);
+$('#rec-cancel').addEventListener('click', () => stopRecording(true));
+$('#rec-send').addEventListener('click', () => stopRecording(false));
+
+/* Typing indicator (shared live, never stored) */
+function startTyping() {
+  const c = chat;
+  c.typingChannel = sb.channel('typing:' + c.id).on('broadcast', { event: 'typing' }, ({ payload }) => {
+    if (chat !== c || !payload || payload.user === session.user.id) return;
+    c.typingUntil = Date.now() + 3500; updateChatStatus();
+    clearTimeout(c.typingTimer); c.typingTimer = setTimeout(updateChatStatus, 3600);
+  }).subscribe();
+}
+function signalTyping() {
+  const c = chat;
+  if (!c || !c.typingChannel || Date.now() - c.lastTypingSent < 2000) return;
+  c.lastTypingSent = Date.now();
+  c.typingChannel.send({ type: 'broadcast', event: 'typing', payload: { user: session.user.id } });
+}
+async function markRead() { if (chat) await sb.rpc('mark_read', { conv: chat.id }); }
+
+/* Live updates, and the "last seen" heartbeat behind your status */
+function onMessageEvent(type, m) {
+  const me = session.user.id;
+  if (chat && m.conversation_id === chat.id) {
+    const i = chat.messages.findIndex(x => x.id === m.id);
+    if (type === 'UPDATE') { if (i >= 0) { chat.messages[i] = { ...chat.messages[i], deleted_at: m.deleted_at, body: m.body }; renderChat('none'); } return; }
+    if (i >= 0) return;
+    if (m.sender_id === me && chat.messages.some(x => x._pending)) return;
+    chat.messages.push({ id: m.id, sender_id: m.sender_id, body: m.body, media_url: m.media_url, media_type: m.media_type, media_seconds: m.media_seconds, reply_to: m.reply_to, created_at: m.created_at, deleted_at: m.deleted_at });
+    renderChat('new');
+    if (m.sender_id !== me) markRead();
+    return;
+  }
+  if (type === 'INSERT' && m.sender_id !== me) {
+    refreshUnread();
+    if (currentTab === 'messages') loadConversations();
+  }
+}
+function startRealtime() {
+  if (inbox) return;
+  inbox = sb.channel('inbox')
+    .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'messages' }, p => onMessageEvent('INSERT', p.new))
+    .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'messages' }, p => onMessageEvent('UPDATE', p.new))
+    .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'notifications' }, p => onNotificationEvent(p.new))
+    .subscribe();
+}
+function stopRealtime() {
+  if (inbox) { sb.removeChannel(inbox); inbox = null; }
+  clearInterval(hbTimer); hbTimer = null;
+  if (chat) { clearInterval(chat.poll); chat = null; $('#chat').hidden = true; document.body.style.overflow = ''; }
+}
+function beat() {
+  if (session && document.visibilityState === 'visible') {
+    sb.from('profiles').update({ last_seen: new Date().toISOString() }).eq('id', session.user.id).then(() => {});
+  }
+}
+function startHeartbeat() {
+  if (hbTimer) return;
+  beat(); hbTimer = setInterval(beat, 60000);
+  if (!hbBound) { document.addEventListener('visibilitychange', beat); hbBound = true; }
+}
+
+/* ---------- Screen 6: the app ---------- */
+function openApp(tab) {
+  show('app'); showTab(tab || currentTab);
+  startRealtime(); startHeartbeat(); refreshUnread(); refreshBell();
+}
+function showTab(name) {
+  currentTab = name;
+  ['home', 'communities', 'messages', 'profile'].forEach(t => { $('#pane-' + t).hidden = t !== name; });
+  document.querySelectorAll('.nav-item').forEach(b => {
+    if (b.dataset.nav === name) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current');
+  });
+  window.scrollTo(0, 0);
+  if (name === 'home') { paintComposeAvatar(); loadHome(); loadStories(); loadFeed(); }
+  if (name === 'profile') loadProfileTab();
+  if (name === 'messages') loadMessagesTab();
+}
+document.querySelectorAll('.nav-item').forEach(b => b.addEventListener('click', () => showTab(b.dataset.nav)));
+function paintComposeAvatar() { $('#compose-avatar').replaceChildren(avatarEl(profile, 40)); }
+
+/* ---------- Photos ---------- */
+const VIDEO_EXT = { 'video/mp4': 'mp4', 'video/quicktime': 'mov', 'video/webm': 'webm' };
+function resizeJpeg(file, max = 1600) {
+  return new Promise((resolve, reject) => {
+    if (file.size > 20 * 1024 * 1024) return reject(new Error('Choose a photo under 20 MB.'));
+    const img = new Image(), url = URL.createObjectURL(file);
+    img.onload = () => {
+      const k = Math.min(1, max / Math.max(img.width, img.height)), c = document.createElement('canvas');
+      c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(url);
+      c.toBlob(b => b ? resolve(b) : reject(new Error('Could not read that photo.')), 'image/jpeg', 0.85);
+    };
+    img.onerror = () => reject(new Error('That file is not a photo.'));
+    img.src = url;
+  });
+}
+function photoPicker(onPick) {
+  const input = h('input', { type: 'file', accept: 'image/*', hidden: '' });
+  const box = h('button', { class: 'photo-pick', type: 'button' }, icon('image'), h('span', { text: 'Add a photo' }));
+  box.addEventListener('click', () => input.click());
+  input.addEventListener('change', async () => {
+    const f = input.files[0]; if (!f) return;
+    try {
+      const blob = await resizeJpeg(f);
+      box.replaceChildren(h('img', { src: URL.createObjectURL(blob), alt: 'Selected photo' }));
+      onPick(blob);
+    } catch (ex) { toast(ex.message); }
+  });
+  return h('div', {}, box, input);
+}
+
+/* ---------- Posts ---------- */
+const POST_SELECT = 'id,author_id,body,image_urls,video_url,visibility,is_pinned,created_at';
+const REACTIONS = { like: '\u2764\uFE0F', love: '\uD83D\uDE0D', fire: '\uD83D\uDD25', clap: '\uD83D\uDC4F', laugh: '\uD83D\uDE02', wow: '\uD83D\uDE2E' };
+
+async function buildCtx(posts) {
+  const me = session.user.id, ids = posts.map(p => p.id), authorIds = [...new Set(posts.map(p => p.author_id))].filter(i => i !== me);
+  const [rx, sv, pr] = await Promise.all([
+    ids.length ? sb.from('reactions').select('post_id,user_id,type').in('post_id', ids) : { data: [] },
+    ids.length ? sb.from('saves').select('post_id').in('post_id', ids) : { data: [] },
+    authorIds.length ? sb.from('profiles').select('id,username,full_name,avatar_url').in('id', authorIds) : { data: [] }
+  ]);
+  const reactions = {};
+  (rx.data || []).forEach(r => { (reactions[r.post_id] = reactions[r.post_id] || []).push(r); });
+  const byId = Object.fromEntries((pr.data || []).map(p => [p.id, p])); byId[me] = profile;
+  const paths = [...new Set(posts.flatMap(p => [...(p.image_urls || []), p.video_url]).filter(Boolean))], signed = {};
+  if (paths.length) {
+    const r = await sb.storage.from('post-media').createSignedUrls(paths, 3600);
+    (r.data || []).forEach(x => { if (x.signedUrl) signed[x.path] = x.signedUrl; });
+  }
+  return { reactions, saved: new Set((sv.data || []).map(s => s.post_id)), byId, signed };
+}
+
+function postCard(p, ctx, onGone) {
+  const me = session.user.id, a = ctx.byId[p.author_id] || { username: 'friend' };
+  const rs = ctx.reactions[p.id] = ctx.reactions[p.id] || [], mine = rs.find(r => r.user_id === me);
+  const redraw = () => card.replaceWith(postCard(p, ctx, onGone));
+
+  const more = h('button', { class: 'iconbtn', type: 'button', 'aria-label': 'Post options' }, icon('more'));
+  more.addEventListener('click', () => openPostMenu(p, ctx, redraw, onGone));
+  const when = timeAgo(p.created_at) + (p.visibility === 'only_me' ? ' \u00B7 Only you' : '');
+  const head = h('div', { class: 'post-head' }, avatarEl(a, 44),
+    h('div', { class: 'who' }, h('strong', { text: nameOf(a) }), h('span', { class: 'when', text: when })), more);
+  const kids = [head];
+  if (p.is_pinned) kids.push(h('span', { class: 'pin-tag' }, icon('pin'), 'Pinned'));
+  if (p.body) kids.push(h('p', { class: 'post-text', text: p.body }));
+  (p.image_urls || []).forEach(path => {
+    if (ctx.signed[path]) kids.push(h('img', { class: 'post-img', src: ctx.signed[path], alt: 'Photo posted by ' + nameOf(a), loading: 'lazy' }));
+  });
+
+  if (p.video_url && ctx.signed[p.video_url]) kids.push(h('video', { class: 'post-img post-video', src: ctx.signed[p.video_url], controls: '', playsinline: '', preload: 'metadata' }));
+
+  const like = h('button', { class: 'act' + (mine ? ' on' : ''), type: 'button', 'aria-pressed': String(!!mine),
+    'aria-label': (mine ? 'Remove your reaction' : 'Like') + '. Hold to choose another reaction.' });
+  like.append(mine && mine.type !== 'like' ? h('span', { text: REACTIONS[mine.type], 'aria-hidden': 'true' }) : icon('heart', mine ? 'fill' : ''));
+  like.append(h('span', { text: rs.length ? String(rs.length) : '' }));
+  let held = false, timer = null;
+  like.addEventListener('pointerdown', () => { held = false; timer = setTimeout(() => { held = true; openReactionSheet(p, ctx, redraw); }, 450); });
+  ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => like.addEventListener(ev, () => clearTimeout(timer)));
+  like.addEventListener('click', () => { if (held) { held = false; return; } toggleReaction(p, 'like', ctx, redraw); });
+
+  const saved = ctx.saved.has(p.id);
+  const save = h('button', { class: 'act' + (saved ? ' saved' : ''), type: 'button', 'aria-pressed': String(saved), 'aria-label': saved ? 'Remove from saved' : 'Save post' }, icon('bookmark', saved ? 'fill' : ''));
+  save.addEventListener('click', async () => {
+    if (saved) { ctx.saved.delete(p.id); redraw(); await sb.from('saves').delete().eq('post_id', p.id).eq('user_id', me); }
+    else { ctx.saved.add(p.id); redraw(); const { error } = await sb.from('saves').insert({ user_id: me, post_id: p.id }); if (error) { ctx.saved.delete(p.id); toast(friendlyError(error)); redraw(); } else toast('Saved'); }
+  });
+  const share = h('button', { class: 'act push', type: 'button', 'aria-label': 'Share post' }, icon('share'));
+  share.addEventListener('click', async () => {
+    const text = (nameOf(a) + ': ' + (p.body || 'Shared a photo')).slice(0, 280);
+    try { if (navigator.share) await navigator.share({ text }); else { await navigator.clipboard.writeText(text); toast('Copied to share'); } } catch {}
+  });
+  kids.push(h('div', { class: 'post-actions' }, like, save, share));
+  const card = h('article', { class: 'post' }, ...kids);
+  return card;
+}
+
+async function toggleReaction(p, type, ctx, redraw) {
+  const me = session.user.id, rs = ctx.reactions[p.id], i = rs.findIndex(r => r.user_id === me);
+  let call;
+  if (i >= 0 && rs[i].type === type) { rs.splice(i, 1); call = () => sb.from('reactions').delete().eq('post_id', p.id).eq('user_id', me); }
+  else {
+    if (i >= 0) rs[i].type = type; else rs.push({ post_id: p.id, user_id: me, type });
+    call = () => sb.from('reactions').upsert({ post_id: p.id, user_id: me, type }, { onConflict: 'post_id,user_id' });
+  }
+  redraw();
+  const { error } = await call();
+  if (error) { toast(friendlyError(error)); loadFeed(); }
+}
+function openReactionSheet(p, ctx, redraw) {
+  const wrap = h('div', { class: 'qchips', style: 'justify-content:space-around;margin:8px 0 16px' });
+  Object.entries(REACTIONS).forEach(([type, emoji]) => {
+    const b = h('button', { class: 'btn quiet', type: 'button', style: 'width:auto;font-size:30px;min-height:56px', 'aria-label': type, text: emoji });
+    b.addEventListener('click', () => { closeSheet(); toggleReaction(p, type, ctx, redraw); });
+    wrap.append(b);
+  });
+  openSheet('React', wrap);
+}
+
+function openPostMenu(p, ctx, redraw, onGone) {
+  const me = session.user.id, own = p.author_id === me, nodes = [];
+  nodes.push(actionBtn('Choose a reaction', null, () => { closeSheet(); openReactionSheet(p, ctx, redraw); }));
+  if (p.body) nodes.push(actionBtn('Copy text', null, async () => { try { await navigator.clipboard.writeText(p.body); toast('Copied'); } catch { toast('Could not copy'); } closeSheet(); }));
+  if (own) {
+    nodes.push(actionBtn(p.is_pinned ? 'Unpin from profile' : 'Pin to profile', null, async () => {
+      const { error } = await sb.from('posts').update({ is_pinned: !p.is_pinned }).eq('id', p.id);
+      if (error) { toast(friendlyError(error)); return; }
+      p.is_pinned = !p.is_pinned; closeSheet(); redraw(); toast(p.is_pinned ? 'Pinned' : 'Unpinned');
+    }));
+    let armed = false; const del = actionBtn('Delete post', null, async () => {
+      if (!armed) { armed = true; del.querySelector('strong').textContent = 'Tap again to delete'; return; }
+      const { error } = await sb.from('posts').delete().eq('id', p.id);
+      if (error) { toast(friendlyError(error)); return; }
+      closeSheet(); toast('Post deleted'); if (onGone) onGone(); else loadFeed();
+    }, 'danger');
+    nodes.push(del);
+  } else {
+    nodes.push(actionBtn('Report post', 'Tell us if something is not right.', () => openReportSheet(p)));
+  }
+  openSheet('Post', ...nodes);
+}
+function openReportSheet(p) {
+  const reasons = ['Spam', 'Harassment or hate', 'Something unsafe', 'Something else'];
+  openSheet('Report post', ...reasons.map(r => actionBtn(r, null, async () => {
+    const { error } = await sb.from('reports').insert({ reporter_id: session.user.id, post_id: p.id, reason: r });
+    if (error) { toast(friendlyError(error)); return; }
+    closeSheet(); toast('Thanks. We will take a look.');
+  })));
+}
+
+function emptyCard(title, text, btnLabel, fn) {
+  const kids = [h('h2', { text: title }), h('p', { class: 'empty', style: 'margin:6px 0 14px', text })];
+  if (btnLabel) { const b = h('button', { class: 'btn primary small', type: 'button', text: btnLabel }); b.addEventListener('click', fn); kids.push(b); }
+  return h('section', { class: 'panel' }, ...kids);
+}
+
+async function loadFeed() {
+  const box = $('#feed');
+  const { data, error } = await sb.from('posts').select(POST_SELECT).eq('is_draft', false).order('created_at', { ascending: false }).limit(30);
+  if (error) { box.replaceChildren(h('p', { class: 'empty', text: 'Could not load posts. Check your connection.' })); return; }
+  if (!data.length) { box.replaceChildren(emptyCard('Nothing here yet', 'Share what you are working on, or add a friend to see theirs.', 'Write a post', openPostComposer)); return; }
+  const ctx = await buildCtx(data);
+  box.replaceChildren(...data.map(p => postCard(p, ctx)));
+}
+
+/* New post */
+function openPostComposer() {
+  let mode = 'text', photo = null, video = null;
+  const ta = h('textarea', { class: 'input', maxlength: '500', placeholder: 'What is on your mind?', 'aria-label': 'Post text' });
+  const count = h('span', { class: 'hint counter', text: '0 of 500' });
+  ta.addEventListener('input', () => { count.textContent = ta.value.length + ' of 500'; });
+  const textBtn = h('button', { type: 'button', 'aria-pressed': 'true', text: 'Post' });
+  const photoBtn = h('button', { type: 'button', 'aria-pressed': 'false', text: 'Photo' });
+  const picker = photoPicker(b => { photo = b; }); picker.hidden = true;
+  const videoBtn = h('button', { type: 'button', 'aria-pressed': 'false', text: 'Video' });
+  const vInput = h('input', { type: 'file', accept: 'video/mp4,video/quicktime,video/webm', hidden: '' });
+  const vBox = h('button', { class: 'photo-pick', type: 'button' }, icon('video'), h('span', { text: 'Add a video (up to 50 MB)' }));
+  const vPicker = h('div', {}, vBox, vInput); vPicker.hidden = true;
+  vBox.addEventListener('click', () => { if (!video) vInput.click(); });
+  vInput.addEventListener('change', () => {
+    const f = vInput.files[0]; if (!f) return;
+    if (!VIDEO_EXT[f.type]) { toast('Use an MP4, MOV or WebM video.'); vInput.value = ''; return; }
+    if (f.size > 50 * 1024 * 1024) { toast('Choose a video under 50 MB.'); vInput.value = ''; return; }
+    video = f;
+    vBox.replaceChildren(h('video', { src: URL.createObjectURL(f), controls: '', playsinline: '', preload: 'metadata', style: 'width:100%;max-height:260px;border-radius:14px' }));
+  });
+  const setMode = m => {
+    mode = m;
+    textBtn.setAttribute('aria-pressed', String(m === 'text')); photoBtn.setAttribute('aria-pressed', String(m === 'photo')); videoBtn.setAttribute('aria-pressed', String(m === 'video'));
+    picker.hidden = m !== 'photo'; vPicker.hidden = m !== 'video';
+  };
+  textBtn.addEventListener('click', () => setMode('text')); photoBtn.addEventListener('click', () => setMode('photo')); videoBtn.addEventListener('click', () => setMode('video'));
+  const toggle = h('input', { type: 'checkbox', 'aria-label': 'Share with friends only' }); toggle.checked = true;
+  const sw = h('label', { class: 'row-item', style: 'border:1px solid var(--line-soft);border-radius:16px;margin:12px 0' },
+    h('div', { class: 'grow' }, 'Share with friends only', h('small', { text: 'Turn off to keep it only for you.' })),
+    h('span', { class: 'switch' }, toggle, h('span', { class: 'track' })));
+  const err = h('p', { class: 'error', role: 'alert' });
+  const post = h('button', { class: 'btn primary', type: 'button', text: 'Post' });
+  post.addEventListener('click', async () => {
+    err.textContent = '';
+    const body = ta.value.trim();
+    const ph = mode === 'photo' ? photo : null, vd = mode === 'video' ? video : null;
+    if (!body && !ph && !vd) { err.textContent = 'Write something or add a photo or video.'; return; }
+    post.disabled = true; post.textContent = 'Posting';
+    try {
+      const paths = [];
+      if (ph) {
+        const path = `${session.user.id}/${Date.now()}.jpg`;
+        const up = await sb.storage.from('post-media').upload(path, ph, { contentType: 'image/jpeg' });
+        if (up.error) throw up.error; paths.push(path);
+      }
+      let vpath = null;
+      if (vd) {
+        vpath = `${session.user.id}/${Date.now()}.${VIDEO_EXT[vd.type]}`;
+        const upv = await sb.storage.from('post-media').upload(vpath, vd, { contentType: vd.type });
+        if (upv.error) throw upv.error;
+      }
+      const { error } = await sb.from('posts').insert({ author_id: session.user.id, body: body || null, image_urls: paths, ...(vpath ? { video_url: vpath } : {}), visibility: toggle.checked ? 'friends' : 'only_me' });
+      if (error) throw error;
+      closeSheet(); toast('Posted'); if (currentTab === 'home') loadFeed(); else if (currentTab === 'profile') loadMyPosts();
+    } catch (ex) { err.textContent = friendlyError(ex); post.disabled = false; post.textContent = 'Post'; }
+  });
+  openSheet('Create post', h('div', { class: 'seg' }, textBtn, photoBtn, videoBtn), ta, count, picker, vPicker, sw, err, post);
+}
+$('#compose-card').addEventListener('click', openPostComposer);
+
+/* ---------- Stories ---------- */
+const STORY_BGS = {
+  violet: 'linear-gradient(135deg,#7B4DFF,#3B1B9E)', rose: 'linear-gradient(135deg,#FF6B9A,#7B2D8B)', ocean: 'linear-gradient(135deg,#2D8BFF,#1B2F8F)',
+  mint: 'linear-gradient(135deg,#2FBF9B,#16506B)', sun: 'linear-gradient(135deg,#FFB547,#C2410C)', night: 'linear-gradient(135deg,#1B1035,#05050F)'
+};
+const NEEDS_V2 = 'Run schema_v2.sql in Supabase to turn on stories.';
+
+function storyItem(label, person, seen, add, fn) {
+  const ring = h('span', { class: 'ring' + (seen ? ' seen' : '') + (add ? ' add' : '') }, h('span', { class: 'gap' }, avatarEl(person, 58)));
+  if (add) ring.append(h('span', { class: 'plus' }, icon('plus')));
+  const b = h('button', { class: 'story', type: 'button', 'aria-label': label }, ring, h('span', { class: 'n', text: label }));
+  b.addEventListener('click', fn); return b;
+}
+async function loadStories() {
+  const row = $('#stories'), me = session.user.id;
+  const [st, vw] = await Promise.all([
+    sb.from('stories').select('id,author_id,kind,media_url,body,background,created_at').gt('expires_at', new Date().toISOString()).order('created_at', { ascending: true }),
+    sb.from('story_views').select('story_id').eq('viewer_id', me)
+  ]);
+  const items = [];
+  const rows = st.error ? [] : (st.data || []);
+  const viewed = new Set((vw.data || []).map(v => v.story_id));
+  const groups = {};
+  rows.forEach(s => { (groups[s.author_id] = groups[s.author_id] || []).push(s); });
+  const authorIds = Object.keys(groups).filter(i => i !== me);
+  let byId = {};
+  if (authorIds.length) { const r = await sb.from('profiles').select('id,username,full_name,avatar_url').in('id', authorIds); byId = Object.fromEntries((r.data || []).map(p => [p.id, p])); }
+  const mineList = groups[me] || [];
+  items.push(storyItem('Your story', profile, false, true, () => {
+    if (st.error) { toast(NEEDS_V2); return; }
+    if (mineList.length) openStoryViewer({ person: profile, stories: mineList, own: true }); else openStoryComposer();
+  }));
+  authorIds.map(id => ({ id, list: groups[id], seen: groups[id].every(s => viewed.has(s.id)) }))
+    .sort((x, y) => Number(x.seen) - Number(y.seen))
+    .forEach(g => { const person = byId[g.id] || { username: 'friend' }; items.push(storyItem(nameOf(person), person, g.seen, false, () => openStoryViewer({ person, stories: g.list, own: false }))); });
+  row.replaceChildren(...items);
+}
+
+function openStoryViewer(group) {
+  const v = $('#story-viewer'); let i = 0, timer = null;
+  v.hidden = false; document.body.style.overflow = 'hidden';
+  const bars = h('div', { class: 'bars' }, ...group.stories.map(() => h('div', { class: 'bar' }, h('div'))));
+  const when = h('div', { class: 'hint', style: 'color:#C9BEF5' });
+  const close = h('button', { class: 'iconbtn', type: 'button', 'aria-label': 'Close story' }, icon('close'));
+  const stage = h('div', { class: 'stage' }), foot = h('div', { class: 'vfoot' });
+  const prev = h('button', { class: 'tap l', type: 'button', 'aria-label': 'Previous' }), next = h('button', { class: 'tap r', type: 'button', 'aria-label': 'Next' });
+  v.replaceChildren(bars, h('div', { class: 'vhead' }, avatarEl(group.person, 36), h('div', {}, h('strong', { text: group.own ? 'Your story' : nameOf(group.person) }), when), close), stage, foot);
+  stage.append(prev, next);
+  function end() { clearTimeout(timer); v.hidden = true; v.replaceChildren(); document.body.style.overflow = ''; document.removeEventListener('keydown', onKey); loadStories(); }
+  function onKey(e) { if (e.key === 'Escape') end(); else if (e.key === 'ArrowRight') go(i + 1); else if (e.key === 'ArrowLeft') go(i - 1); }
+  async function go(idx) {
+    clearTimeout(timer);
+    if (idx >= group.stories.length) return end();
+    i = Math.max(0, idx); const s = group.stories[i];
+    [...bars.children].forEach((b, j) => { b.className = 'bar' + (j < i ? ' done' : ''); });
+    when.textContent = timeAgo(s.created_at);
+    stage.querySelectorAll('.txt, img').forEach(n => n.remove()); stage.style.background = '';
+    if (s.kind === 'text') {
+      stage.style.background = STORY_BGS[s.background] || STORY_BGS.violet;
+      stage.prepend(h('div', { class: 'txt', text: s.body || '' }));
+    } else {
+      const r = await sb.storage.from('story-media').createSignedUrl(s.media_url, 3600);
+      if (r.data && r.data.signedUrl) stage.prepend(h('img', { src: r.data.signedUrl, alt: 'Story photo' }));
+    }
+    const cur = bars.children[i]; void cur.offsetWidth; cur.classList.add('run');
+    foot.replaceChildren();
+    if (group.own) {
+      const seen = h('button', { class: 'btn quiet small', type: 'button', text: 'Seen by' });
+      seen.addEventListener('click', () => { clearTimeout(timer); openSeenSheet(s); });
+      foot.append(seen);
+      sb.from('story_views').select('story_id', { count: 'exact', head: true }).eq('story_id', s.id).then(r2 => { seen.textContent = 'Seen by ' + (r2.count || 0); });
+    } else {
+      sb.from('story_views').insert({ story_id: s.id, viewer_id: session.user.id }).then(() => {});
+    }
+    timer = setTimeout(() => go(i + 1), 5000);
+  }
+  close.addEventListener('click', end); prev.addEventListener('click', () => go(i - 1)); next.addEventListener('click', () => go(i + 1));
+  document.addEventListener('keydown', onKey);
+  go(0);
+}
+async function openSeenSheet(s) {
+  const { data } = await sb.from('story_views').select('viewer_id,viewed_at').eq('story_id', s.id).order('viewed_at', { ascending: false });
+  const ids = (data || []).map(x => x.viewer_id);
+  let byId = {}; if (ids.length) { const r = await sb.from('profiles').select('id,username,full_name,avatar_url').in('id', ids); byId = Object.fromEntries((r.data || []).map(p => [p.id, p])); }
+  openSheet('Seen by', ...(ids.length ? ids.map(id => h('div', { class: 'person' }, avatarEl(byId[id] || { username: 'friend' }, 40), h('div', { class: 'name' }, h('strong', { text: nameOf(byId[id]) })))) : [h('p', { class: 'empty', text: 'No views yet.' })]));
+}
+
+function openStoryComposer() {
+  let mode = 'text', bg = 'violet', photo = null;
+  const ta = h('textarea', { class: 'input', maxlength: '200', placeholder: 'Share a quick update', 'aria-label': 'Story text' });
+  const preview = h('div', { style: 'border-radius:18px;padding:28px 18px;min-height:120px;display:grid;place-items:center;text-align:center;font-size:22px;font-weight:600;color:#fff;margin-bottom:12px;overflow-wrap:anywhere', text: 'Your words here' });
+  const paint = () => { preview.style.background = STORY_BGS[bg]; preview.textContent = ta.value.trim() || 'Your words here'; };
+  ta.addEventListener('input', paint); paint();
+  const swatches = h('div', { class: 'bg-swatches', role: 'group', 'aria-label': 'Background' });
+  Object.keys(STORY_BGS).forEach(k => {
+    const b = h('button', { class: 'bg-swatch', type: 'button', 'aria-label': k, 'aria-pressed': String(k === bg), style: 'background:' + STORY_BGS[k] });
+    b.addEventListener('click', () => { bg = k; swatches.querySelectorAll('.bg-swatch').forEach(x => x.setAttribute('aria-pressed', 'false')); b.setAttribute('aria-pressed', 'true'); paint(); });
+    swatches.append(b);
+  });
+  const textBox = h('div', {}, preview, ta, h('div', { style: 'height:12px' }), swatches);
+  const picker = photoPicker(b => { photo = b; }); picker.hidden = true;
+  const t1 = h('button', { type: 'button', 'aria-pressed': 'true', text: 'Text' }), t2 = h('button', { type: 'button', 'aria-pressed': 'false', text: 'Photo' });
+  const setMode = m => { mode = m; t1.setAttribute('aria-pressed', String(m === 'text')); t2.setAttribute('aria-pressed', String(m === 'photo')); textBox.hidden = m !== 'text'; picker.hidden = m !== 'photo'; };
+  t1.addEventListener('click', () => setMode('text')); t2.addEventListener('click', () => setMode('photo'));
+  const err = h('p', { class: 'error', role: 'alert' });
+  const share = h('button', { class: 'btn primary', type: 'button', text: 'Share story' });
+  share.addEventListener('click', async () => {
+    err.textContent = '';
+    if (mode === 'text' && !ta.value.trim()) { err.textContent = 'Write something first.'; return; }
+    if (mode === 'photo' && !photo) { err.textContent = 'Choose a photo first.'; return; }
+    share.disabled = true; share.textContent = 'Sharing';
+    try {
+      let row;
+      if (mode === 'text') row = { author_id: session.user.id, kind: 'text', body: ta.value.trim(), background: bg };
+      else {
+        const path = `${session.user.id}/${Date.now()}.jpg`;
+        const up = await sb.storage.from('story-media').upload(path, photo, { contentType: 'image/jpeg' });
+        if (up.error) throw up.error;
+        row = { author_id: session.user.id, kind: 'image', media_url: path };
+      }
+      const { error } = await sb.from('stories').insert(row);
+      if (error) throw error;
+      closeSheet(); toast('Story shared. It disappears in 24 hours.'); loadStories();
+    } catch (ex) { err.textContent = /relation|schema cache|not exist/i.test(ex.message || '') ? NEEDS_V2 : friendlyError(ex); share.disabled = false; share.textContent = 'Share story'; }
+  });
+  openSheet('New story', h('div', { class: 'seg' }, t1, t2), textBox, picker, err, share);
+}
+
+/* ---------- Create menu ---------- */
+function openCreateMenu() {
+  openSheet('Create',
+    actionBtn('New post', 'Share an update or a photo with friends.', () => { closeSheet(); openPostComposer(); }),
+    actionBtn('New story', 'Disappears after 24 hours.', () => { closeSheet(); openStoryComposer(); }),
+    actionBtn('New commitment', 'Something you will repeat on the days you choose.', () => { closeSheet(); openCommitmentForm(null); }));
+}
+$('#nav-create').addEventListener('click', openCreateMenu);
+
+/* ---------- Notifications ---------- */
+async function refreshBell() {
+  const { count } = await sb.from('notifications').select('id', { count: 'exact', head: true }).is('read_at', null).neq('type', 'message');
+  setBadge($('#bell-badge'), count || 0);
+}
+function onNotificationEvent(n) {
+  if (!n || n.type === 'message') return;
+  refreshBell();
+  if (n.type === 'encouragement' && n.data && n.data.message) toast('Someone cheered you on');
+  else if (n.type === 'check_in_help') toast('A friend needs help');
+  if (currentTab === 'home') loadHome();
+}
+function notificationText(n, who) {
+  const name = nameOf(who), d = n.data || {};
+  switch (n.type) {
+    case 'task_completed': return name + ' finished a commitment';
+    case 'encouragement': return name + ' cheered you on' + (d.message ? ': "' + d.message + '"' : '');
+    case 'check_in_help': return name + ' needs help with a commitment';
+    case 'incoming_call': return name + ' called you';
+    case 'collab_invite': return name + ' invited you to collaborate on a post';
+    case 'group_invite': return name + ' invited you to a group';
+    default: return name + ' sent you an update';
+  }
+}
+async function openNotifications() {
+  const { data, error } = await sb.from('notifications').select('id,type,actor_id,data,read_at,created_at').neq('type', 'message').order('created_at', { ascending: false }).limit(30);
+  if (error) { toast(friendlyError(error)); return; }
+  const rows = data || [], ids = [...new Set(rows.map(r => r.actor_id).filter(Boolean))];
+  let byId = {}; if (ids.length) { const r = await sb.from('profiles').select('id,username,full_name,avatar_url').in('id', ids); byId = Object.fromEntries((r.data || []).map(p => [p.id, p])); }
+  const nodes = rows.length ? rows.map(n => {
+    const who = byId[n.actor_id] || { username: 'A friend' };
+    return h('div', { class: 'circle-item' }, avatarEl(who, 44),
+      h('div', { class: 'tx' }, h('span', { text: notificationText(n, who), style: n.read_at ? '' : 'font-weight:600' })),
+      h('time', { text: timeAgo(n.created_at) }));
+  }) : [h('p', { class: 'empty', text: 'Nothing new. When friends cheer you on or finish something, it shows up here.' })];
+  openSheet('Notifications', ...nodes);
+  const unread = rows.filter(r => !r.read_at).map(r => r.id);
+  if (unread.length) { await sb.from('notifications').update({ read_at: new Date().toISOString() }).in('id', unread); refreshBell(); }
+}
+$('#bell-btn').addEventListener('click', openNotifications);
+
+/* ---------- Friends: shared helpers ---------- */
+async function loadFriendData() {
+  const me = session.user.id;
+  const { data: rows, error } = await sb.from('friendships').select('id,requester_id,addressee_id,status');
+  if (error) return null;
+  const otherOf = r => r.requester_id === me ? r.addressee_id : r.requester_id;
+  const ids = [...new Set(rows.map(otherOf))];
+  let people = [];
+  if (ids.length) { const res = await sb.from('profiles').select('id,username,full_name,avatar_url,status,last_seen,bio').in('id', ids); people = res.data || []; }
+  const byId = Object.fromEntries(people.map(p => [p.id, p]));
+  return {
+    rows, byId, otherOf,
+    incoming: rows.filter(r => r.status === 'pending' && r.addressee_id === me),
+    outgoing: rows.filter(r => r.status === 'pending' && r.requester_id === me),
+    friends: rows.filter(r => r.status === 'accepted').map(r => byId[otherOf(r)] || { id: otherOf(r), username: 'friend' })
+  };
+}
+
+function openFriendSheet(p) {
+  const me = session.user.id, nodes = [];
+  nodes.push(h('div', { class: 'person', style: 'padding-bottom:12px' }, avatarWithStatus(p, 60), h('div', { class: 'name' }, h('strong', { text: nameOf(p) }), h('span', { text: '@' + (p.username || 'friend') }))));
+  if (p.bio) nodes.push(h('p', { style: 'margin-bottom:14px;overflow-wrap:anywhere', text: p.bio }));
+  nodes.push(actionBtn('Message', null, async () => {
+    const { data, error } = await sb.rpc('start_direct_chat', { friend: p.id });
+    if (error) { toast(friendlyError(error)); return; }
+    closeSheet(); closeSearch(); if (chat) closeChat(); openChat(data, p);
+  }));
+  const confirmable = (label, sub, fn) => {
+    let armed = false; const b = actionBtn(label, sub, async () => { if (!armed) { armed = true; b.querySelector('strong').textContent = 'Tap again to confirm'; return; } await fn(); }, 'danger'); return b;
+  };
+  nodes.push(confirmable('Remove friend', 'You can add them again with their ID.', async () => {
+    const { error } = await sb.from('friendships').delete().or(`and(requester_id.eq.${me},addressee_id.eq.${p.id}),and(requester_id.eq.${p.id},addressee_id.eq.${me})`);
+    if (error) { toast(friendlyError(error)); return; }
+    closeSheet(); if (chat && chat.other && chat.other.id === p.id) closeChat(); toast('Friend removed'); refreshAfterFriendChange();
+  }));
+  nodes.push(confirmable('Block', 'They will not be able to find or message you.', async () => {
+    const { error } = await sb.rpc('block_user', { target: p.id });
+    if (error) { toast(friendlyError(error)); return; }
+    closeSheet(); if (chat && chat.other && chat.other.id === p.id) closeChat(); toast('Blocked'); refreshAfterFriendChange();
+  }));
+  openSheet(nameOf(p), ...nodes);
+}
+function refreshAfterFriendChange() {
+  if (currentTab === 'profile') loadProfileTab(); else if (currentTab === 'messages') loadMessagesTab(); else if (currentTab === 'home') { loadFeed(); loadHome(); }
+}
+
+/* ---------- Search ---------- */
+let searchTimer = null, searchFriends = [];
+async function openSearch() {
+  $('#search').hidden = false; document.body.style.overflow = 'hidden';
+  $('#search-input').value = ''; $('#search-results').replaceChildren(h('p', { class: 'empty', text: 'Search your friends and the posts you can see.' }));
+  $('#search-input').focus();
+  const d = await loadFriendData(); searchFriends = d ? d.friends : [];
+}
+function closeSearch() { $('#search').hidden = true; if (!chat) document.body.style.overflow = ''; }
+$('#search-btn').addEventListener('click', openSearch);
+$('#search-back').addEventListener('click', closeSearch);
+$('#search-input').addEventListener('input', () => { clearTimeout(searchTimer); searchTimer = setTimeout(runSearch, 250); });
+async function runSearch() {
+  const q = $('#search-input').value.trim(), box = $('#search-results');
+  if (q.length < 2) { box.replaceChildren(h('p', { class: 'empty', text: q ? 'Type at least 2 letters.' : 'Search your friends and the posts you can see.' })); return; }
+  const low = q.toLowerCase();
+  const people = searchFriends.filter(p => nameOf(p).toLowerCase().includes(low) || (p.username || '').toLowerCase().includes(low));
+  const pat = '%' + q.replace(/[\\%_]/g, m => '\\' + m) + '%';
+  const { data } = await sb.from('posts').select(POST_SELECT).eq('is_draft', false).ilike('body', pat).order('created_at', { ascending: false }).limit(15);
+  if ($('#search-input').value.trim() !== q) return;
+  const nodes = [];
+  if (people.length) {
+    nodes.push(h('section', { class: 'panel' }, h('h2', { text: 'Friends' }), ...people.map(p => {
+      const b = h('button', { class: 'person', type: 'button' }, avatarWithStatus(p, 44), h('div', { class: 'name' }, h('strong', { text: nameOf(p) }), h('span', { text: '@' + p.username })));
+      b.addEventListener('click', () => openFriendSheet(p)); return b;
+    })));
+  }
+  if (data && data.length) { const ctx = await buildCtx(data); nodes.push(h('h2', { text: 'Posts', style: 'font-size:20px' }), ...data.map(p => postCard(p, ctx))); }
+  if (!nodes.length) nodes.push(h('p', { class: 'empty', text: 'No results for "' + q + '".' }));
+  box.replaceChildren(...nodes);
+}
+
+
+/* ---------- Messages tab ---------- */
+let mtab = 'chats', convRows = [], convPeople = {};
+function setMtab(t) {
+  mtab = t;
+  document.querySelectorAll('[data-mtab]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.mtab === t)));
+  $('#mtab-chats').hidden = t !== 'chats'; $('#mtab-requests').hidden = t !== 'requests';
+}
+document.querySelectorAll('[data-mtab]').forEach(b => b.addEventListener('click', () => setMtab(b.dataset.mtab)));
+async function loadMessagesTab() { setMtab(mtab); updatePresenceBtn(); await Promise.all([loadConversations(), loadRequests()]); }
+$('#conv-search').addEventListener('input', renderConvList);
+
+async function loadConversations() {
+  const list = $('#conv-list');
+  const { data, error } = await sb.rpc('my_conversations');
+  updatePresenceBtn();
+  if (error) { list.replaceChildren(h('p', { class: 'empty', style: 'padding:16px 0', text: 'Run schema_v6.sql in Supabase to turn on messages and groups.' })); return; }
+  convRows = data || [];
+  const ids = [...new Set(convRows.map(c => c.other_id))].filter(Boolean);
+  convPeople = {};
+  if (ids.length) {
+    const r = await sb.from('profiles').select('id,username,full_name,avatar_url,status,last_seen').in('id', ids);
+    convPeople = Object.fromEntries((r.data || []).map(p => [p.id, p]));
+  }
+  setBadge($('#msg-badge'), convRows.reduce((a, c) => a + (c.unread_count || 0), 0));
+  renderConvList();
+}
+function renderConvList() {
+  const list = $('#conv-list'), me = session.user.id, q = $('#conv-search').value.trim().toLowerCase();
+  const label = c => c.conv_type === 'group' ? (c.conv_name || 'Group') : nameOf(convPeople[c.other_id]);
+  const rows = convRows.filter(c => !q || label(c).toLowerCase().includes(q));
+  if (!rows.length) {
+    list.replaceChildren(h('p', { class: 'empty', style: 'padding:16px 0', text: convRows.length ? 'No chats match your search.' : 'No conversations yet. Tap the pencil to message a friend.' }));
+    return;
+  }
+  list.replaceChildren(...rows.map(c => {
+    const isG = c.conv_type === 'group';
+    const p = isG ? null : (convPeople[c.other_id] || { id: c.other_id, username: 'friend' });
+    const media = c.last_media_type ? MEDIA_LABEL[c.last_media_type] : '';
+    const preview = !c.last_at ? (isG ? 'New group' : 'Say hello') : c.last_deleted ? 'Message deleted' : (c.last_sender === me ? 'You: ' : '') + (c.last_body || media || 'Photo');
+    const row = h('button', { class: 'conv-row' + (c.unread_count ? ' unread-row' : ''), type: 'button' },
+      isG ? groupAvatar(52) : avatarWithStatus(p, 52),
+      h('div', { style: 'flex:1;min-width:0' }, h('strong', { text: isG ? (c.conv_name || 'Group') : nameOf(p) }), h('div', { class: 'pv', text: preview })),
+      h('div', { class: 'right' }, c.last_at ? h('time', { class: 'hint', text: timeAgo(c.last_at) }) : null,
+        c.unread_count ? h('span', { class: 'count', role: 'img', 'aria-label': c.unread_count + ' unread', text: c.unread_count > 9 ? '9+' : String(c.unread_count) }) : null));
+    row.addEventListener('click', () => { if (isG) openChat(c.conversation_id, null, { name: c.conv_name || 'Group', count: c.member_count }); else openChat(c.conversation_id, p); });
+    return row;
+  }));
+}
+async function refreshUnread() {
+  const { data } = await sb.rpc('my_conversations');
+  if (data) setBadge($('#msg-badge'), data.reduce((a, c) => a + (c.unread_count || 0), 0));
+}
+
+/* Friend requests live in the Requests tab */
+async function loadRequests() {
+  const d = await loadFriendData(); if (!d) return;
+  const list = $('#requests-list'); list.replaceChildren();
+  $('#requests-empty').hidden = d.incoming.length > 0;
+  const rc = $('#req-count'); rc.hidden = !d.incoming.length; rc.textContent = String(d.incoming.length);
+  d.incoming.forEach(r => {
+    const p = d.byId[r.requester_id] || { username: 'someone' };
+    const accept = h('button', { class: 'btn primary small', type: 'button', text: 'Accept' });
+    const decline = h('button', { class: 'btn small', type: 'button', text: 'Decline' });
+    const respond = async ok => {
+      accept.disabled = decline.disabled = true;
+      const { error } = await sb.rpc('respond_friend_request', { request_id: r.id, accept: ok });
+      if (error) { toast(friendlyError(error)); accept.disabled = decline.disabled = false; return; }
+      toast(ok ? 'Friend added' : 'Request declined'); loadRequests();
+    };
+    accept.addEventListener('click', () => respond(true)); decline.addEventListener('click', () => respond(false));
+    list.append(h('div', { class: 'person' }, avatarEl(p, 48), h('div', { class: 'name' }, h('strong', { text: nameOf(p) }), h('span', { text: '@' + p.username })), h('div', { class: 'btns' }, accept, decline)));
+  });
+  const w = $('#waiting'); w.hidden = !d.outgoing.length;
+  w.textContent = d.outgoing.length ? 'Waiting for a reply from ' + d.outgoing.map(r => '@' + ((d.byId[r.addressee_id] || {}).username || 'someone')).join(', ') + '.' : '';
+}
+$('#add-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const ok = await sendRequest($('#add-code'), $('#add-error'), e.submitter || $('#add-form button'));
+  if (ok) loadRequests();
+});
+$('#chat-person').addEventListener('click', () => { if (!chat) return; if (chat.group) openGroupSheet(); else openFriendSheet(chat.other); });
+
+/* ---------- Profile tab ---------- */
+let ptab = 'posts';
+function setPtab(t) {
+  ptab = t;
+  document.querySelectorAll('[data-ptab]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.ptab === t)));
+  ['posts', 'friends', 'saved'].forEach(n => { $('#ptab-' + n).hidden = n !== t; });
+  if (t === 'posts') loadMyPosts(); else if (t === 'friends') loadFriendsTab(); else loadSaved();
+}
+document.querySelectorAll('[data-ptab]').forEach(b => b.addEventListener('click', () => setPtab(b.dataset.ptab)));
+$('#edit-profile-btn').addEventListener('click', () => openProfileForm('edit'));
+$('#copy-code-btn').addEventListener('click', copyCode);
+$('#settings-btn').addEventListener('click', openSettings);
+
+async function loadProfileTab() {
+  const me = session.user.id;
+  paintAvatar($('#me-avatar'), profile);
+  $('#me-name').textContent = nameOf(profile);
+  $('#me-handle').textContent = '@' + profile.username;
+  $('#me-bio').textContent = profile.bio || ''; $('#me-bio').hidden = !profile.bio;
+  $('#friend-code').textContent = profile.friend_code;
+  setPtab(ptab);
+  const [d, s, f] = await Promise.all([
+    sb.from('tasks').select('id', { count: 'exact', head: true }).eq('user_id', me).eq('is_done', true),
+    sb.from('streaks').select('current_streak,last_done_date,freezes_left').eq('user_id', me).maybeSingle(),
+    sb.from('friendships').select('id', { count: 'exact', head: true }).eq('status', 'accepted')
+  ]);
+  let streak = 0;
+  if (s.data && s.data.last_done_date) {
+    const gap = Math.round((new Date(localDate() + 'T00:00:00') - new Date(s.data.last_done_date + 'T00:00:00')) / 86400000);
+    if (gap <= 1 || (gap === 2 && s.data.freezes_left > 0)) streak = s.data.current_streak;
+  }
+  $('#st-done').textContent = String(d.count || 0); $('#st-streak').textContent = String(streak); $('#st-friends').textContent = String(f.count || 0);
+}
+async function loadMyPosts() {
+  const box = $('#ptab-posts'), me = session.user.id;
+  const { data, error } = await sb.from('posts').select(POST_SELECT).eq('author_id', me).eq('is_draft', false).order('is_pinned', { ascending: false }).order('created_at', { ascending: false }).limit(30);
+  if (error) { box.replaceChildren(h('p', { class: 'empty', text: 'Could not load your posts.' })); return; }
+  if (!data.length) { box.replaceChildren(emptyCard('No posts yet', 'Share what you are working on.', 'Write a post', openPostComposer)); return; }
+  const ctx = await buildCtx(data);
+  box.replaceChildren(...data.map(p => postCard(p, ctx, loadMyPosts)));
+}
+async function loadSaved() {
+  const box = $('#ptab-saved');
+  const { data: sv } = await sb.from('saves').select('post_id,created_at').order('created_at', { ascending: false }).limit(30);
+  const ids = (sv || []).map(s => s.post_id);
+  if (!ids.length) { box.replaceChildren(emptyCard('Nothing saved', 'Tap the bookmark on a post to keep it here.')); return; }
+  const { data } = await sb.from('posts').select(POST_SELECT).in('id', ids);
+  const order = Object.fromEntries(ids.map((id, i) => [id, i]));
+  const posts = (data || []).sort((a, b) => order[a.id] - order[b.id]);
+  if (!posts.length) { box.replaceChildren(emptyCard('Nothing saved', 'Tap the bookmark on a post to keep it here.')); return; }
+  const ctx = await buildCtx(posts);
+  box.replaceChildren(...posts.map(p => postCard(p, ctx, loadSaved)));
+}
+async function loadFriendsTab() {
+  const d = await loadFriendData(); if (!d) return;
+  const shelf = $('#friends-shelf'); shelf.replaceChildren();
+  $('#friends-empty').hidden = d.friends.length > 0; shelf.hidden = d.friends.length === 0;
+  d.friends.forEach(p => {
+    const b = h('button', { class: 'shelf-friend', type: 'button', 'aria-label': nameOf(p) }, avatarWithStatus(p, 56), h('span', { class: 'label', text: nameOf(p) }));
+    b.addEventListener('click', () => openFriendSheet(p)); shelf.append(b);
+  });
+}
+
+/* ---------- Settings ---------- */
+const TERMS_URL = '', PRIVACY_URL = '';
+const NT_MAP = { 'nt-completions': 'notify_completions', 'nt-mentions': 'notify_mentions', 'nt-messages': 'notify_messages', 'nt-groups': 'notify_group_invites' };
+let ntRow = null;
+
+async function openSettings() {
+  show('settings');
+  $('#set-email').textContent = session.user.email || '';
+  const providers = (session.user.app_metadata && session.user.app_metadata.providers) || [];
+  $('#set-password').hidden = !providers.includes('email');
+  [['set-terms', TERMS_URL], ['set-privacy', PRIVACY_URL]].forEach(([id, url]) => { const a = $('#' + id); a.hidden = !url; if (url) a.href = url; });
+  applyTheme(getTheme());
+  const { data } = await sb.from('notification_settings').select('*').eq('user_id', session.user.id).maybeSingle();
+  ntRow = data || {};
+  Object.entries(NT_MAP).forEach(([id, col]) => { $('#' + id).checked = ntRow[col] !== false; });
+  paintPause();
+}
+function paintPause() {
+  const until = ntRow && ntRow.muted_until ? new Date(ntRow.muted_until) : null;
+  $('#nt-pause-sub').textContent = until && until > new Date() ? 'Paused until ' + until.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) + '.' : 'Alerts are on.';
+}
+Object.entries(NT_MAP).forEach(([id, col]) => $('#' + id).addEventListener('change', async e => {
+  const { error } = await sb.from('notification_settings').update({ [col]: e.target.checked }).eq('user_id', session.user.id);
+  if (error) { e.target.checked = !e.target.checked; toast(friendlyError(error)); }
+}));
+$('#nt-pause').addEventListener('click', () => {
+  const set = async hours => {
+    const until = hours ? new Date(Date.now() + hours * 3600e3).toISOString() : null;
+    const { error } = await sb.from('notification_settings').update({ muted_until: until }).eq('user_id', session.user.id);
+    if (error) { toast(friendlyError(error)); return; }
+    ntRow.muted_until = until; paintPause(); closeSheet(); toast(until ? 'Alerts paused' : 'Alerts are back on');
+  };
+  const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate() + 1); tomorrow.setHours(8, 0, 0, 0);
+  openSheet('Pause alerts',
+    actionBtn('For 1 hour', null, () => set(1)), actionBtn('For 8 hours', null, () => set(8)),
+    actionBtn('Until tomorrow morning', null, () => set((tomorrow - Date.now()) / 3600e3)),
+    actionBtn('Turn alerts back on', null, () => set(0)));
+});
+$('#settings-back').addEventListener('click', () => openApp('profile'));
+$('#signout-btn').addEventListener('click', async () => { await sb.auth.signOut(); });
+
+$('#set-password').addEventListener('click', () => {
+  const a = h('input', { class: 'input', type: 'password', autocomplete: 'new-password', 'aria-label': 'New password' });
+  const b = h('input', { class: 'input', type: 'password', autocomplete: 'new-password', 'aria-label': 'Confirm password' });
+  const err = h('p', { class: 'error', role: 'alert' });
+  const save = h('button', { class: 'btn primary', type: 'button', text: 'Save password' });
+  save.addEventListener('click', async () => {
+    err.textContent = '';
+    if (a.value.length < 8) { err.textContent = 'Use at least 8 characters.'; return; }
+    if (a.value !== b.value) { err.textContent = 'The two passwords do not match.'; return; }
+    save.disabled = true;
+    const { error } = await sb.auth.updateUser({ password: a.value });
+    if (error) { err.textContent = friendlyError(error); save.disabled = false; return; }
+    closeSheet(); toast('Password changed');
+  });
+  openSheet('Change password', field('New password', a, 'At least 8 characters.'), field('Confirm password', b), err, save);
+});
+$('#set-export').addEventListener('click', async () => {
+  const { data, error } = await sb.rpc('export_my_data');
+  if (error) { toast('Run schema_v5_fixes.sql in Supabase to turn on downloads.'); return; }
+  const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+  const a = h('a', { href: url, download: 'logra-data.json' }); document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 4000); toast('Your data is downloading');
+});
+$('#set-deactivate').addEventListener('click', () => {
+  const go = h('button', { class: 'btn primary', type: 'button', text: 'Deactivate' });
+  go.addEventListener('click', async () => {
+    go.disabled = true;
+    const { error } = await sb.from('profiles').update({ is_deactivated: true }).eq('id', session.user.id);
+    if (error) { toast(friendlyError(error)); go.disabled = false; return; }
+    closeSheet(); await sb.auth.signOut(); toast('Account deactivated. Sign in any time to come back.');
+  });
+  openSheet('Deactivate account', h('p', { style: 'margin-bottom:16px', text: 'Your profile and posts are hidden from everyone. Your friends and data are kept. Sign in again whenever you want to come back.' }), go);
+});
+$('#set-delete').addEventListener('click', () => {
+  const input = h('input', { class: 'input', 'aria-label': 'Type DELETE to confirm', placeholder: 'Type DELETE', autocomplete: 'off' });
+  const go = h('button', { class: 'btn primary', type: 'button', text: 'Delete forever' }); go.disabled = true;
+  const err = h('p', { class: 'error', role: 'alert' });
+  input.addEventListener('input', () => { go.disabled = input.value.trim() !== 'DELETE'; });
+  go.addEventListener('click', async () => {
+    go.disabled = true; err.textContent = '';
+    const { error } = await sb.rpc('delete_my_account');
+    if (error) { err.textContent = /function|schema cache/i.test(error.message) ? 'Run schema_v5_fixes.sql in Supabase to turn on account deletion.' : friendlyError(error); go.disabled = false; return; }
+    closeSheet(); await sb.auth.signOut({ scope: 'local' }); toast('Your account was deleted');
+  });
+  openSheet('Delete account', h('p', { style: 'margin-bottom:14px', text: 'This permanently deletes your profile, commitments, posts, messages and friendships. It cannot be undone.' }), field('Type DELETE to confirm', input), err, go);
+});
+$('#set-blocked').addEventListener('click', async () => {
+  const { data, error } = await sb.rpc('my_blocked');
+  if (error) { toast('Run schema_v5_fixes.sql in Supabase to turn on this list.'); return; }
+  const render = rows => openSheet('Blocked accounts', ...(rows.length ? rows.map(p => {
+    const un = h('button', { class: 'btn small', type: 'button', text: 'Unblock' });
+    un.addEventListener('click', async () => {
+      const { error: e2 } = await sb.from('blocks').delete().eq('blocker_id', session.user.id).eq('blocked_id', p.id);
+      if (e2) { toast(friendlyError(e2)); return; }
+      toast('Unblocked'); render(rows.filter(x => x.id !== p.id));
+    });
+    return h('div', { class: 'person' }, avatarEl(p, 44), h('div', { class: 'name' }, h('strong', { text: nameOf(p) }), h('span', { text: '@' + p.username })), un);
+  }) : [h('p', { class: 'empty', text: 'You have not blocked anyone.' })]));
+  render(data || []);
+});
+$('#set-guidelines').addEventListener('click', () => openSheet('Community guidelines',
+  ...['Be kind. Cheer each other on and never pressure anyone.', 'Respect privacy. Share only what is yours to share.', 'No harassment, hate or spam.', 'If something is not right, report it. We take reports seriously.']
+    .map(t => h('p', { style: 'margin-bottom:12px', text: t }))));
+
+/* Reactivate a deactivated account */
+$('#reactivate-btn').addEventListener('click', async () => {
+  const { error } = await sb.from('profiles').update({ is_deactivated: false }).eq('id', session.user.id);
+  if (error) { $('#reactivate-error').textContent = friendlyError(error); return; }
+  profile.is_deactivated = false; toast('Welcome back'); route();
+});
+$('#reactivate-out').addEventListener('click', async () => { await sb.auth.signOut(); });
+
+
+/* ---------- Start up ---------- */
+async function route() {
+  if (recovering) return show('recovery');
+  if (!session) {
+    profile = null; currentUserId = null; stopRealtime();
+    if (holdAuthError) { holdAuthError = false; return; }
+    if (RETURNING && !$('#view-loading').hidden) return;
+    return show('intro');
+  }
+  currentUserId = session.user.id;
+  if (/access_token|[?&]code=/.test(location.hash + location.search)) cleanUrl();
+  try {
+    await loadProfile();
+    if (profile.is_deactivated) return show('reactivate');
+    const md = session.user.user_metadata || {};
+    if (!md.profile_done) openProfileForm('setup');
+    else if (!md.onboarded) openConnect();
+    else openApp('home');
+  } catch (ex) {
+    show('auth'); $('#auth-error').textContent = friendlyError(ex);
+  }
+}
+
+hydrateIcons();
+
+/* Coming back from Google: wait for the session instead of flashing the first screen */
+const RETURNING = /access_token|refresh_token|[?&]code=|error_description/.test(location.hash + location.search);
+function oauthError() {
+  const p = new URLSearchParams(location.hash.replace(/^#/, '') + '&' + location.search.replace(/^\?/, ''));
+  return p.get('error_description');
+}
+function cleanUrl() { try { history.replaceState(null, '', pageUrl()); } catch {} }
+
+setAuthMode('signup');
+if (typeof supabase === 'undefined') {
+  show('intro');
+} else {
+  sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  const authErr = oauthError();
+  if (authErr) {
+    holdAuthError = true; cleanUrl(); setAuthMode('signin'); show('auth');
+    $('#auth-error').textContent = 'Sign in did not finish. ' + authErr;
+  } else if (RETURNING) {
+    show('loading');
+    setTimeout(() => { if (!$('#view-loading').hidden) show('intro'); }, 8000);
+  }
+  sb.auth.onAuthStateChange((event, s) => {
+    session = s;
+    if (event === 'PASSWORD_RECOVERY') { recovering = true; setTimeout(route, 0); return; }
+    if (event === 'TOKEN_REFRESHED' || event === 'USER_UPDATED') return;
+    if (event === 'SIGNED_IN' && s && s.user.id === currentUserId) return;
+    setTimeout(route, 0);
+  });
+}
+</script>
+</body>
+</html>
