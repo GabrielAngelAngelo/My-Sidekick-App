@@ -374,7 +374,7 @@
 
   .composer[hidden] { display: none; }
   .bubble .sender { font-size: 12px; font-weight: 600; margin-bottom: 2px; opacity: .85; }
-  .bubble img { display: block; max-width: 100%; max-height: 320px; border-radius: 14px; margin: 2px 0 4px; background: var(--surface2); }
+  .bubble img { display: block; width: 220px; max-width: 100%; max-height: 260px; object-fit: cover; border-radius: 14px; margin: 2px 0 4px; background: var(--surface2); cursor: zoom-in; }
   .bubble video { display: block; width: 260px; max-width: 100%; height: auto; max-height: 60vh; object-fit: contain; border-radius: 14px; margin: 2px 0 4px; background: #000; }
   .bubble audio { display: block; width: 220px; max-width: 100%; height: 40px; margin: 2px 0 4px; }
   .composer .iconbtn { flex: none; width: 46px; height: 46px; }
@@ -391,6 +391,36 @@
   .pick-row input { width: 22px; height: 22px; flex: none; }
   .post-video { width: 100%; height: auto; max-height: 80vh; object-fit: contain; background: #000; }
   .bubble { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+  .conv-row { overflow: hidden; min-width: 0; max-width: 100%; }
+  .conv-row > div:nth-child(2) { flex: 1 1 0; min-width: 0; }
+  .conv-row strong, .conv-row .pv { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+  .conv-row .pv { display: block; }
+  .post-img:not(.post-video) { max-height: 300px; object-fit: cover; cursor: zoom-in; }
+  .lightbox { position: fixed; inset: 0; z-index: 300; background: rgba(0, 0, 0, .94); display: grid; place-items: center; padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); }
+  .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .lb-x { position: absolute; top: calc(12px + env(safe-area-inset-top, 0px)); right: 14px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, .16); color: #fff; font-size: 28px; line-height: 1; cursor: pointer; }
+  .hero { background: linear-gradient(165deg, var(--surface2), var(--surface) 70%); border: 1px solid var(--line-soft); border-radius: 28px; padding: 22px 20px 16px; }
+  .hero-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .hero h2 { font-size: 28px; letter-spacing: -.02em; margin: 0; }
+  .hero .hint { margin-top: 4px; }
+  .hero .link { font-size: 13px; color: var(--muted); }
+  .hero .progress { height: 10px; margin: 18px 0 12px; }
+  .hero .chips { margin: 0 0 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .hero .chips::-webkit-scrollbar { display: none; }
+  .hero .chip { white-space: nowrap; }
+  .hero .tasks { margin: 6px 0 10px; }
+  .add-row { display: flex; align-items: center; gap: 10px; }
+  .add-row .input { flex: 1; border-radius: 999px; padding-left: 18px; }
+  .addbtn { flex: none; width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--grad); color: #fff; font-size: 28px; line-height: 1; cursor: pointer; box-shadow: var(--glow); }
+  .addbtn:active { transform: scale(.94); }
+  .hero-foot { display: flex; justify-content: center; margin-top: 6px; }
+  .week-card { display: flex; align-items: center; gap: 16px; padding: 16px 18px; }
+  .week-card .grow { flex: 1; min-width: 0; }
+  .week-card h2 { font-size: 16px; margin: 0; }
+  .week-card .sub { margin: 2px 0 0; font-size: 14px; }
+  .week-card .progress { height: 6px; margin: 10px 0 0; }
+  .week-card .link { flex: none; max-width: 96px; text-align: right; line-height: 1.25; }
+  .link.primary { font-weight: 600; }
   @media (min-width: 700px) { .sheet-backdrop { align-items: center; } .sheet { border-radius: 26px; } }
   @media (max-width: 520px) { .card { padding: 24px; } .splash h1 { font-size: 44px; } }
   @media (prefers-reduced-motion: reduce) { .sheet { animation: none; } .progress > div, .viewer .bar.run > div { transition: none; } }
@@ -601,7 +631,7 @@
     <h1>What brings you here?</h1>
     <p class="sub">Pick any that fit. You can change this later.</p>
     <div class="purposes" id="purposes">
-      <button class="purpose" type="button" aria-pressed="false" data-key="friends"><span class="tick" aria-hidden="true">&#10003;</span><span><strong>Stay accountable with friends</strong><span class="d">Share commitments and check in with people you trust.</span></span></button>
+      <button class="purpose" type="button" aria-pressed="false" data-key="friends"><span class="tick" aria-hidden="true">&#10003;</span><span><strong>Stay accountable with friends</strong><span class="d">Share goals and check in with people you trust.</span></span></button>
       <button class="purpose" type="button" aria-pressed="false" data-key="goals"><span class="tick" aria-hidden="true">&#10003;</span><span><strong>Work toward personal goals</strong><span class="d">Plan your day and build a steady streak.</span></span></button>
       <button class="purpose" type="button" aria-pressed="false" data-key="learn"><span class="tick" aria-hidden="true">&#10003;</span><span><strong>Join educational communities</strong><span class="d">Learn from people who share your interests.</span></span></button>
     </div>
@@ -629,24 +659,26 @@
 
     <div class="gentle" id="recovery-note" hidden>
       <span>Yesterday did not go to plan, and that is okay. Today is a fresh start.</span>
-      <button class="link" type="button" id="recovery-adjust">Adjust my commitments</button>
+      <button class="link" type="button" id="recovery-adjust">Adjust my goals</button>
     </div>
 
-    <section class="panel" aria-labelledby="commit-title">
-      <div class="panel-head">
-        <h2 id="commit-title">Today</h2>
-        <button class="link" type="button" id="manage-btn">Manage commitments</button>
+    <section class="hero" aria-labelledby="commit-title">
+      <div class="hero-top">
+        <div>
+          <h2 id="commit-title">Today</h2>
+          <p class="hint" id="home-summary"></p>
+        </div>
+        <button class="link" type="button" id="manage-btn">Manage goals</button>
       </div>
-      <p class="hint" id="home-summary" style="margin-top:2px"></p>
       <div class="progress" role="progressbar" aria-label="Progress today" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress"><div style="width:0%"></div></div>
       <div class="chips" id="streak-chips"></div>
-      <div class="tasks" id="tasks" style="margin-top:14px"></div>
-      <form class="inline-form" id="task-form" novalidate>
+      <div class="tasks" id="tasks"></div>
+      <form class="add-row" id="task-form" novalidate>
         <input class="input" id="task-input" aria-label="Add something for today" placeholder="Add something for today" maxlength="200" autocomplete="off">
-        <button class="btn primary" type="submit">Add</button>
+        <button class="addbtn" type="submit" aria-label="Add"><span aria-hidden="true">+</span></button>
       </form>
-      <p class="error" id="task-error" role="alert" style="margin-top:10px"></p>
-      <button class="btn small" type="button" id="new-commitment-btn" style="margin-top:14px">New repeating commitment</button>
+      <p class="error" id="task-error" role="alert"></p>
+      <div class="hero-foot"><button class="link" type="button" id="new-commitment-btn">+ New repeating goal</button></div>
     </section>
 
     <section class="panel" id="support-panel" hidden>
@@ -655,12 +687,14 @@
       <div id="support-list"></div>
     </section>
 
-    <section class="panel" id="week-panel">
-      <h2>Your week</h2>
-      <p class="sub" id="week-summary" style="margin-bottom:6px"></p>
-      <div class="progress" role="progressbar" aria-label="Progress this week" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="week-progress"><div style="width:0%"></div></div>
-      <p class="hint" id="week-hint" style="margin:8px 0 12px"></p>
-      <button class="btn small" type="button" id="reflect-btn">Reflect on your week</button>
+    <section class="panel week-card" id="week-panel" aria-label="Your week">
+      <div class="grow">
+        <h2>Your week</h2>
+        <p class="sub" id="week-summary"></p>
+        <div class="progress" role="progressbar" aria-label="Progress this week" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="week-progress"><div style="width:0%"></div></div>
+        <p class="hint" id="week-hint" style="margin:8px 0 0"></p>
+      </div>
+      <button class="link" type="button" id="reflect-btn">Reflect on your week</button>
     </section>
 
     <button class="compose-card" type="button" id="compose-card" aria-label="Write a post">
@@ -738,7 +772,7 @@
     </div>
     <div class="stats">
       <div><strong id="st-done">0</strong><span>Done</span></div>
-      <div><strong id="st-streak">0</strong><span>Day streak</span></div>
+      <div><strong id="st-streak">0</strong><span>Goals streak</span></div>
       <div><strong id="st-friends">0</strong><span>Friends</span></div>
     </div>
     <button class="btn primary" type="button" id="edit-profile-btn">Edit profile</button>
@@ -765,7 +799,7 @@
 
   <nav class="bottom-nav" aria-label="Main">
     <div class="inner">
-      <button class="nav-item" type="button" data-nav="home" aria-current="page"><span data-icon="home"></span>Home</button>
+      <button class="nav-item" type="button" data-nav="home" aria-current="page"><span data-icon="home"></span>Home<span class="badge" id="home-badge" hidden></span></button>
       <button class="nav-item" type="button" data-nav="communities"><span data-icon="users"></span>Communities</button>
       <button class="nav-create" type="button" id="nav-create" aria-label="Create"><span data-icon="plus"></span></button>
       <button class="nav-item" type="button" data-nav="messages"><span data-icon="chat"></span>Messages<span class="badge" id="msg-badge" hidden></span></button>
@@ -782,13 +816,13 @@
     <div class="set-group"><h2>Account</h2><div class="set-list">
       <div class="row-item" style="cursor:default"><div class="grow">Email<small id="set-email"></small></div></div>
       <button class="row-item" type="button" id="set-password"><div class="grow">Change password</div><span data-icon="chevron"></span></button>
-      <button class="row-item" type="button" id="set-export"><div class="grow">Download my data<small>A copy of your profile, commitments, posts and messages.</small></div><span data-icon="chevron"></span></button>
+      <button class="row-item" type="button" id="set-export"><div class="grow">Download my data<small>A copy of your profile, goals, posts and messages.</small></div><span data-icon="chevron"></span></button>
       <button class="row-item" type="button" id="set-deactivate"><div class="grow">Deactivate account<small>Hide your profile. Come back any time.</small></div><span data-icon="chevron"></span></button>
       <button class="row-item danger" type="button" id="set-delete"><div class="grow">Delete account<small>Permanent. This cannot be undone.</small></div></button>
     </div></div>
 
     <div class="set-group"><h2>Notifications</h2><div class="set-list">
-      <label class="row-item"><div class="grow">Friends finishing commitments</div><span class="switch"><input type="checkbox" id="nt-completions"><span class="track"></span></span></label>
+      <label class="row-item"><div class="grow">Friends finishing goals</div><span class="switch"><input type="checkbox" id="nt-completions"><span class="track"></span></span></label>
       <label class="row-item"><div class="grow">Mentions</div><span class="switch"><input type="checkbox" id="nt-mentions"><span class="track"></span></span></label>
       <label class="row-item"><div class="grow">New messages</div><span class="switch"><input type="checkbox" id="nt-messages"><span class="track"></span></span></label>
       <label class="row-item"><div class="grow">Browser alerts<small id="nt-browser-sub">Get a pop-up when a message arrives.</small></div><span class="switch"><input type="checkbox" id="nt-browser"><span class="track"></span></span></label>
@@ -1235,7 +1269,7 @@ const STATUS_LABEL = { planned: 'Planned', in_progress: 'In progress', needs_hel
 const CHEER_PRESETS = ['You have got this', 'Proud of you', 'Need a hand with it?'];
 const CHECK_SVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>';
 const nameOf = p => (p && (p.full_name || p.username)) || 'a friend';
-const NEEDS_V3 = 'Run schema_v3.sql in Supabase to turn on commitments.';
+const NEEDS_V3 = 'Run schema_v3.sql in Supabase to turn on goals.';
 
 function daysSummary(days) {
   const sorted = [...days].sort((a, b) => a - b), key = sorted.join('');
@@ -1302,7 +1336,7 @@ function openTaskSheet(task, commitment, partner) {
                 partner ? nameOf(partner) + ' has been told' : 'Marked as needing help')));
   }
   if (commitment) {
-    nodes.push(actionBtn('Skip today', 'No penalty. The commitment continues tomorrow.',
+    nodes.push(actionBtn('Skip today', 'No penalty. The goal continues tomorrow.',
       () => run(() => sb.rpc('check_in', { task_id: task.id, new_status: 'skipped' }), 'Skipped for today')));
   } else {
     nodes.push(actionBtn('Move to tomorrow', 'Same task, a fresh day.', () => {
@@ -1340,7 +1374,8 @@ function openCheerSheet(c, owner) {
 async function openCommitmentForm(existing) {
   const friends = await getFriends();
   const days = new Set(existing ? existing.days : [1, 2, 3, 4, 5, 6, 7]);
-  let sharing = !!(existing && existing.partner_id);
+  let chosen = new Set(existing && existing.partners ? existing.partners : []);
+  let sharing = chosen.size > 0;
 
   const title = h('input', { class: 'input', maxlength: '120', placeholder: 'For example, Write for 30 minutes', 'aria-label': 'Name' });
   title.value = existing ? existing.title : '';
@@ -1361,41 +1396,54 @@ async function openCommitmentForm(existing) {
   });
 
   const solo = h('button', { type: 'button', text: 'Just me' });
-  const withF = h('button', { type: 'button', text: 'With a friend' });
+  const withF = h('button', { type: 'button', text: 'With friends' });
   if (!friends.length) withF.disabled = true;
-  const select = h('select', { class: 'input', 'aria-label': 'Choose a friend' }, ...friends.map(f => h('option', { value: f.id, text: f.name })));
-  if (existing && existing.partner_id) select.value = existing.partner_id;
+  const pickWrap = h('div', { role: 'group', 'aria-label': 'Friends who see your progress', style: 'margin-top:8px' });
+  friends.forEach(f => {
+    const cb = h('input', { type: 'checkbox', 'aria-label': f.name });
+    cb.checked = chosen.has(f.id);
+    cb.addEventListener('change', () => { if (cb.checked) chosen.add(f.id); else chosen.delete(f.id); });
+    pickWrap.append(h('label', { class: 'pick-row' }, cb, h('span', { text: f.name })));
+  });
   const refresh = () => {
     solo.setAttribute('aria-pressed', String(!sharing)); withF.setAttribute('aria-pressed', String(sharing));
-    select.hidden = !sharing;
+    pickWrap.hidden = !sharing;
   };
   solo.addEventListener('click', () => { sharing = false; refresh(); });
   withF.addEventListener('click', () => { sharing = true; refresh(); });
   refresh();
 
   const err = h('p', { class: 'error', role: 'alert' });
-  const save = h('button', { class: 'btn primary', type: 'button', text: existing ? 'Save changes' : 'Create commitment' });
+  const save = h('button', { class: 'btn primary', type: 'button', text: existing ? 'Save changes' : 'Create goal' });
   save.addEventListener('click', async () => {
     err.textContent = '';
     const t = title.value.trim();
-    if (!t) { err.textContent = 'Give your commitment a name.'; return; }
+    if (!t) { err.textContent = 'Give your goal a name.'; return; }
     if (!days.size) { err.textContent = 'Choose at least one day.'; return; }
-    const payload = { title: t, note: noteEl.value.trim() || null, days: [...days].sort((a, b) => a - b), partner_id: sharing ? select.value : null };
+    const payload = { title: t, note: noteEl.value.trim() || null, days: [...days].sort((a, b) => a - b) };
     save.disabled = true;
-    const { error } = existing
-      ? await sb.from('commitments').update(payload).eq('id', existing.id)
-      : await sb.from('commitments').insert({ ...payload, user_id: session.user.id });
+    let cid = existing ? existing.id : null, error;
+    if (existing) ({ error } = await sb.from('commitments').update(payload).eq('id', existing.id));
+    else { const r = await sb.from('commitments').insert({ ...payload, user_id: session.user.id }).select('id').single(); error = r.error; cid = r.data && r.data.id; }
+    if (!error) {
+      const d = await sb.from('commitment_partners').delete().eq('commitment_id', cid);
+      error = d.error;
+      if (!error && sharing && chosen.size) {
+        const ins = await sb.from('commitment_partners').insert([...chosen].map(p => ({ commitment_id: cid, partner_id: p })));
+        error = ins.error;
+      }
+    }
     if (error) { err.textContent = friendlyError(error); save.disabled = false; return; }
-    closeSheet(); toast('Commitment saved'); loadHome();
+    closeSheet(); toast('Goal saved'); loadHome();
   });
 
-  openSheet(existing ? 'Edit commitment' : 'New commitment',
+  openSheet(existing ? 'Edit goal' : 'New goal',
     field('Name', title),
     field('Description (optional)', noteEl),
     h('div', { class: 'field' }, h('label', { text: 'Repeats on' }), dayWrap, presets),
     h('div', { class: 'field' }, h('label', { text: 'Who sees your progress' }),
-      h('div', { class: 'seg' }, solo, withF), select,
-      h('span', { class: 'hint', text: friends.length ? 'A friend you choose sees your progress on this and can send encouragement. Nothing else.' : 'Add a friend from your profile to share this.' })),
+      h('div', { class: 'seg' }, solo, withF), pickWrap,
+      h('span', { class: 'hint', text: friends.length ? 'The friends you choose see your progress on this and can send encouragement. Nothing else.' : 'Add a friend from your profile to share this.' })),
     err, save);
 }
 
@@ -1403,10 +1451,15 @@ async function openCommitmentForm(existing) {
 async function openManageSheet() {
   const { data, error } = await sb.from('commitments').select('*').eq('user_id', session.user.id).order('created_at');
   if (error) { toast(NEEDS_V3); return; }
+  if (data.length) {
+    const pr = await sb.from('commitment_partners').select('commitment_id,partner_id').in('commitment_id', data.map(c => c.id));
+    const pm = {}; (pr.data || []).forEach(r => { (pm[r.commitment_id] = pm[r.commitment_id] || []).push(r.partner_id); });
+    data.forEach(c => { c.partners = pm[c.id] || []; });
+  }
   const friends = await getFriends();
   const fname = Object.fromEntries(friends.map(f => [f.id, f.name]));
   const nodes = [];
-  if (!data.length) nodes.push(h('p', { class: 'empty', style: 'margin-bottom:12px', text: 'No repeating commitments yet. Start with one thing you want to do on most days.' }));
+  if (!data.length) nodes.push(h('p', { class: 'empty', style: 'margin-bottom:12px', text: 'No repeating goals yet. Start with one thing you want to do on most days.' }));
   data.forEach(c => {
     const edit = h('button', { class: 'btn small', type: 'button', text: 'Edit' });
     edit.addEventListener('click', () => openCommitmentForm(c));
@@ -1420,23 +1473,24 @@ async function openManageSheet() {
     del.addEventListener('click', async () => {
       if (!armed) { armed = true; del.textContent = 'Tap again to delete'; return; }
       const { error: e3 } = await sb.from('commitments').delete().eq('id', c.id);
-      if (e3) toast(friendlyError(e3)); else { toast('Commitment deleted'); openManageSheet(); loadHome(); }
+      if (e3) toast(friendlyError(e3)); else { toast('Goal deleted'); openManageSheet(); loadHome(); }
     });
     nodes.push(h('div', { class: 'manage-item' },
       h('strong', { style: 'font-weight:500', text: c.title }),
-      h('div', { class: 'hint', text: daysSummary(c.days) + ' \u00B7 ' + (c.partner_id ? 'With ' + (fname[c.partner_id] || 'a friend') : 'Just me') + (c.is_paused ? ' \u00B7 Paused' : '') }),
+      h('div', { class: 'hint', text: daysSummary(c.days) + ' \u00B7 ' + (c.partners && c.partners.length ? 'With ' + c.partners.map(id => fname[id] || 'a friend').join(', ') : 'Just me') + (c.is_paused ? ' \u00B7 Paused' : '') }),
       h('div', { class: 'row' }, edit, pause, del)));
   });
-  const add = h('button', { class: 'btn primary', type: 'button', text: 'New commitment' });
+  const add = h('button', { class: 'btn primary', type: 'button', text: 'New goal' });
   add.addEventListener('click', () => openCommitmentForm(null));
   nodes.push(add);
-  openSheet('Your commitments', ...nodes);
+  openSheet('Your goals', ...nodes);
 }
 
 /* One row in today's list */
 function taskRow(task, commitmentById, byId) {
   const c = task.commitment_id ? commitmentById[task.commitment_id] : null;
-  const partner = c && c.partner_id ? (byId[c.partner_id] || {}) : null;
+  const plist = c && c.partners ? c.partners.map(id => byId[id] || {}) : [];
+  const partner = plist.length ? { username: plist.length === 1 ? nameOf(plist[0]) : nameOf(plist[0]) + ' and ' + (plist.length - 1) + ' more' } : null;
   const box = h('span', { class: 'box' }); box.innerHTML = CHECK_SVG;
   const check = h('button', { class: 'check', type: 'button', 'aria-label': (task.is_done ? 'Completed: ' : 'Mark complete: ') + task.title }, box);
   const meta = h('div', { class: 'meta' });
@@ -1466,30 +1520,33 @@ async function loadHome() {
   await sb.rpc('ensure_today_tasks', { for_date: today });
   const since = new Date(Date.now() - 2 * 86400000).toISOString();
   const ws = weekStartStr();
-  const [t, yt, s, a, mine, theirs, cheers, wk, refl] = await Promise.all([
+  const [t, yt, s, a, mine, theirs, cheers, wk, refl, cps] = await Promise.all([
     sb.from('tasks').select('id,title,is_done,status,commitment_id').eq('user_id', me).eq('due_date', today).order('created_at'),
     sb.from('tasks').select('id').eq('user_id', me).eq('due_date', localDate(yd)).eq('is_done', false).neq('status', 'skipped'),
     sb.from('streaks').select('*').eq('user_id', me).maybeSingle(),
     sb.from('activity_events').select('id,user_id,created_at').neq('user_id', me).order('created_at', { ascending: false }).limit(5),
     sb.from('commitments').select('*').eq('user_id', me).order('created_at'),
-    sb.from('commitments').select('id,user_id,title').eq('partner_id', me).eq('is_paused', false),
+    sb.from('commitment_partners').select('commitments!inner(id,user_id,title,is_paused)').eq('partner_id', me),
     sb.from('encouragements').select('id,from_user,message,created_at').eq('to_user', me).gte('created_at', since).order('created_at', { ascending: false }).limit(3),
     sb.from('tasks').select('is_done,status').eq('user_id', me).gte('due_date', ws).lte('due_date', today),
-    sb.from('weekly_reflections').select('*').eq('user_id', me).order('week_start', { ascending: false }).limit(3)
+    sb.from('weekly_reflections').select('*').eq('user_id', me).order('week_start', { ascending: false }).limit(3),
+    sb.from('commitment_partners').select('commitment_id,partner_id')
   ]);
   if (t.error) toast(NEEDS_V3);
 
   const tasks = (t.data || []).slice().sort((x, y) => (x.is_done === y.is_done ? 0 : x.is_done ? 1 : -1));
   const myCommitments = mine.data || [];
   const commitmentById = Object.fromEntries(myCommitments.map(c => [c.id, c]));
-  const partnerRows = theirs.data || [];
+  const cpm = {}; ((cps && cps.data) || []).forEach(r => { (cpm[r.commitment_id] = cpm[r.commitment_id] || []).push(r.partner_id); });
+  myCommitments.forEach(c => { c.partners = cpm[c.id] || []; });
+  const partnerRows = (theirs.data || []).map(r => r.commitments).filter(c => c && !c.is_paused);
   let partnerTasks = [];
   if (partnerRows.length) {
     const r = await sb.from('tasks').select('id,commitment_id,status,is_done').in('commitment_id', partnerRows.map(c => c.id)).eq('due_date', today);
     partnerTasks = r.data || [];
   }
   const events = a.data || [], cheerRows = cheers.data || [];
-  const ids = [...new Set([...events.map(e => e.user_id), ...partnerRows.map(c => c.user_id), ...cheerRows.map(c => c.from_user), ...myCommitments.map(c => c.partner_id).filter(Boolean)])];
+  const ids = [...new Set([...events.map(e => e.user_id), ...partnerRows.map(c => c.user_id), ...cheerRows.map(c => c.from_user), ...myCommitments.flatMap(c => c.partners || [])])];
   let byId = {};
   if (ids.length) {
     const res = await sb.from('profiles').select('id,username,full_name,avatar_url').in('id', ids);
@@ -1525,7 +1582,7 @@ async function loadHome() {
 
   // Tasks
   const list = $('#tasks'); list.replaceChildren();
-  if (!tasks.length) list.append(h('p', { class: 'empty', text: 'Nothing planned yet. Add something below, or create a repeating commitment.' }));
+  if (!tasks.length) list.append(h('p', { class: 'empty', text: 'Nothing planned yet. Add something below, or create a repeating goal.' }));
   tasks.forEach(task => list.append(taskRow(task, commitmentById, byId)));
 
   // Streak: only count it while it is still alive
@@ -1535,7 +1592,7 @@ async function loadHome() {
     const gap = last ? Math.round((todayD - last) / 86400000) : null;
     const alive = gap !== null && (gap <= 1 || (gap === 2 && s.data.freezes_left > 0));
     const n = alive ? s.data.current_streak : 0;
-    chips.append(h('span', { class: 'chip', text: n > 0 ? `${n} day streak` : 'Complete one today to start a streak' }));
+    chips.append(h('span', { class: 'chip', text: n > 0 ? `Goals streak: ${n} ${n === 1 ? 'day' : 'days'}` : 'Complete a goal today to start your streak' }));
     chips.append(h('span', { class: 'chip plain', text: `${s.data.freezes_left} streak ${s.data.freezes_left === 1 ? 'freeze' : 'freezes'} left this week` }));
   }
 
@@ -1557,7 +1614,7 @@ async function loadHome() {
   const circle = $('#circle'); circle.replaceChildren();
   const items = [
     ...cheerRows.map(c => ({ at: c.created_at, who: byId[c.from_user], text: `${nameOf(byId[c.from_user])} cheered you on: "${c.message}"` })),
-    ...events.map(e => ({ at: e.created_at, who: byId[e.user_id], text: `${nameOf(byId[e.user_id])} finished a commitment` }))
+    ...events.map(e => ({ at: e.created_at, who: byId[e.user_id], text: `${nameOf(byId[e.user_id])} finished a goal` }))
   ].sort((x, y) => new Date(y.at) - new Date(x.at)).slice(0, 6);
   if (!items.length) circle.append(h('p', { class: 'empty', text: 'When a friend finishes something or cheers you on, you will see it here.' }));
   items.forEach(it => circle.append(h('div', { class: 'circle-item' }, avatarEl(it.who || { username: 'friend' }, 40),
@@ -1779,7 +1836,7 @@ function bubble(m, map, me) {
   el.addEventListener('click', () => { if (m._failed) retrySend(m); });
   el.addEventListener('pointerdown', () => {
     fired = false; clearTimeout(lp);
-    lp = setTimeout(() => { fired = true; if (canOpen()) { if (navigator.vibrate) navigator.vibrate(15); openMessageSheet(m, mine); } }, 450);
+    lp = setTimeout(() => { fired = true; window.__lp = Date.now(); if (canOpen()) { if (navigator.vibrate) navigator.vibrate(15); openMessageSheet(m, mine); } }, 450);
   });
   ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => el.addEventListener(ev, () => clearTimeout(lp)));
   el.addEventListener('contextmenu', ev => { ev.preventDefault(); if (!fired && canOpen()) openMessageSheet(m, mine); });
@@ -2119,6 +2176,7 @@ async function syncChat() {
 }
 function resync() {
   if (!session) return;
+  refreshBell();
   if (chat) syncChat();
   refreshUnread();
   if (currentTab === 'messages') loadConversations();
@@ -2196,6 +2254,19 @@ async function maybeBrowserAlert(n) {
     try { const reg = await navigator.serviceWorker.getRegistration(); if (reg) reg.showNotification(who, { body: text.slice(0, 120), tag: 'chat-' + cid }); } catch {}
   }
 }
+
+/* Tap a photo to see it full screen */
+document.addEventListener('click', e => {
+  const im = e.target.closest && e.target.closest('.bubble img, img.post-img');
+  if (!im || !im.src || Date.now() - (window.__lp || 0) < 700) return;
+  const ov = h('div', { class: 'lightbox', role: 'dialog', 'aria-label': 'Photo' },
+    h('img', { src: im.src, alt: im.alt || 'Photo' }),
+    h('button', { class: 'lb-x', type: 'button', 'aria-label': 'Close', text: '\u00D7' }));
+  const onKey = ev => { if (ev.key === 'Escape') close(); };
+  const close = () => { ov.remove(); document.removeEventListener('keydown', onKey); };
+  ov.addEventListener('click', close); document.addEventListener('keydown', onKey);
+  document.body.append(ov);
+});
 
 function beat() {
   if (session && document.visibilityState === 'visible') {
@@ -2631,7 +2702,7 @@ function openCreateMenu() {
   openSheet('Create',
     actionBtn('New post', 'Share an update or a photo with friends.', () => { closeSheet(); openPostComposer(); }),
     actionBtn('New story', 'Disappears after 24 hours.', () => { closeSheet(); openStoryComposer(); }),
-    actionBtn('New commitment', 'Something you will repeat on the days you choose.', () => { closeSheet(); openCommitmentForm(null); }));
+    actionBtn('New goal', 'Something you will repeat on the days you choose.', () => { closeSheet(); openCommitmentForm(null); }));
 }
 $('#nav-create').addEventListener('click', openCreateMenu);
 
@@ -2639,6 +2710,7 @@ $('#nav-create').addEventListener('click', openCreateMenu);
 async function refreshBell() {
   const { count } = await sb.from('notifications').select('id', { count: 'exact', head: true }).is('read_at', null).neq('type', 'message');
   setBadge($('#bell-badge'), count || 0);
+  setBadge($('#home-badge'), count || 0);
 }
 function onNotificationEvent(n) {
   if (!n) return;
@@ -2651,9 +2723,9 @@ function onNotificationEvent(n) {
 function notificationText(n, who) {
   const name = nameOf(who), d = n.data || {};
   switch (n.type) {
-    case 'task_completed': return name + ' finished a commitment';
+    case 'task_completed': return name + ' finished a goal';
     case 'encouragement': return name + ' cheered you on' + (d.message ? ': "' + d.message + '"' : '');
-    case 'check_in_help': return name + ' needs help with a commitment';
+    case 'check_in_help': return name + ' needs help with a goal';
     case 'incoming_call': return name + ' called you';
     case 'collab_invite': return name + ' invited you to collaborate on a post';
     case 'group_invite': return name + ' invited you to a group';
@@ -2994,7 +3066,7 @@ $('#set-delete').addEventListener('click', () => {
     if (error) { err.textContent = /function|schema cache/i.test(error.message) ? 'Run schema_v5_fixes.sql in Supabase to turn on account deletion.' : friendlyError(error); go.disabled = false; return; }
     closeSheet(); await sb.auth.signOut({ scope: 'local' }); toast('Your account was deleted');
   });
-  openSheet('Delete account', h('p', { style: 'margin-bottom:14px', text: 'This permanently deletes your profile, commitments, posts, messages and friendships. It cannot be undone.' }), field('Type DELETE to confirm', input), err, go);
+  openSheet('Delete account', h('p', { style: 'margin-bottom:14px', text: 'This permanently deletes your profile, goals, posts, messages and friendships. It cannot be undone.' }), field('Type DELETE to confirm', input), err, go);
 });
 $('#set-blocked').addEventListener('click', async () => {
   const { data, error } = await sb.rpc('my_blocked');
