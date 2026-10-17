@@ -421,6 +421,43 @@
   .week-card .progress { height: 6px; margin: 10px 0 0; }
   .week-card .link { flex: none; max-width: 96px; text-align: right; line-height: 1.25; }
   .link.primary { font-weight: 600; }
+  /* Mobile and desktop fit: nothing may be wider or taller than the screen */
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img, video, canvas { max-width: 100%; }
+  .pane { grid-template-columns: minmax(0, 1fr); }
+  .pane > * { min-width: 0; }
+  .hero, .panel, .post { min-width: 0; max-width: 100%; }
+  .post-text, .task .t, .hint, .sub { overflow-wrap: anywhere; }
+  .post-text.clamp, .bubble .bt.clamp { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+  .post-text.clamp { -webkit-line-clamp: 6; }
+  .bubble .bt.clamp { -webkit-line-clamp: 8; }
+  .readmore { display: block; background: none; border: 0; padding: 4px 0 0; font-size: 13px; font-weight: 600; color: var(--accent-text); opacity: .9; cursor: pointer; min-height: 28px; }
+  .bubble .readmore { color: inherit; }
+  .conv-row { min-height: 64px; padding: 8px 0; gap: 12px; }
+  .conv-row strong { font-size: 16px; line-height: 1.25; }
+  .conv-row .pv { font-size: 14px; line-height: 1.3; }
+  .chat { top: 0; left: 0; right: 0; bottom: auto; height: 100dvh; max-height: 100dvh; overflow: hidden; overscroll-behavior: contain; }
+  .chat-head { padding: 6px 10px; }
+  .chat-body { min-height: 0; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding-top: 10px; padding-bottom: 10px; gap: 4px; }
+  .bubble { min-width: 0; max-width: 78%; padding: 7px 12px; border-radius: 18px; font-size: 15px; line-height: 1.35; }
+  .bubble.me { border-bottom-right-radius: 5px; }
+  .bubble.them { border-bottom-left-radius: 5px; }
+  .bubble .time { font-size: 10px; margin-top: 1px; }
+  .bubble img { width: 200px; max-height: 240px; }
+  .composer { padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px)); gap: 6px; }
+  .composer textarea { min-height: 42px; max-height: 96px; padding: 9px 16px; border-radius: 21px; }
+  .composer .iconbtn, .composer .send { width: 42px; height: 42px; }
+  @media (max-width: 480px) {
+    .pane { padding: 12px 12px 120px; gap: 12px; }
+    .hero { padding: 18px 16px 14px; border-radius: 24px; }
+    .hero h2 { font-size: 24px; }
+    .post { padding: 14px; border-radius: 20px; }
+  }
+  @media (min-width: 768px) {
+    .pane { max-width: 680px; padding-top: 24px; }
+    .topbar .in, .bottom-nav .inner { max-width: 680px; }
+    .hero h2 { font-size: 30px; }
+  }
   @media (min-width: 700px) { .sheet-backdrop { align-items: center; } .sheet { border-radius: 26px; } }
   @media (max-width: 520px) { .card { padding: 24px; } .splash h1 { font-size: 44px; } }
   @media (prefers-reduced-motion: reduce) { .sheet { animation: none; } .progress > div, .viewer .bar.run > div { transition: none; } }
@@ -1755,7 +1792,7 @@ function openChat(cid, other, group) {
   }, 45000);
 }
 function paintChatHead() {
-  $('#chat-avatar').replaceChildren(chat.group ? groupAvatar(40) : avatarWithStatus(chat.other, 40));
+  $('#chat-avatar').replaceChildren(chat.group ? groupAvatar(38) : avatarWithStatus(chat.other, 38));
   updateChatStatus();
 }
 function updateChatStatus() {
@@ -1829,7 +1866,23 @@ function bubble(m, map, me) {
       h('span', { text: o ? (o.deleted_at ? 'Message deleted' : (o.body || mediaLabel(o)).slice(0, 80)) : 'Original message' })));
   }
   if (m.media_type && (m.media_url || m._localUrl)) el.append(mediaEl(m));
-  if (m.body) el.append(h('span', { text: m.body }));
+  if (m.body) {
+    const long = m.body.length > 320 || m.body.split('\n').length > 8;
+    chat.expanded = chat.expanded || new Set();
+    const tx = h('span', { class: long && !chat.expanded.has(m.id) ? 'bt clamp' : 'bt', text: m.body });
+    el.append(tx);
+    if (long) {
+      const rm = h('button', { class: 'readmore', type: 'button', text: chat.expanded.has(m.id) ? 'Show less' : 'Read more' });
+      rm.addEventListener('click', ev => {
+        ev.stopPropagation();
+        const open = tx.classList.toggle('clamp');
+        if (open) chat.expanded.delete(m.id); else chat.expanded.add(m.id);
+        rm.textContent = open ? 'Read more' : 'Show less';
+      });
+      rm.addEventListener('pointerdown', ev => ev.stopPropagation());
+      el.append(rm);
+    }
+  }
   el.append(h('time', { class: 'time', text: m._pending ? 'Sending' : m._failed ? 'Not sent. Tap to retry' : clockTime(m.created_at) }));
   const canOpen = () => !m._pending && !m._failed;
   let lp = null, fired = false;
@@ -2408,7 +2461,16 @@ function postCard(p, ctx, onGone) {
     h('div', { class: 'who' }, h('strong', { text: nameOf(a) }), h('span', { class: 'when', text: when })), more);
   const kids = [head];
   if (p.is_pinned) kids.push(h('span', { class: 'pin-tag' }, icon('pin'), 'Pinned'));
-  if (p.body) kids.push(h('p', { class: 'post-text', text: p.body }));
+  if (p.body) {
+    const long = p.body.length > 280 || p.body.split('\n').length > 6;
+    const tx = h('p', { class: long ? 'post-text clamp' : 'post-text', text: p.body });
+    kids.push(tx);
+    if (long) {
+      const rm = h('button', { class: 'readmore', type: 'button', text: 'Read more' });
+      rm.addEventListener('click', () => { const open = tx.classList.toggle('clamp'); rm.textContent = open ? 'Read more' : 'Show less'; });
+      kids.push(rm);
+    }
+  }
   (p.image_urls || []).forEach(path => {
     if (ctx.signed[path]) kids.push(h('img', { class: 'post-img', src: ctx.signed[path], alt: 'Photo posted by ' + nameOf(a), loading: 'lazy' }));
   });
@@ -2868,7 +2930,7 @@ function renderConvList() {
     const media = c.last_media_type ? MEDIA_LABEL[c.last_media_type] : '';
     const preview = !c.last_at ? (isG ? 'New group' : 'Say hello') : c.last_deleted ? 'Message deleted' : (c.last_sender === me ? 'You: ' : '') + (c.last_body || media || 'Photo');
     const row = h('button', { class: 'conv-row' + (c.unread_count ? ' unread-row' : ''), type: 'button' },
-      isG ? groupAvatar(52) : avatarWithStatus(p, 52),
+      isG ? groupAvatar(48) : avatarWithStatus(p, 48),
       h('div', { style: 'flex:1;min-width:0' }, h('strong', { text: isG ? (c.conv_name || 'Group') : nameOf(p) }), h('div', { class: 'pv', text: preview })),
       h('div', { class: 'right' }, c.last_at ? h('time', { class: 'hint', text: timeAgo(c.last_at) }) : null,
         c.unread_count ? h('span', { class: 'count', role: 'img', 'aria-label': c.unread_count + ' unread', text: c.unread_count > 9 ? '9+' : String(c.unread_count) }) : null));
