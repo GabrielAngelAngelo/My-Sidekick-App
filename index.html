@@ -458,6 +458,64 @@
     .topbar .in, .bottom-nav .inner { max-width: 680px; }
     .hero h2 { font-size: 30px; }
   }
+  .story .plus { width: 26px; height: 26px; right: -4px; bottom: -4px; cursor: pointer; }
+  .streak-chip { border: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, rgba(255, 200, 60, .24), rgba(255, 140, 0, .18)); color: #FFC83C; font-weight: 600; }
+  .streak-chip svg { width: 16px; height: 16px; fill: currentColor; stroke: none; }
+  .streakscreen { position: fixed; inset: 0; z-index: 40; background: #05050F; color: #fff; overflow: hidden; }
+  .portal-stage { position: absolute; inset: 0; overflow: hidden; background: radial-gradient(circle at 78% 46%, #2d1780 0%, #05050F 62%); transition: opacity .4s; }
+  .portal-stage.out { opacity: 0; pointer-events: none; }
+  .stars { position: absolute; inset: 0; background-image: radial-gradient(1.5px 1.5px at 20% 30%, #fff, transparent), radial-gradient(1px 1px at 60% 72%, #fff, transparent), radial-gradient(1.5px 1.5px at 82% 18%, #cfc2ff, transparent), radial-gradient(1px 1px at 35% 82%, #fff, transparent), radial-gradient(1px 1px at 92% 64%, #fff, transparent), radial-gradient(1.5px 1.5px at 10% 66%, #fff, transparent), radial-gradient(1px 1px at 48% 14%, #fff, transparent); animation: twinkle 2.4s ease-in-out infinite alternate; }
+  .portal { position: absolute; right: 12vw; top: 50%; width: 150px; height: 150px; margin-top: -75px; border-radius: 50%; background: conic-gradient(from 0deg, #7C4BF7, #22D3EE, #D17BFF, #7C4BF7); box-shadow: 0 0 60px 18px rgba(124, 75, 247, .65); animation: spin 1.1s linear infinite; }
+  .portal::after { content: ""; position: absolute; inset: 20%; border-radius: 50%; background: #05050F; }
+  .rider { position: absolute; left: -170px; bottom: 30%; width: 150px; animation: ride 2.1s cubic-bezier(.45, 0, .3, 1) forwards; }
+  .rider svg { width: 100%; height: auto; display: block; }
+  .rider .wheel { transform-box: fill-box; transform-origin: center; animation: spin .35s linear infinite; }
+  .portal-skip { position: absolute; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); left: 0; right: 0; text-align: center; font-size: 13px; color: #B8AEE8; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes twinkle { from { opacity: .5; } to { opacity: 1; } }
+  @keyframes ride {
+    0% { transform: translate(0, 0) rotate(0); }
+    50% { transform: translate(52vw, 0) rotate(0); }
+    68% { transform: translate(70vw, -7vh) rotate(-12deg); }
+    85% { transform: translate(calc(84vw + 10px), -15vh) rotate(-26deg) scale(.6); }
+    100% { transform: translate(calc(88vw + 20px), -19vh) rotate(-38deg) scale(.08); opacity: 0; }
+  }
+  .streak-content { position: absolute; left: 0; right: 0; bottom: 0; top: 7vh; margin: 0 auto; max-width: 600px; background: var(--bg); color: var(--text); border-radius: 28px 28px 0 0; transform: translateY(105%); transition: transform .55s cubic-bezier(.2, .9, .2, 1); overflow-y: auto; padding: 18px 18px calc(28px + env(safe-area-inset-bottom, 0px)); }
+  .streak-content.up { transform: none; }
+  .sc-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .sc-head h2 { font-size: 22px; }
+  .sc-big { display: grid; justify-items: center; gap: 2px; padding: 12px 0 8px; text-align: center; }
+  .sc-big svg { width: 64px; height: 64px; fill: #FFC83C; filter: drop-shadow(0 0 14px rgba(255, 200, 60, .8)); }
+  .sc-big strong { font-size: 48px; line-height: 1; letter-spacing: -.02em; }
+  .sc-big span, .sc-big small { color: var(--muted); }
+  .sc-title { display: flex; align-items: center; gap: 14px; background: var(--surface); border: 1px solid var(--line-soft); border-radius: 20px; padding: 12px 14px; margin: 12px 0 18px; }
+  .sc-title .grow { flex: 1; min-width: 0; }
+  .sc-title small { color: var(--muted); display: block; }
+  .sc-title strong { display: block; font-size: 17px; }
+  .streak-content h3 { font-size: 15px; margin: 6px 0 10px; color: var(--muted); font-weight: 600; }
+  .sc-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+  .sc-wd { text-align: center; font-size: 11px; color: var(--muted); }
+  .sc-day { display: grid; justify-items: center; align-content: center; gap: 0; aspect-ratio: 1; border-radius: 12px; background: var(--surface); font-size: 10px; color: var(--muted); }
+  .sc-day svg { width: 22px; height: 22px; }
+  .sc-day.on svg { fill: #FFC83C; filter: drop-shadow(0 0 5px rgba(255, 200, 60, .8)); }
+  .sc-day.on { color: #FFC83C; }
+  .sc-day.off svg { fill: #4B4B6B; }
+  .sc-day.pre { background: transparent; opacity: .35; }
+  .sc-day.pre svg { display: none; }
+  .sc-day.today { outline: 2px solid var(--accent-text); }
+  .sc-legend { display: flex; gap: 16px; justify-content: center; margin: 10px 0 18px; font-size: 13px; color: var(--muted); }
+  .sc-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .sc-legend svg { width: 16px; height: 16px; }
+  .sc-heroes { display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 10px; }
+  .hero-card { display: grid; justify-items: center; gap: 4px; padding: 12px 8px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line-soft); cursor: pointer; text-align: center; color: var(--text); }
+  .hero-card strong { font-size: 13px; line-height: 1.2; }
+  .hero-card small { color: var(--muted); font-size: 12px; }
+  .hero-card.locked svg { filter: grayscale(1) brightness(.55); }
+  .hero-card.locked { opacity: .75; }
+  .hero-story { display: grid; justify-items: center; gap: 10px; text-align: center; padding: 8px 0 16px; }
+  .hero-story p { color: var(--text); line-height: 1.55; }
+  .hero-story small { color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { .rider, .portal, .stars, .rider .wheel { animation: none; } .streak-content { transition: none; } }
   @media (min-width: 700px) { .sheet-backdrop { align-items: center; } .sheet { border-radius: 26px; } }
   @media (max-width: 520px) { .card { padding: 24px; } .splash h1 { font-size: 44px; } }
   @media (prefers-reduced-motion: reduce) { .sheet { animation: none; } .progress > div, .viewer .bar.run > div { transition: none; } }
@@ -817,6 +875,7 @@
       <button type="button" role="tab" aria-selected="true" data-ptab="posts">Posts</button>
       <button type="button" role="tab" aria-selected="false" data-ptab="friends">Friends</button>
       <button type="button" role="tab" aria-selected="false" data-ptab="saved">Saved</button>
+      <button type="button" role="tab" aria-selected="false" data-ptab="streak">Streak</button>
     </div>
     <div id="ptab-posts" style="display:grid;gap:14px"></div>
     <div id="ptab-friends" hidden style="display:grid;gap:14px">
@@ -906,6 +965,8 @@
 <div class="viewer" id="story-viewer" hidden role="dialog" aria-modal="true" aria-label="Story"></div>
 
 <!-- Chat -->
+<div class="streakscreen" id="streak-screen" hidden></div>
+
 <div class="chat" id="chat" hidden>
   <header class="chat-head">
     <button class="iconbtn" type="button" id="chat-back" aria-label="Back to messages"><span data-icon="back"></span></button>
@@ -1038,6 +1099,7 @@ const ICON_PATHS = {
   pin: '<path d="M12 17v5"/><path d="M9 3h6l-1 7 3 3H7l3-3z"/>',
   flag: '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/>',
   trash: '<path d="M3 6h18"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>',
+  bolt: '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
   mic: '<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2"/><path d="M12 19v3"/>',
   video: '<rect x="2" y="5" width="14" height="14" rx="2"/><path d="M22 7l-6 5 6 5z"/>',
   smile: '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/>'
@@ -1629,7 +1691,7 @@ async function loadHome() {
     const gap = last ? Math.round((todayD - last) / 86400000) : null;
     const alive = gap !== null && (gap <= 1 || (gap === 2 && s.data.freezes_left > 0));
     const n = alive ? s.data.current_streak : 0;
-    chips.append(h('span', { class: 'chip', text: n > 0 ? `Goals streak: ${n} ${n === 1 ? 'day' : 'days'}` : 'Complete a goal today to start your streak' }));
+    { const sc = h('button', { class: 'chip streak-chip', type: 'button', 'aria-label': 'Open your streak' }, icon('bolt'), h('span', { text: n > 0 ? `Goals streak: ${n} ${n === 1 ? 'day' : 'days'}` : 'Start your streak' })); sc.addEventListener('click', openStreak); chips.append(sc); }
     chips.append(h('span', { class: 'chip plain', text: `${s.data.freezes_left} streak ${s.data.freezes_left === 1 ? 'freeze' : 'freezes'} left this week` }));
   }
 
@@ -2321,6 +2383,159 @@ document.addEventListener('click', e => {
   document.body.append(ov);
 });
 
+/* ---------- Streak: portal intro, calendar and hero titles ---------- */
+const HEROES = [
+  { d: 10, name: 'The Red Wing Hero', c1: '#E5484D', c2: '#7A1F2B', em: 'wing',
+    story: 'In the 1940s, a group of young pilots in Alabama were told they would never fly in a war. They trained anyway, painted their plane tails bright red, and flew beside the bombers so the crews never felt alone in the sky. Ten days of showing up is how a wing earns its red.' },
+  { d: 20, name: 'The Lamp Bearer', c1: '#F59E0B', c2: '#7C4A03', em: 'lamp',
+    story: 'Florence Nightingale walked the dark hospital wards at night with a small lamp, checking on every bed. She also drew charts that proved clean air and clean water saved lives. Small habits, repeated every day, can light up a whole room.' },
+  { d: 30, name: 'The Kite Builder', c1: '#22D3EE', c2: '#0E5A6B', em: 'kite',
+    story: 'Before they ever flew, the Wright brothers built kites and gliders, crashed many of them, and wrote down what went wrong. In 1903 their plane stayed up for twelve seconds. Thirty days in, you are building your own lift.' },
+  { d: 40, name: 'The Glow Keeper', c1: '#84CC16', c2: '#35560A', em: 'glow',
+    story: 'Marie Curie spent years stirring huge pots of ore in a leaky shed to pull out a tiny glowing speck of radium. She went on to win two Nobel Prizes. The glow came from the days nobody saw.' },
+  { d: 50, name: 'The North Star Guide', c1: '#6366F1', c2: '#26286B', em: 'star',
+    story: 'Harriet Tubman escaped to freedom, then went back again and again to guide others north, walking at night and following the North Star. She kept her eyes on one bright point and kept moving. Fifty days is your star staying put.' },
+  { d: 60, name: 'The Salt Walker', c1: '#F97316', c2: '#7A3208', em: 'walk',
+    story: 'In 1930, Mahatma Gandhi set out on a 24-day walk of about 240 miles to the sea. Thousands joined along the way, one day at a time. Nobody walks 240 miles at once, and nobody keeps a streak at once either.' },
+  { d: 70, name: 'The Summit Pair', c1: '#38BDF8', c2: '#0B4A6F', em: 'peak',
+    story: 'In 1953, Edmund Hillary and Tenzing Norgay stood on top of Mount Everest, after earlier expeditions had turned back. They climbed it one careful step at a time. Seventy days means you are above the cloud line.' },
+  { d: 80, name: 'The Year-End Star', c1: '#EC4899', c2: '#6B1743', em: 'spark',
+    story: 'Some heroes are not in the history books yet. This one kept the lights on through the end of 2026, one quiet day after another. That hero is you.' }
+];
+function heroSvg(hr, size) {
+  const e = {
+    wing: '<path d="M60 58l-14-8 6 14-8 4 16 2zM60 58l14-8-6 14 8 4-16 2z" fill="#fff"/>',
+    lamp: '<path d="M54 62h12l-2 10h-8z" fill="#FFD76A"/><circle cx="60" cy="58" r="4" fill="#FFF3B0"/>',
+    kite: '<path d="M60 52l9 10-9 12-9-12z" fill="#fff"/>',
+    glow: '<circle cx="60" cy="64" r="8" fill="#D9FF9A"/><circle cx="60" cy="64" r="4" fill="#fff"/>',
+    star: '<path d="M60 54l3 8 8 1-6 5 2 8-7-5-7 5 2-8-6-5 8-1z" fill="#fff"/>',
+    walk: '<path d="M52 74c0-6 4-8 4-14M64 74c0-6 4-8 4-14" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>',
+    peak: '<path d="M48 74l12-22 12 22z" fill="#fff"/><path d="M55 62l5-9 5 9z" fill="#9BD1FF"/>',
+    spark: '<path d="M60 52l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" fill="#FFD76A"/>'
+  }[hr.em];
+  const wings = hr.em === 'wing' ? `<path d="M34 70L4 44l8 40 18 2zM86 70l30-26-8 40-18 2z" fill="${hr.c2}"/>` : '';
+  return `<svg viewBox="0 0 120 140" width="${size}" height="${Math.round(size * 140 / 120)}" aria-hidden="true">${wings}
+    <path d="M38 52Q60 44 82 52L94 130H26z" fill="${hr.c2}"/>
+    <rect x="44" y="50" width="32" height="46" rx="12" fill="${hr.c1}"/>
+    <rect x="46" y="94" width="11" height="34" rx="5" fill="${hr.c1}"/><rect x="63" y="94" width="11" height="34" rx="5" fill="${hr.c1}"/>
+    <rect x="44" y="124" width="14" height="8" rx="4" fill="#1b1b2e"/><rect x="62" y="124" width="14" height="8" rx="4" fill="#1b1b2e"/>
+    <rect x="43" y="82" width="34" height="6" fill="${hr.c2}"/>
+    <path d="M44 56L28 82M76 56L94 36" stroke="${hr.c1}" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="94" cy="35" r="5" fill="#F2C9A0"/><circle cx="28" cy="83" r="5" fill="#F2C9A0"/>
+    <circle cx="60" cy="34" r="15" fill="#F2C9A0"/>
+    <path d="M45 31Q60 10 75 31Q60 22 45 31z" fill="#1b1b2e"/>
+    <rect x="45" y="30" width="30" height="9" rx="4" fill="${hr.c2}"/>
+    <circle cx="54" cy="34.5" r="2" fill="#fff"/><circle cx="66" cy="34.5" r="2" fill="#fff"/>
+    ${e}</svg>`;
+}
+const BOLT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>';
+const PORTAL_HTML = `<div class="stars"></div><div class="portal"></div>
+  <div class="rider"><svg viewBox="0 0 160 120" aria-hidden="true">
+    <rect x="28" y="98" width="104" height="8" rx="4" fill="#FF4D8D"/>
+    <circle class="wheel" cx="48" cy="111" r="7" fill="#fff"/><circle class="wheel" cx="112" cy="111" r="7" fill="#fff"/>
+    <path d="M70 70L60 96M90 70L104 96" stroke="#2B2B6B" stroke-width="10" stroke-linecap="round"/>
+    <rect x="50" y="92" width="18" height="8" rx="4" fill="#fff"/><rect x="96" y="92" width="18" height="8" rx="4" fill="#fff"/>
+    <path d="M62 40Q80 33 98 40L96 76H64z" fill="#7C4BF7"/>
+    <path d="M64 46L36 60M96 46L128 34" stroke="#7C4BF7" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="34" cy="61" r="5" fill="#F2C9A0"/><circle cx="130" cy="33" r="5" fill="#F2C9A0"/>
+    <circle cx="80" cy="26" r="13" fill="#F2C9A0"/>
+    <path d="M66 24Q80 8 94 24z" fill="#22D3EE"/><rect x="48" y="21" width="22" height="6" rx="3" fill="#22D3EE" transform="translate(30 0)"/>
+    <rect x="70" y="26" width="22" height="6" rx="3" fill="#111"/>
+    <circle cx="80" cy="60" r="3" fill="#FFC83C"/>
+  </svg></div><p class="portal-skip">Tap to skip</p>`;
+
+async function loadStreakData() {
+  const me = session.user.id, days = 42;
+  const start = new Date(); start.setDate(start.getDate() - (days - 1));
+  const [t, s] = await Promise.all([
+    sb.from('tasks').select('due_date').eq('user_id', me).eq('is_done', true).gte('due_date', localDate(start)),
+    sb.from('streaks').select('current_streak,longest_streak,last_done_date,freezes_left').eq('user_id', me).maybeSingle()
+  ]);
+  return { kept: new Set((t.data || []).map(x => x.due_date)), streak: s.data || {}, start, days };
+}
+function renderStreak(box, d, close) {
+  const st = d.streak, todayStr = localDate(new Date());
+  const last = st.last_done_date;
+  const gap = last ? Math.round((new Date(todayStr) - new Date(last)) / 86400000) : null;
+  const alive = gap !== null && (gap <= 1 || (gap === 2 && (st.freezes_left || 0) > 0));
+  const cur = alive ? (st.current_streak || 0) : 0;
+  const best = Math.max(st.longest_streak || 0, cur);
+  const earned = HEROES.filter(x => best >= x.d), hero = earned[earned.length - 1], next = HEROES.find(x => best < x.d);
+  const joined = profile && profile.created_at ? profile.created_at.slice(0, 10) : null;
+
+  const cells = [];
+  const first = new Date(d.start), pad = (first.getDay() + 6) % 7;
+  for (let i = 0; i < pad; i++) cells.push('<div></div>');
+  for (let i = 0; i < d.days; i++) {
+    const dt = new Date(d.start); dt.setDate(dt.getDate() + i);
+    const key = localDate(dt), kept = d.kept.has(key), pre = joined && key < joined && !kept;
+    cells.push(`<div class="sc-day ${pre ? 'pre' : kept ? 'on' : 'off'}${key === todayStr ? ' today' : ''}" title="${key}">${BOLT}<span>${dt.getDate()}</span></div>`);
+  }
+  const wd = ['M', 'T', 'W', 'T', 'F', 'S', 'S'].map(x => `<div class="sc-wd">${x}</div>`).join('');
+
+  box.innerHTML = `
+    <div class="sc-head"><h2>Your streak</h2><button class="iconbtn" type="button" id="sc-close" aria-label="Close"></button></div>
+    <div class="sc-big">${BOLT}<strong>${cur}</strong><span>${cur === 1 ? 'day' : 'days'} goals streak</span>
+      <small>Best ${best} · ${st.freezes_left || 0} ${(st.freezes_left || 0) === 1 ? 'freeze' : 'freezes'} left this week</small></div>
+    <div class="sc-title" id="sc-title"></div>
+    <h3>Last 6 weeks</h3>
+    <div class="sc-grid">${wd}${cells.join('')}</div>
+    <div class="sc-legend"><span><i class="sc-day on" style="display:inline-grid;width:auto;aspect-ratio:auto;background:none">${BOLT}</i>Kept</span><span><i class="sc-day off" style="display:inline-grid;width:auto;aspect-ratio:auto;background:none">${BOLT}</i>Missed</span></div>
+    <h3>Titles you can earn</h3>
+    <div class="sc-heroes" id="sc-heroes"></div>`;
+  $('#sc-close').replaceChildren(icon('close'));
+  $('#sc-close').addEventListener('click', close);
+
+  const openHero = hr => {
+    const unlocked = best >= hr.d;
+    box.scrollTop = 0;
+    const view = h('div', { class: 'hero-story' });
+    view.innerHTML = `<div class="${unlocked ? '' : 'hero-card locked'}" style="background:none;border:0;cursor:default">${heroSvg(hr, 170)}</div>
+      <h2>${hr.name}</h2><small>Day ${hr.d} title</small>
+      <p>${unlocked ? hr.story : 'Keep your streak going for ' + (hr.d - best) + ' more ' + (hr.d - best === 1 ? 'day' : 'days') + ' to meet this hero.'}</p>`;
+    const back = h('button', { class: 'btn primary', type: 'button', text: 'Back to my streak' });
+    back.addEventListener('click', () => renderStreak(box, d, close));
+    box.replaceChildren(h('div', { class: 'sc-head' }, h('h2', { text: unlocked ? 'Your hero' : 'Locked hero' })), view, back);
+  };
+
+  const tt = $('#sc-title');
+  if (hero) {
+    tt.innerHTML = heroSvg(hero, 64) + `<div class="grow"><small>Your title</small><strong>${hero.name}</strong><small>${next ? (next.d - best) + ' ' + (next.d - best === 1 ? 'day' : 'days') + ' to the next hero' : 'Every hero unlocked'}</small></div>`;
+    const rb = h('button', { class: 'btn small', type: 'button', text: 'Story' }); rb.addEventListener('click', () => openHero(hero)); tt.append(rb);
+  } else {
+    tt.innerHTML = `<div class="grow"><small>First title</small><strong>${HEROES[0].name}</strong><small>${HEROES[0].d - best} more ${HEROES[0].d - best === 1 ? 'day' : 'days'} of your streak to unlock</small></div>`;
+  }
+  const list = $('#sc-heroes');
+  HEROES.forEach(hr => {
+    const unlocked = best >= hr.d;
+    const card = h('button', { class: 'hero-card' + (unlocked ? '' : ' locked'), type: 'button', 'aria-label': hr.name + (unlocked ? '' : ', locked') });
+    card.innerHTML = heroSvg(hr, 72) + `<strong>${hr.name}</strong><small>Day ${hr.d}${unlocked ? '' : ' · locked'}</small>`;
+    card.addEventListener('click', () => openHero(hr));
+    list.append(card);
+  });
+}
+async function openStreak() {
+  const scr = $('#streak-screen');
+  scr.hidden = false; document.body.style.overflow = 'hidden';
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const stage = h('div', { class: 'portal-stage' }); stage.innerHTML = PORTAL_HTML;
+  const content = h('div', { class: 'streak-content' });
+  scr.replaceChildren(stage, content);
+  const onKey = e => { if (e.key === 'Escape') close(); };
+  const close = () => { scr.hidden = true; scr.replaceChildren(); document.body.style.overflow = chat ? 'hidden' : ''; document.removeEventListener('keydown', onKey); };
+  document.addEventListener('keydown', onKey);
+  const data = loadStreakData();
+  let shown = false;
+  const reveal = async () => {
+    if (shown) return; shown = true;
+    renderStreak(content, await data, close);
+    stage.classList.add('out');
+    requestAnimationFrame(() => content.classList.add('up'));
+  };
+  stage.addEventListener('click', reveal);
+  setTimeout(reveal, reduce ? 0 : 2300);
+}
+
 function beat() {
   if (session && document.visibilityState === 'visible') {
     sb.from('profiles').update({ last_seen: new Date().toISOString() }).eq('id', session.user.id).then(() => {});
@@ -2638,9 +2853,15 @@ const STORY_BGS = {
 };
 const NEEDS_V2 = 'Run schema_v2.sql in Supabase to turn on stories.';
 
-function storyItem(label, person, seen, add, fn) {
+function storyItem(label, person, seen, add, fn, onAdd) {
   const ring = h('span', { class: 'ring' + (seen ? ' seen' : '') + (add ? ' add' : '') }, h('span', { class: 'gap' }, avatarEl(person, 58)));
-  if (add) ring.append(h('span', { class: 'plus' }, icon('plus')));
+  if (add) {
+    const plus = h('span', { class: 'plus', role: 'button', tabindex: '0', 'aria-label': 'Add to your story' }, icon('plus'));
+    const go = ev => { ev.stopPropagation(); ev.preventDefault(); (onAdd || fn)(); };
+    plus.addEventListener('click', go);
+    plus.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') go(ev); });
+    ring.append(plus);
+  }
   const b = h('button', { class: 'story', type: 'button', 'aria-label': label }, ring, h('span', { class: 'n', text: label }));
   b.addEventListener('click', fn); return b;
 }
@@ -2659,10 +2880,13 @@ async function loadStories() {
   let byId = {};
   if (authorIds.length) { const r = await sb.from('profiles').select('id,username,full_name,avatar_url').in('id', authorIds); byId = Object.fromEntries((r.data || []).map(p => [p.id, p])); }
   const mineList = groups[me] || [];
-  items.push(storyItem('Your story', profile, false, true, () => {
+  const addStory = () => { if (st.error) { toast(NEEDS_V2); return; } openStoryComposer(); };
+  const ownItem = storyItem('Your story', profile, false, true, () => {
     if (st.error) { toast(NEEDS_V2); return; }
     if (mineList.length) openStoryViewer({ person: profile, stories: mineList, own: true }); else openStoryComposer();
-  }));
+  }, addStory);
+  if (mineList.length) ownItem.querySelector('.ring').classList.remove('add');
+  items.push(ownItem);
   authorIds.map(id => ({ id, list: groups[id], seen: groups[id].every(s => viewed.has(s.id)) }))
     .sort((x, y) => Number(x.seen) - Number(y.seen))
     .forEach(g => { const person = byId[g.id] || { username: 'friend' }; items.push(storyItem(nameOf(person), person, g.seen, false, () => openStoryViewer({ person, stories: g.list, own: false }))); });
@@ -2982,6 +3206,7 @@ $('#chat-person').addEventListener('click', () => { if (!chat) return; if (chat.
 /* ---------- Profile tab ---------- */
 let ptab = 'posts';
 function setPtab(t) {
+  if (t === 'streak') { openStreak(); return; }
   ptab = t;
   document.querySelectorAll('[data-ptab]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.ptab === t)));
   ['posts', 'friends', 'saved'].forEach(n => { $('#ptab-' + n).hidden = n !== t; });
